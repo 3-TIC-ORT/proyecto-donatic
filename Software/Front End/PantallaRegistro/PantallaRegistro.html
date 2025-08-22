@@ -8,5 +8,25 @@
 </head>
 <body>
     <script src="PantallaRegistro.js"></script>
+    <button onclick="window.location.href = '../pantalla de inicio no registrados/pantalla de inicio no registrados.html'">Volver a la pantalla de inicio</button>
+    <form action="" method="">
+        <h2>Formulario de registro</h2>
+        <h5>Nombre:</h5>
+        <input type="text" name="nombre" placeholder="Ingresa tu nombre">
+        <h5>Apellido:</h5>
+        <input type="text" name="apellido" placeholder="Ingresa tu apellido">
+        <h5>Correo electrónico:</h5>
+        <input type="email" name="email" placeholder="Ingresa tu correo electrónico">
+        <h5>Contraseña:</h5>
+        <input type="password" name="contraseña" placeholder="Ingresa tu contraseña">
+        <h5>Tipo de usuario:</h5>
+        <select name="opcion">
+            <option value="">Selecciona un tipo de usuario</option>
+            <option value="donante">Donante</option>
+            <option value="hospital">Hospital</option>
+        </select>
+        <h5>Foto de perfil:</h5>
+        <input type="file" name="fotodeperfil" placeholder="Selecciona tu foto de perfil"
+    ></form>
 </body>
 </html>
