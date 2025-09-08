@@ -8,3 +8,8 @@ function IrCuestionario(){
     window.location.href= "../Pantalla Cuestionario/Pantalla Cuestionario.html"
 }
 BotonCuestionario.addEventListener("click", (IrCuestionario));
+let BotonIrInformación = document.getElementById("BotonInformacion");
+function IrInformación(){
+    window.location.href="../Pantalla Información/Información.html"
+}
+BotonIrInformación.addEventListener("click", (IrInformación));
