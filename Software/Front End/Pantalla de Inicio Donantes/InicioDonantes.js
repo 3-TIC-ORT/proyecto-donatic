@@ -13,3 +13,8 @@ function IrInformación(){
     window.location.href="../Pantalla Información/Información.html"
 }
 BotonIrInformación.addEventListener("click", (IrInformación));
+let BotonSelectorJuegos = document.getElementById("BotonJuegos");
+function IrSelectorJuegos(){
+    window.location.href="../Pantalla de Juegos/Selector de Juegos.html"
+}
+BotonSelectorJuegos.addEventListener("click", (IrSelectorJuegos));
