@@ -9,3 +9,7 @@ window.location.href = '../Pantalla de inicio no registrados/pantalla de inicio 
 Botoniniciarsesion.addEventListener("click",(click) => {
     alert(emailusuario.value +" "+ contraseña.value);
   })
+Botoniniciarsesion.addEventListener("click", FuncionIniciarSesion)
+function FuncionIniciarSesion (){
+  window.location.href = '../Pantalla de Inicio Donantes/InicioDonantes.html'
+}
