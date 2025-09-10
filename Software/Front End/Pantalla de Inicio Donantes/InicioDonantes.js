@@ -17,4 +17,8 @@ let BotonSelectorJuegos = document.getElementById("BotonJuegos");
 function IrSelectorJuegos(){
     window.location.href="../Pantalla de Juegos/Selector de Juegos.html"
 }
+BotonCerrarSesion.addEventListener("click", FuncionCerrarSesion)
+function FuncionCerrarSesion(){
+    window.location.href = '../Pantalla de Inicio de Sesion/Inicio de sesion.html'
+}
 BotonSelectorJuegos.addEventListener("click", (IrSelectorJuegos));
