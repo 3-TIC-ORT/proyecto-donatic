@@ -1,0 +1,21 @@
+{
+  "name": "proyecto-donatic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3-TIC-ORT/proyecto-donatic.git"
+  },
+  "type":"module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3-TIC-ORT/proyecto-donatic/issues"
+  },
+  "homepage": "https://github.com/3-TIC-ORT/proyecto-donatic#readme",
+  "description": ""
+}
