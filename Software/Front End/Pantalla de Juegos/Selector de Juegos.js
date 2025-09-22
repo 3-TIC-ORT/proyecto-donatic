@@ -1,5 +1,5 @@
-let BotonVolver = document.getElementById("VolverAlInicio");
-function VolverALInicio(){
-    window.location.href='../Pantalla de Inicio Donantes/InicioDonantes.html'
+let BotonVolver = document.getElementById("VolverInicio");
+function VolverAlInicio (){
+    window.location.href='../Pantalla de inicio estudiantes/Inicio estudiantes.html'
 }
-BotonVolver.addEventListener("click", (VolverALInicio));
+BotonVolver.addEventListener("click", (VolverAlInicio));
