@@ -13,3 +13,8 @@ function IrClases (){
     window.location.href='../Pantalla Gestionar Clases/Clases.html'
 }
 BotonIrClases.addEventListener("click", (IrClases));
+let BotonIrStats = document.getElementById("BotonIrEstadisticas");
+function IrStats (){
+    window.location.href='../Pantalla Estadisticas/Stats.html'
+}
+BotonIrStats.addEventListener("click", (IrStats));
