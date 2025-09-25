@@ -8,3 +8,8 @@ function CerrarSesion (){
     window.location.href='../pantalla de inicio no registrados/pantalla de inicio no registrados.html'
 }
 BotonCerrarLaSesion.addEventListener("click", (CerrarSesion));
+let BotonIrClases = document.getElementById("BotonClases");
+function IrClases (){
+    window.location.href='../Pantalla Gestionar Clases/Clases.html'
+}
+BotonIrClases.addEventListener("click", (IrClases));
