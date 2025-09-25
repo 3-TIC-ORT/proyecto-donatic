@@ -1,5 +1,5 @@
-{
-    "usuarios": [
+[
+   
   {
     "mail": "xxx@gmail.com", 
   "contraseña" : 1234 
@@ -9,5 +9,5 @@
     "mail": "yyy@gmail.com", 
   "contraseña" : 5678 
 }
+
 ]
-  }
