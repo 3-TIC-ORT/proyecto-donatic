@@ -1,8 +1,11 @@
 import fs from "fs";
 
 function registro (mail, contraseña){
-let usuario = mail + contraseña
-let usuariojson = JSON.stringify (usuario)
-fs.writeFileSync ("Software/Back/usuarios.json", usuariojson)
+let data = fs.readFileSync ("Software/Back/usuarios.json", "utf-8")
+let usuariosArray = JSON.parse (data)
+let usuario = {mail, contraseña}
+usuariosArray.push (usuario)
+let usuariosjson = JSON.stringify (usuariosArray)
+fs.writeFileSync ("Software/Back/usuarios.json", usuariosjson)
 }
 registro ("zuri@gmail.com",0712)
