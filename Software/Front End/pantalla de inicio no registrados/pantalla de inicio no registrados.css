@@ -13,18 +13,18 @@ body{
 }
 .container-logo{
     width: 100vw;
-    height: 113vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .logoDonaticP1{
-    width: 58.77vw;
-    height: 90vh;
+    width: 46.46rem;
+    height: 38.5rem;
 }
 .buttons{
     width: 100vw;
-    height: 37vh;
+    height: 25vh;
     background-color:#C31315;
     display: flex;
     justify-content: center;
@@ -45,6 +45,6 @@ body{
     background-color: #F66451;
 }
 .logoUsuarioP1{
-    width: 11vw;
-    height: 21vh;
+    width: 8.9rem;
+    height: 8.8rem;
 }
