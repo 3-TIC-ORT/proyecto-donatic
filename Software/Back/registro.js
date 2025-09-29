@@ -1,11 +1,13 @@
 import fs from "fs";
+import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic";
 
 function registro (mail, contraseña){
-let data = fs.readFileSync ("Software/Back/usuarios.json", "utf-8")
+let data = fs.readFileSync ("usuarios.json", "utf-8")
 let usuariosArray = JSON.parse (data)
 let usuario = {mail, contraseña}
 usuariosArray.push (usuario)
 let usuariosjson = JSON.stringify (usuariosArray)
-fs.writeFileSync ("Software/Back/usuarios.json", usuariosjson)
+fs.writeFileSync ("usuarios.json", usuariosjson)
 }
-registro ("zuri@gmail.com",0712)
+registro ("zuri@gmail.com", "0712")
+startServer()
