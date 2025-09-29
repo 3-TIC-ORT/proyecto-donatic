@@ -13,7 +13,7 @@ body{
 }
 .container-logo{
     width: 100vw;
-    height: 75vh;
+    height: 48.125rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@ body{
 }
 .buttons{
     width: 100vw;
-    height: 25vh;
+    height: 15.875rem;
     background-color:#C31315;
     display: flex;
     justify-content: center;
