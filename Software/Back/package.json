@@ -9,7 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/3-TIC-ORT/proyecto-donatic.git"
   },
-  "type":"module",
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,5 +17,8 @@
     "url": "https://github.com/3-TIC-ORT/proyecto-donatic/issues"
   },
   "homepage": "https://github.com/3-TIC-ORT/proyecto-donatic#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "soquetic": "^1.4.2"
+  }
 }

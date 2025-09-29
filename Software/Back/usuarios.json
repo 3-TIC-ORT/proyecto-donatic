@@ -1,13 +1,1 @@
-[
-   
-  {
-    "mail": "xxx@gmail.com", 
-  "contraseña" : 1234 
-},
-
-  {
-    "mail": "yyy@gmail.com", 
-  "contraseña" : 5678 
-}
-
-]
+[{"mail":"xxx@gmail.com","contraseña":1234},{"mail":"yyy@gmail.com","contraseña":5678},{"mail":"zuri@gmail.com","contraseña":"0712"}]
