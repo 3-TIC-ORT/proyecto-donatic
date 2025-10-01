@@ -1,0 +1,12 @@
+#Indicador{
+    width: 17rem;
+    height: 11rem;
+ 
+    transition: background-color 0.3s;
+}
+.correcto{
+background-color: green;
+}
+.incorrecto{
+background-color: red;
+}
