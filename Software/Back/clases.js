@@ -10,6 +10,5 @@ let clasesjson = JSON.stringify (clasesArray)
 fs.writeFileSync ("clases.json", clasesjson)
 return clase
 }
-
 subscribePOSTEvent("creaciondeclases", crearClase)
 startServer()
