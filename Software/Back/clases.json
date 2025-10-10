@@ -1,1 +1,1 @@
-[{"creador":"pepe","nombre":"3TD","ID":"4g6U"},{"creador":"juan","nombre":"3TA","ID":"1eH9"}]
+[{"creador":"pepe","nombre":"3TD","ID":"4g6U", "alumnos":["zuri", "lu"]},{"creador":"juan","nombre":"3TA","ID":"1eH9", "alumnos":["dante", "valen"]}]
