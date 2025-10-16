@@ -4,7 +4,7 @@ import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } fro
 function gestionPerfil ({nuevoNombre, nuevoApellido, nuevaContraseña, nuevaClase}){
 let usuariosJSON = fs.readFileSync ("usuarios.json", "utf-8")
 let usuariosArray = JSON.parse (usuariosJSON)
-let nuevoUsuarioArray usuariosArray.nombre = 
+let nuevoUsuarioArray 
 
 return 
 }
