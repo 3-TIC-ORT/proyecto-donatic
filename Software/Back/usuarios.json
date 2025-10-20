@@ -1,1 +1,1 @@
-[{"mail":"xxx@gmail.com","contraseña":1234, "rol": "educador", "nombre":"pepe", "apellido": "gonzalez", "fecha de nacimiento":null, "codigo de clase": null},{"mail": null, "contraseña":5678, "rol": "alumno", "nombre":"juan", "apellido":"gomez", "fecha de nacimiento":"03/02/10", "codigo de clase":"p67t"}]
+[{"contraseña":1234, "rol": "educador", "nombre":"pepe", "apellido": "gonzalez", "codigo de clase": null},{"contraseña":5678, "rol": "alumno", "nombre":"juan", "apellido":"gomez", "codigo de clase":"p67t"}]

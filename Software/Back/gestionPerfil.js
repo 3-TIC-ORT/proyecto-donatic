@@ -1,7 +1,7 @@
 import fs from "fs"; 
 import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic";
 
-function gestionPerfil ({nuevoNombre, nuevoApellido, nuevaContraseña, nuevaClase}){
+function gestionPerfil ({nuevoNombre, nuevoApellido, nuevaContraseña, nuevaClase, nuevaFoto}){
 let usuariosJSON = fs.readFileSync ("usuarios.json", "utf-8")
 let usuariosArray = JSON.parse (usuariosJSON)
 let nuevoUsuarioArray 
