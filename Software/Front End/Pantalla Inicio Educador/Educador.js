@@ -18,3 +18,8 @@ function IrStats (){
     window.location.href='../Pantalla Estadisticas/Stats.html'
 }
 BotonIrStats.addEventListener("click", (IrStats));
+let BotonGestionar = document.getElementById('BotonGestionarPerfil');
+function Perfil(){
+    window.location.href='../Pantalla de gestion de perfil educador/GestionPerfilEdu.html'
+}
+BotonGestionar.addEventListener("click", (Perfil))
