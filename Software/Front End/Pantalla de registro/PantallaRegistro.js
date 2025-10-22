@@ -4,5 +4,5 @@ function Funcionvolver (){
 }
 BotonRegistrarse.addEventListener("click", FuncionRegistrarse)
 function FuncionRegistrarse (){
-    window.location.href = '../Pantalla Elegir Rol/Rol.html'
+    window.location.href = '../Pantalla Inicio Educador/Educador.html'
 }

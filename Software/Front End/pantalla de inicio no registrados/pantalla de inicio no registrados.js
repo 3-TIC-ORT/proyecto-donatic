@@ -1,7 +1,7 @@
 let BotonRegistrarse = document.getElementById("BotonRegistrarse");
 let BotonIniciarSesion = document.getElementById("BotonIniciarSesion");
 function IniciarSesion (){
-    window.location.href = '../Pantalla de inicio de sesion/Inicio de sesion.html';
+    window.location.href = '../Pantalla Elegir Rol/Rol.html';
 };
 function Registrarse (){
     window.location.href = '../Pantalla de registro/PantallaRegistro.html';

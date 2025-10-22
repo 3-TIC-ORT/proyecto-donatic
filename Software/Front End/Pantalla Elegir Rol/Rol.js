@@ -5,11 +5,11 @@ function CerrarSesion (){
 BotonCerrarLaSesion.addEventListener("click", (CerrarSesion));
 let BotonEstudiante = document.getElementById("Estudiante");
 function IrEstudiante (){
-    window.location.href='../Pantalla de inicio estudiantes/Inicio estudiantes.html'
+    window.location.href='../Pantalla de Inicio de Sesion/Inicio de sesion.html'
 }
 BotonEstudiante.addEventListener("click", (IrEstudiante));
 let BotonEducador = document.getElementById("Educador");
 function IrEducador (){
-    window.location.href='../Pantalla Inicio Educador/Educador.html'
+    window.location.href='../Pantalla de registro/PantallaRegistro.html'
 }
 BotonEducador.addEventListener("click", (IrEducador));
