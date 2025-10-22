@@ -11,5 +11,5 @@ Botoniniciarsesion.addEventListener("click",(click) => {
   })
 Botoniniciarsesion.addEventListener("click", FuncionIniciarSesion)
 function FuncionIniciarSesion (){
-  window.location.href = '../Pantalla Elegir Rol/Rol.html'
+  window.location.href = '../Pantalla de inicio estudiantes/Inicio estudiantes.html'
 }
