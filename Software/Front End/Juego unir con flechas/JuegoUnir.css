@@ -117,12 +117,6 @@
   .izq{
       background-color: #236995;
   }
-  .izq:hover{
-      background-color: #3996D0;
-  }
-  .der:hover{
-      background-color: #F66451;
-  }
   .der{
       background-color: #C31315;
   }

@@ -8,12 +8,14 @@
     <link rel="icon" href="../../../Imagenes/LOGO DEFINITIVO.png" type="image/x-icon">
 </head>
 <body>
+
     <div class="container-blanco">
         <button id="BotonVolver" class="BotonVolver">
             <img src="../../../Imagenes/flecha salir.png" alt="FlechaSalir" class="FlechaVolver">
         </button>
         <img src="../../../Imagenes/LOGO DEFINITIVO.png" alt="Logo DonaTIC" class="logo">
     </div>
+
     <div class="container-juego">
         <div class="opcionesIzquierda">
             <h3>¿QUIENES PUEDEN DONARLE?</h3>
@@ -30,13 +32,13 @@
         </div>
         <div class="opcionCentro">
             <div class="circunferencia">
-                <div id="" class="circuloI"></div>
+                <div id="circuloI" class="circuloI"></div>
             </div>
             <div class="lineaNegra"></div>
             <div class="TarjetaOpcion" id="TarjetaOpcion">A+</div>
             <div class="lineaNegra"></div>
             <div class="circunferencia">
-                <div id="" class="circuloD"></div>
+                <div id="circuloD" class="circuloD"></div>
             </div>
         </div>
         <div class="opcionesDerecha">
@@ -53,11 +55,35 @@
             </div>
         </div>
     </div>
+
+    <svg id="svg" style="position: absolute; top:0; left:0; width:100%; height:80rem;">
+        <line id="linea1" stroke="#236995" stroke-width="6" />
+        <line id="linea2" stroke="#236995" stroke-width="6" />
+        <line id="linea3" stroke="#236995" stroke-width="6" />
+        <line id="linea4" stroke="#236995" stroke-width="6" />
+        <line id="linea5" stroke="#236995" stroke-width="6" />
+        <line id="linea6" stroke="#236995" stroke-width="6" />
+        <line id="linea7" stroke="#236995" stroke-width="6" />
+        <line id="linea8" stroke="#236995" stroke-width="6" />
+
+        <line id="linea9" stroke="#C31315" stroke-width="6" />
+        <line id="linea10" stroke="#C31315" stroke-width="6" />
+        <line id="linea11" stroke="#C31315" stroke-width="6" />
+        <line id="linea12" stroke="#C31315" stroke-width="6" />
+        <line id="linea13" stroke="#C31315" stroke-width="6" />
+        <line id="linea14" stroke="#C31315" stroke-width="6" />
+        <line id="linea15" stroke="#C31315" stroke-width="6" />
+        <line id="linea16" stroke="#C31315" stroke-width="6" />
+
+    </svg>
+
     <div class="container-flecha">
         <button id="BotonSiguiente" class="BotonSiguiente">
             <img src="../../../Imagenes/flecha siguiente.png" alt="FlechaSiguiente" class="FlechaSiguiente">
         </button>
     </div>
+
     <script src="JuegoUnir.js"></script>
+
 </body>
 </html>
