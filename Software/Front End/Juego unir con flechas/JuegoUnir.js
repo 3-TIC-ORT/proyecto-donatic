@@ -64,7 +64,19 @@ function crearLinea() {
   const ix = i.offsetLeft + i.offsetWidth / 2;
   const iy = i.offsetTop + i.offsetHeight / 2;
   const jx = j.offsetLeft + j.offsetWidth / 2;
-  const jy = j.offsetTop + j.offsetHeight / 2;        
+  const jy = j.offsetTop + j.offsetHeight / 2;
+  const kx = k.offsetLeft + k.offsetWidth / 2;
+  const ky = k.offsetTop + k.offsetHeight / 2;
+  const lx = l.offsetLeft + l.offsetWidth / 2;
+  const ly = l.offsetTop + l.offsetHeight / 2;
+  const mx = m.offsetLeft + m.offsetWidth / 2;
+  const my = m.offsetTop + m.offsetHeight / 2;
+  const nx = n.offsetLeft + n.offsetWidth / 2;
+  const ny = n.offsetTop + n.offsetHeight / 2;
+  const ox = o.offsetLeft + o.offsetWidth / 2;
+  const oy = o.offsetTop + o.offsetHeight / 2;
+  const px = p.offsetLeft + p.offsetWidth / 2;
+  const py = p.offsetTop + p.offsetHeight / 2;        
   
   const circuloIx = circuloI.offsetLeft + circuloI.offsetWidth / 2;
   const circuloIy = circuloI.offsetTop + circuloI.offsetHeight / 2;
@@ -113,6 +125,30 @@ function crearLinea() {
   linea10.setAttribute('y1', circuloDy);
   linea10.setAttribute('x2', jx);
   linea10.setAttribute('y2', jy);  
+  linea11.setAttribute('y1', circuloDy);
+  linea11.setAttribute('x1', circuloDx);
+  linea11.setAttribute('x2', kx);
+  linea11.setAttribute('y2', ky);
+  linea12.setAttribute('x1', circuloDx);
+  linea12.setAttribute('y1', circuloDy);
+  linea12.setAttribute('x2', lx);
+  linea12.setAttribute('y2', ly);  
+  linea13.setAttribute('x1', circuloDx);
+  linea13.setAttribute('y1', circuloDy);
+  linea13.setAttribute('x2', mx);
+  linea13.setAttribute('y2', my);
+  linea14.setAttribute('x1', circuloDx);
+  linea14.setAttribute('y1', circuloDy);
+  linea14.setAttribute('x2', nx);
+  linea14.setAttribute('y2', ny);  
+  linea15.setAttribute('x1', circuloDx);
+  linea15.setAttribute('y1', circuloDy);
+  linea15.setAttribute('x2', ox);
+  linea15.setAttribute('y2', oy);
+  linea16.setAttribute('x1', circuloDx);
+  linea16.setAttribute('y1', circuloDy);
+  linea16.setAttribute('x2', px);
+  linea16.setAttribute('y2', py);  
 
 }
 crearLinea();

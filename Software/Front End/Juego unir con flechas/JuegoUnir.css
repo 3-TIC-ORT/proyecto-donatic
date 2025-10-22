@@ -192,10 +192,11 @@
       padding-left: 2rem;
       font-size: 2rem;
   }
-  .linea {
-      height: 1rem;
-      background-color: #236995;
-      transform-origin: 0 0;
+  svg{
+      pointer-events: none;
+  }
+  .linea{
+      pointer-events: none;
   }
   
   
