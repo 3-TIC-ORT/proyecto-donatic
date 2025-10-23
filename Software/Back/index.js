@@ -19,10 +19,10 @@ let usuarioArray = JSON.parse(usuario);
     let correcto = false;
 for (let i=0; i<usuarioArray.length; i++){
     if (nombre===usuarioArray[i].nombre && apellido===usuarioArray[i].apellido && contraseña===usuarioArray[i].contraseña){
-        correcto = true
+        respuesta = true
     }     
 }
-return correcto
+return respuesta
 
 }
 subscribePOSTEvent ("iniciodesesion", login);
@@ -50,7 +50,7 @@ return juegosResultado
 
 subscribePOSTEvent("juegosResultados", juegos);
 
-function subirInfo (data){
+function subirinfo (data){
 let pizarronJSON = fs.readFileSync ("pizarron.json", "utf-8")
 let pizarronArray = JSON.parse (pizarronJSON)
 let info = data
