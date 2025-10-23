@@ -152,3 +152,17 @@ function crearLinea() {
 
 }
 crearLinea();
+
+let estaVisible = true;
+
+function alternarVisibilidadLinea() {
+    estaVisible = !estaVisible;
+
+    if (estaVisible) {
+        linea1.style.display = 'block';
+    } else {
+        linea1.style.display = 'none';
+    }
+  }
+
+a.addEventListener('click', alternarVisibilidadLinea);
