@@ -153,16 +153,39 @@ function crearLinea() {
 }
 crearLinea();
 
-let estaVisible = true;
+window.addEventListener('resize', () => {
+  crearLinea();
+});
 
-function alternarVisibilidadLinea() {
-    estaVisible = !estaVisible;
-
-    if (estaVisible) {
-        linea1.style.display = 'block';
-    } else {
-        linea1.style.display = 'none';
-    }
+let estaVisibleA = true;
+function alternarVisibilidadLineaA() {
+  estaVisibleA = !estaVisibleA;
+  if (estaVisibleA) {
+      linea1.style.display = 'block';
+  } else {      
+    linea1.style.display = 'none';
   }
+}
+a.addEventListener('click', alternarVisibilidadLineaA);
 
-a.addEventListener('click', alternarVisibilidadLinea);
+let estaVisibleB = true;
+function alternarVisibilidadLineaB() {
+  estaVisibleB = !estaVisibleB;
+  if (estaVisibleB) {
+      linea2.style.display = 'block';
+  } else {      
+    linea2.style.display = 'none';
+  }
+}
+b.addEventListener('click', alternarVisibilidadLineaB);
+
+let estaVisibleC = true;
+function alternarVisibilidadLineaC() {
+  estaVisibleB = !estaVisibleB;
+  if (estaVisibleB) {
+      linea3.style.display = 'block';
+  } else {      
+    linea3.style.display = 'none';
+  }
+}
+c.addEventListener('click', alternarVisibilidadLineaC);
