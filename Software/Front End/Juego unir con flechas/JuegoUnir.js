@@ -157,35 +157,64 @@ window.addEventListener('resize', () => {
   crearLinea();
 });
 
-let estaVisibleA = true;
-function alternarVisibilidadLineaA() {
-  estaVisibleA = !estaVisibleA;
-  if (estaVisibleA) {
-      linea1.style.display = 'block';
-  } else {      
-    linea1.style.display = 'none';
-  }
-}
-a.addEventListener('click', alternarVisibilidadLineaA);
+const conexionesA = [
+    { botonId: 'i1', lineaId: 'linea1' },
+    { botonId: 'i2', lineaId: 'linea2' },
+    { botonId: 'i3', lineaId: 'linea3' },
+    { botonId: 'i4', lineaId: 'linea4' },
+    { botonId: 'i5', lineaId: 'linea5' },
+    { botonId: 'i6', lineaId: 'linea6' },
+    { botonId: 'i7', lineaId: 'linea7' },
+    { botonId: 'i8', lineaId: 'linea8' },
+];
+function alternarVisibilidad(lineaElemento) {
 
-let estaVisibleB = true;
-function alternarVisibilidadLineaB() {
-  estaVisibleB = !estaVisibleB;
-  if (estaVisibleB) {
-      linea2.style.display = 'block';
-  } else {      
-    linea2.style.display = 'none';
-  }
+    if (lineaElemento.style.display === 'none') {
+        lineaElemento.style.display = 'block';
+    } else {
+        lineaElemento.style.display = 'none';
+    }
 }
-b.addEventListener('click', alternarVisibilidadLineaB);
+conexionesA.forEach(par => {
+    const boton = document.getElementById(par.botonId);
+    const linea = document.getElementById(par.lineaId);
+    if (linea) {
+        linea.style.display = 'none';
+    }
+    if (boton && linea) {
+        boton.addEventListener('click', () => {
+            alternarVisibilidad(linea);
+        });
+    }
+});
 
-let estaVisibleC = true;
-function alternarVisibilidadLineaC() {
-  estaVisibleB = !estaVisibleB;
-  if (estaVisibleB) {
-      linea3.style.display = 'block';
-  } else {      
-    linea3.style.display = 'none';
-  }
+const conexionesB = [
+    { botonId: 'd1', lineaId: 'linea9' },
+    { botonId: 'd2', lineaId: 'linea10' },
+    { botonId: 'd3', lineaId: 'linea11' },
+    { botonId: 'd4', lineaId: 'linea12' },
+    { botonId: 'd5', lineaId: 'linea13' },
+    { botonId: 'd6', lineaId: 'linea14' },
+    { botonId: 'd7', lineaId: 'linea15' },
+    { botonId: 'd8', lineaId: 'linea16' },
+];
+function alternarVisibilidad(lineaElemento) {
+
+    if (lineaElemento.style.display === 'none') {
+        lineaElemento.style.display = 'block';
+    } else {
+        lineaElemento.style.display = 'none';
+    }
 }
-c.addEventListener('click', alternarVisibilidadLineaC);
+conexionesB.forEach(par => {
+    const botonB = document.getElementById(par.botonId);
+    const lineaB = document.getElementById(par.lineaId);
+    if (lineaB) {
+        lineaB.style.display = 'none';
+    }
+    if (botonB && lineaB) {
+        botonB.addEventListener('click', () => {
+            alternarVisibilidad(lineaB);
+        });
+    }
+});
