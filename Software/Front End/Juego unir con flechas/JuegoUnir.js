@@ -43,6 +43,10 @@ const linea14 = document.getElementById('linea14');
 const linea15 = document.getElementById('linea15');
 const linea16 = document.getElementById('linea16');
 
+const TarjetaOpcion = document.getElementById('TarjetaOpcion');
+const botonSiguiente = document.getElementById('BotonSiguiente');
+const lineasActivasUsuario = new Map();
+
 function crearLinea() {
   const ax = a.offsetLeft + a.offsetWidth / 2;
   const ay = a.offsetTop + a.offsetHeight / 2;
@@ -157,64 +161,289 @@ window.addEventListener('resize', () => {
   crearLinea();
 });
 
-const conexionesA = [
-    { botonId: 'i1', lineaId: 'linea1' },
-    { botonId: 'i2', lineaId: 'linea2' },
-    { botonId: 'i3', lineaId: 'linea3' },
-    { botonId: 'i4', lineaId: 'linea4' },
-    { botonId: 'i5', lineaId: 'linea5' },
-    { botonId: 'i6', lineaId: 'linea6' },
-    { botonId: 'i7', lineaId: 'linea7' },
-    { botonId: 'i8', lineaId: 'linea8' },
-];
-function alternarVisibilidad(lineaElemento) {
+const NIVELES_DE_JUEGO = {
+    // Nivel 1:  A+
+    'A+': {
+        tarjetaCentral: 'A+',
+        respuestas: [
+            // Donantes 
+            { botonId: 'i1', lineaId: 'linea1', esCorrecta: true },  // A+
+            { botonId: 'i2', lineaId: 'linea2', esCorrecta: true },  // A-
+            { botonId: 'i3', lineaId: 'linea3', esCorrecta: false }, // B+
+            { botonId: 'i4', lineaId: 'linea4', esCorrecta: false }, // B-
+            { botonId: 'i5', lineaId: 'linea5', esCorrecta: false }, // AB+
+            { botonId: 'i6', lineaId: 'linea6', esCorrecta: false }, // AB-
+            { botonId: 'i7', lineaId: 'linea7', esCorrecta: true },  // O+
+            { botonId: 'i8', lineaId: 'linea8', esCorrecta: true },  // O-
+            // Receptores 
+            { botonId: 'd1', lineaId: 'linea9', esCorrecta: true },  // A+
+            { botonId: 'd2', lineaId: 'linea10', esCorrecta: false },// A-
+            { botonId: 'd3', lineaId: 'linea11', esCorrecta: false },// B+
+            { botonId: 'd4', lineaId: 'linea12', esCorrecta: false },// B-
+            { botonId: 'd5', lineaId: 'linea13', esCorrecta: true }, // AB+
+            { botonId: 'd6', lineaId: 'linea14', esCorrecta: false },// AB-
+            { botonId: 'd7', lineaId: 'linea15', esCorrecta: false },// O+
+            { botonId: 'd8', lineaId: 'linea16', esCorrecta: false },// O-
+        ]
+    },
+    // Nivel 2:  A-
+    'A-': {
+        tarjetaCentral: 'A-',
+        respuestas: [
+            // Donantes 
+            { botonId: 'i1', lineaId: 'linea1', esCorrecta: false }, // A+
+            { botonId: 'i2', lineaId: 'linea2', esCorrecta: true },  // A-
+            { botonId: 'i3', lineaId: 'linea3', esCorrecta: false }, // B+
+            { botonId: 'i4', lineaId: 'linea4', esCorrecta: false }, // B-
+            { botonId: 'i5', lineaId: 'linea5', esCorrecta: false }, // AB+
+            { botonId: 'i6', lineaId: 'linea6', esCorrecta: false }, // AB-
+            { botonId: 'i7', lineaId: 'linea7', esCorrecta: false }, // O+
+            { botonId: 'i8', lineaId: 'linea8', esCorrecta: true },  // O-
+            // Receptores 
+            { botonId: 'd1', lineaId: 'linea9', esCorrecta: true },  // A+
+            { botonId: 'd2', lineaId: 'linea10', esCorrecta: true }, // A-
+            { botonId: 'd3', lineaId: 'linea11', esCorrecta: false },// B+
+            { botonId: 'd4', lineaId: 'linea12', esCorrecta: false },// B-
+            { botonId: 'd5', lineaId: 'linea13', esCorrecta: true }, // AB+
+            { botonId: 'd6', lineaId: 'linea14', esCorrecta: true }, // AB-
+            { botonId: 'd7', lineaId: 'linea15', esCorrecta: false },// O+
+            { botonId: 'd8', lineaId: 'linea16', esCorrecta: false },// O-
+        ]
+    },
+    // Nivel 3: B+
+    'B+': {
+        tarjetaCentral: 'B+',
+        respuestas: [
+            // Donantes 
+            { botonId: 'i1', lineaId: 'linea1', esCorrecta: false }, // A+
+            { botonId: 'i2', lineaId: 'linea2', esCorrecta: false }, // A-
+            { botonId: 'i3', lineaId: 'linea3', esCorrecta: true },  // B+
+            { botonId: 'i4', lineaId: 'linea4', esCorrecta: true },  // B-
+            { botonId: 'i5', lineaId: 'linea5', esCorrecta: false }, // AB+
+            { botonId: 'i6', lineaId: 'linea6', esCorrecta: false }, // AB-
+            { botonId: 'i7', lineaId: 'linea7', esCorrecta: true },  // O+
+            { botonId: 'i8', lineaId: 'linea8', esCorrecta: true },  // O-
+            // Receptores 
+            { botonId: 'd1', lineaId: 'linea9', esCorrecta: false }, // A+
+            { botonId: 'd2', lineaId: 'linea10', esCorrecta: false },// A-
+            { botonId: 'd3', lineaId: 'linea11', esCorrecta: true }, // B+
+            { botonId: 'd4', lineaId: 'linea12', esCorrecta: false },// B-
+            { botonId: 'd5', lineaId: 'linea13', esCorrecta: true }, // AB+
+            { botonId: 'd6', lineaId: 'linea14', esCorrecta: false },// AB-
+            { botonId: 'd7', lineaId: 'linea15', esCorrecta: false },// O+
+            { botonId: 'd8', lineaId: 'linea16', esCorrecta: false },// O-
+        ]
+    },
+    // Nivel 4: B-
+    'B-': {
+    tarjetaCentral: 'B-',
+    respuestas: [
+        // Donantes 
+        { botonId: 'i1', lineaId: 'linea1', esCorrecta: false }, // A+
+        { botonId: 'i2', lineaId: 'linea2', esCorrecta: false }, // A-
+        { botonId: 'i3', lineaId: 'linea3', esCorrecta: false }, // B+
+        { botonId: 'i4', lineaId: 'linea4', esCorrecta: true },  // B-
+        { botonId: 'i5', lineaId: 'linea5', esCorrecta: false }, // AB+
+        { botonId: 'i6', lineaId: 'linea6', esCorrecta: false }, // AB-
+        { botonId: 'i7', lineaId: 'linea7', esCorrecta: false }, // O+
+        { botonId: 'i8', lineaId: 'linea8', esCorrecta: true },  // O-
+        // Receptores 
+        { botonId: 'd1', lineaId: 'linea9', esCorrecta: false }, // A+
+        { botonId: 'd2', lineaId: 'linea10', esCorrecta: false },// A-
+        { botonId: 'd3', lineaId: 'linea11', esCorrecta: true }, // B+
+        { botonId: 'd4', lineaId: 'linea12', esCorrecta: true }, // B-
+        { botonId: 'd5', lineaId: 'linea13', esCorrecta: true }, // AB+
+        { botonId: 'd6', lineaId: 'linea14', esCorrecta: true }, // AB-
+        { botonId: 'd7', lineaId: 'linea15', esCorrecta: false },// O+
+        { botonId: 'd8', lineaId: 'linea16', esCorrecta: false },// O-
+        ]
+    },
+    // Nivel 5: AB+
+    'AB+': {
+    tarjetaCentral: 'AB+',
+    respuestas: [
+        // Donantes 
+        { botonId: 'i1', lineaId: 'linea1', esCorrecta: true }, // A+
+        { botonId: 'i2', lineaId: 'linea2', esCorrecta: true }, // A-
+        { botonId: 'i3', lineaId: 'linea3', esCorrecta: true }, // B+
+        { botonId: 'i4', lineaId: 'linea4', esCorrecta: true }, // B-
+        { botonId: 'i5', lineaId: 'linea5', esCorrecta: true }, // AB+
+        { botonId: 'i6', lineaId: 'linea6', esCorrecta: true }, // AB-
+        { botonId: 'i7', lineaId: 'linea7', esCorrecta: true }, // O+
+        { botonId: 'i8', lineaId: 'linea8', esCorrecta: true }, // O-
+        // Receptores 
+        { botonId: 'd1', lineaId: 'linea9', esCorrecta: false }, // A+
+        { botonId: 'd2', lineaId: 'linea10', esCorrecta: false },// A-
+        { botonId: 'd3', lineaId: 'linea11', esCorrecta: false },// B+
+        { botonId: 'd4', lineaId: 'linea12', esCorrecta: false },// B-
+        { botonId: 'd5', lineaId: 'linea13', esCorrecta: true }, // AB+
+        { botonId: 'd6', lineaId: 'linea14', esCorrecta: false },// AB-
+        { botonId: 'd7', lineaId: 'linea15', esCorrecta: false },// O+
+        { botonId: 'd8', lineaId: 'linea16', esCorrecta: false },// O-
+        ]
+    },
+    // Nivel 6: AB-
+    'AB-': {
+    tarjetaCentral: 'AB-',
+    respuestas: [
+        // Donantes 
+        { botonId: 'i1', lineaId: 'linea1', esCorrecta: false }, // A+
+        { botonId: 'i2', lineaId: 'linea2', esCorrecta: true },  // A-
+        { botonId: 'i3', lineaId: 'linea3', esCorrecta: false }, // B+
+        { botonId: 'i4', lineaId: 'linea4', esCorrecta: true },  // B-
+        { botonId: 'i5', lineaId: 'linea5', esCorrecta: false }, // AB+
+        { botonId: 'i6', lineaId: 'linea6', esCorrecta: true },  // AB-
+        { botonId: 'i7', lineaId: 'linea7', esCorrecta: false }, // O+
+        { botonId: 'i8', lineaId: 'linea8', esCorrecta: true },  // O-
+        // Receptores 
+        { botonId: 'd1', lineaId: 'linea9', esCorrecta: false }, // A+
+        { botonId: 'd2', lineaId: 'linea10', esCorrecta: false },// A-
+        { botonId: 'd3', lineaId: 'linea11', esCorrecta: false },// B+
+        { botonId: 'd4', lineaId: 'linea12', esCorrecta: false },// B-
+        { botonId: 'd5', lineaId: 'linea13', esCorrecta: true }, // AB+
+        { botonId: 'd6', lineaId: 'linea14', esCorrecta: true }, // AB-
+        { botonId: 'd7', lineaId: 'linea15', esCorrecta: false },// O+
+        { botonId: 'd8', lineaId: 'linea16', esCorrecta: false },// O-
+        ]
+    },
+    // Nivel 7: 0+
+    '0+': {
+    tarjetaCentral: '0+',
+    respuestas: [
+        // Donantes 
+        { botonId: 'i1', lineaId: 'linea1', esCorrecta: false }, // A+
+        { botonId: 'i2', lineaId: 'linea2', esCorrecta: false }, // A-
+        { botonId: 'i3', lineaId: 'linea3', esCorrecta: false }, // B+
+        { botonId: 'i4', lineaId: 'linea4', esCorrecta: false }, // B-
+        { botonId: 'i5', lineaId: 'linea5', esCorrecta: false }, // AB+
+        { botonId: 'i6', lineaId: 'linea6', esCorrecta: false }, // AB-
+        { botonId: 'i7', lineaId: 'linea7', esCorrecta: true },  // O+
+        { botonId: 'i8', lineaId: 'linea8', esCorrecta: true },  // O-
+        // Receptores 
+        { botonId: 'd1', lineaId: 'linea9', esCorrecta: true },  // A+
+        { botonId: 'd2', lineaId: 'linea10', esCorrecta: false },// A-
+        { botonId: 'd3', lineaId: 'linea11', esCorrecta: true }, // B+
+        { botonId: 'd4', lineaId: 'linea12', esCorrecta: false },// B-
+        { botonId: 'd5', lineaId: 'linea13', esCorrecta: true }, // AB+
+        { botonId: 'd6', lineaId: 'linea14', esCorrecta: false },// AB-
+        { botonId: 'd7', lineaId: 'linea15', esCorrecta: true }, // O+
+        { botonId: 'd8', lineaId: 'linea16', esCorrecta: false },// O-
+        ]
+    },
+    // Nivel 8: 0-
+    '0-': {
+    tarjetaCentral: '0-',
+    respuestas: [
+        // Donantes 
+        { botonId: 'i1', lineaId: 'linea1', esCorrecta: false }, // A+
+        { botonId: 'i2', lineaId: 'linea2', esCorrecta: false }, // A-
+        { botonId: 'i3', lineaId: 'linea3', esCorrecta: false }, // B+
+        { botonId: 'i4', lineaId: 'linea4', esCorrecta: false }, // B-
+        { botonId: 'i5', lineaId: 'linea5', esCorrecta: false }, // AB+
+        { botonId: 'i6', lineaId: 'linea6', esCorrecta: false }, // AB-
+        { botonId: 'i7', lineaId: 'linea7', esCorrecta: false }, // O+
+        { botonId: 'i8', lineaId: 'linea8', esCorrecta: true },  // O-
+        // Receptores 
+        { botonId: 'd1', lineaId: 'linea9', esCorrecta: true },  // A+
+        { botonId: 'd2', lineaId: 'linea10', esCorrecta: true }, // A-
+        { botonId: 'd3', lineaId: 'linea11', esCorrecta: true }, // B+
+        { botonId: 'd4', lineaId: 'linea12', esCorrecta: true }, // B-
+        { botonId: 'd5', lineaId: 'linea13', esCorrecta: true }, // AB+
+        { botonId: 'd6', lineaId: 'linea14', esCorrecta: true }, // AB-
+        { botonId: 'd7', lineaId: 'linea15', esCorrecta: true }, // O+
+        { botonId: 'd8', lineaId: 'linea16', esCorrecta: true }, // O-
+        ]
+    },
+};
 
-    if (lineaElemento.style.display === 'none') {
-        lineaElemento.style.display = 'block';
-    } else {
-        lineaElemento.style.display = 'none';
+const ORDEN_NIVELES = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', '0+', '0-'];
+let nivelActualIndex = 0;
+let aciertosGlobales = 0;
+
+function cargarNivel() {
+    const finDelJuego = nivelActualIndex >= ORDEN_NIVELES.length;
+
+    if (finDelJuego) {
+        alert(`¡Felicidades! Has terminado el juego. 
+        Total de Respuestas Correctas: ${aciertosGlobales} de ${ORDEN_NIVELES.length * 16} posibles.`
+        )
+        
+        aciertosGlobales = 0;
+        nivelActualIndex = 0; 
+        
+        const claveNivel = ORDEN_NIVELES[nivelActualIndex];
+        const datosNivel = NIVELES_DE_JUEGO[claveNivel];
+        
+        if (TarjetaOpcion) {
+            TarjetaOpcion.textContent = datosNivel.tarjetaCentral;
+        }
+
+        lineasActivasUsuario.clear(); 
+        configurarInteracciones(datosNivel.respuestas);
+        
+        return; 
     }
+
+    const claveNivel = ORDEN_NIVELES[nivelActualIndex];
+    const datosNivel = NIVELES_DE_JUEGO[claveNivel];
+    
+    if (TarjetaOpcion) {
+        TarjetaOpcion.textContent = datosNivel.tarjetaCentral;
+    }
+    lineasActivasUsuario.clear(); 
+    
+    configurarInteracciones(datosNivel.respuestas);
 }
-conexionesA.forEach(par => {
-    const boton = document.getElementById(par.botonId);
-    const linea = document.getElementById(par.lineaId);
-    if (linea) {
-        linea.style.display = 'none';
-    }
-    if (boton && linea) {
-        boton.addEventListener('click', () => {
-            alternarVisibilidad(linea);
-        });
-    }
-});
+function configurarInteracciones(conexionesDelNivel) { 
+    conexionesDelNivel.forEach(par => {
+        const boton = document.getElementById(par.botonId);
+        const linea = document.getElementById(par.lineaId);
 
-const conexionesB = [
-    { botonId: 'd1', lineaId: 'linea9' },
-    { botonId: 'd2', lineaId: 'linea10' },
-    { botonId: 'd3', lineaId: 'linea11' },
-    { botonId: 'd4', lineaId: 'linea12' },
-    { botonId: 'd5', lineaId: 'linea13' },
-    { botonId: 'd6', lineaId: 'linea14' },
-    { botonId: 'd7', lineaId: 'linea15' },
-    { botonId: 'd8', lineaId: 'linea16' },
-];
-function alternarVisibilidad(lineaElemento) {
+        if (linea) {
+            linea.style.display = 'none';
+            lineasActivasUsuario.set(par.lineaId, false);
+        }
 
-    if (lineaElemento.style.display === 'none') {
-        lineaElemento.style.display = 'block';
-    } else {
-        lineaElemento.style.display = 'none';
-    }
+        if (boton && linea) {
+            const listenerExistente = boton.getAttribute('data-listener');
+            if(listenerExistente) {
+            }
+            
+            boton.onclick = () => {
+                const estadoActual = lineasActivasUsuario.get(par.lineaId);
+                const nuevoEstado = !estadoActual;
+                
+                linea.style.display = nuevoEstado ? 'block' : 'none';
+                lineasActivasUsuario.set(par.lineaId, nuevoEstado);
+            };
+        }
+    });
 }
-conexionesB.forEach(par => {
-    const botonB = document.getElementById(par.botonId);
-    const lineaB = document.getElementById(par.lineaId);
-    if (lineaB) {
-        lineaB.style.display = 'none';
-    }
-    if (botonB && lineaB) {
-        botonB.addEventListener('click', () => {
-            alternarVisibilidad(lineaB);
-        });
-    }
-});
+function verificarRespuestas() {
+    console.log("¡Botón Siguiente Presionado! Iniciando verificación...");
+    const claveNivel = ORDEN_NIVELES[nivelActualIndex];
+    const respuestasNivel = NIVELES_DE_JUEGO[claveNivel].respuestas;
+    
+    let aciertosNivelActual = 0;
+    const totalPosible = respuestasNivel.length; 
+    
+    respuestasNivel.forEach(par => {
+        const usuarioActivo = lineasActivasUsuario.get(par.lineaId); 
+        if (usuarioActivo === par.esCorrecta) {
+            aciertosNivelActual++;
+        }
+    });
+
+    aciertosGlobales += aciertosNivelActual;
+    
+    alert(`¡Nivel ${claveNivel} completado!
+    Respuestas Correctas: ${aciertosNivelActual} de ${totalPosible}.`);
+
+    nivelActualIndex++;
+    
+    cargarNivel();
+}
+if (botonSiguiente) {
+    botonSiguiente.onclick = verificarRespuestas;
+}
+cargarNivel();
