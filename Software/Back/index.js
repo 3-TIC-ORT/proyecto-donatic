@@ -16,20 +16,16 @@ subscribePOSTEvent("registro", registro);
 function login ({nombre, apellido, contraseña}){
 let usuario = fs.readFileSync("usuarios.json", "utf-8")
 let usuarioArray = JSON.parse(usuario);
-    let respuesta = false;
+let respuesta = false;
 for (let i=0; i<usuarioArray.length; i++){
     if (nombre===usuarioArray[i].nombre && apellido===usuarioArray[i].apellido && contraseña===usuarioArray[i].contraseña){
-        let respuesta = true
-      
-if (respuesta == true){
-return true
-}
-else{
-    return false
+        respuesta = true
+    }
+return respuesta
 }
 }
-}
-}
+
+
 subscribePOSTEvent ("iniciodesesion", login);
 
 function crearClase (data){
