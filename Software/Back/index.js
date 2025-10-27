@@ -24,8 +24,6 @@ for (let i=0; i<usuarioArray.length; i++){
 return respuesta
 }
 }
-
-
 subscribePOSTEvent ("iniciodesesion", login);
 
 function crearClase (data){
@@ -65,7 +63,7 @@ subscribePOSTEvent("subirInfo", subirinfo);
 function gestionPerfil ({nombre, apellido, nuevoNombre, nuevoApellido, nuevaContraseña, nuevaClase, nuevaFoto}){
 let usuariosJSON = fs.readFileSync ("usuarios.json", "utf-8")
 let usuariosArray = JSON.parse (usuariosJSON)
-for (let i = 0; i<data.length; i++){
+for (let i = 0; i<usuariosArray.length; i++){
     if (nombre == usuariosArray.nombre[i] && apellido == usuariosArray.apellido[i]){
 usuariosArray[i] = [nuevoNombre, nuevoApellido, nuevaContraseña, nuevaClase, nuevaFoto]
 let usuariosjson = JSON.stringify(usuariosArray)
