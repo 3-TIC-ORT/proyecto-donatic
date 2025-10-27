@@ -1,6 +1,6 @@
 const Preguntas = [
-    { pregunta: "¿2 + 2 es 4?", Respuesta: true, Numero: 1 },
-    { pregunta: "¿2 + 8 es 11?", Respuesta: false, Numero: 2 },
+    { pregunta: "LAS DONACIONES DE SANGRE PUEDEN DEBILITAR AL CUERPO PERMANENTEMENTE", Respuesta: false, Numero: 1 },
+    { pregunta: "¿AL DONAR SANGRE, ME PUEDO CONTAGIAR DE ALGUNA ENFERMEDAD?", Respuesta: false, Numero: 2 },
     { pregunta: "¿2 + 3 es 5?", Respuesta: true, Numero: 3 },
     { pregunta: "¿2 + 4 es 6?", Respuesta: true, Numero: 3 },
 ];
