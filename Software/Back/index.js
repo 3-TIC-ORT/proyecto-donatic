@@ -16,14 +16,19 @@ subscribePOSTEvent("registro", registro);
 function login ({nombre, apellido, contraseña}){
 let usuario = fs.readFileSync("usuarios.json", "utf-8")
 let usuarioArray = JSON.parse(usuario);
-    let correcto = false;
+    let respuesta = false;
 for (let i=0; i<usuarioArray.length; i++){
     if (nombre===usuarioArray[i].nombre && apellido===usuarioArray[i].apellido && contraseña===usuarioArray[i].contraseña){
-        respuesta = true
-    }     
+        let respuesta = true
+      
+if (respuesta == true){
+return true
 }
-return respuesta
-
+else{
+    return false
+}
+}
+}
 }
 subscribePOSTEvent ("iniciodesesion", login);
 
@@ -74,3 +79,4 @@ fs.writeFileSync ("usuarios.json", usuariosjson)
 }
 subscribePOSTEvent("gestionPerfil", gestionPerfil);
     startServer()
+

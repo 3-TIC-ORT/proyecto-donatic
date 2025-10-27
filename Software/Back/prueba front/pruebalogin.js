@@ -1,7 +1,6 @@
 connect2Server();
-
+let data = {"nombre":"zuri", "apellido":"oliver", "contraseña":"zur123"}
 function pruebalogin (data){
-    if (respuesta === true){
-    alert ("iniciado correctamente")
-}}
-postEvent ("registro", {"nombre": zuri, "apellido": oliver, "contraseña":zur123}, pruebalogin )
+    alert (data)
+}
+postEvent ("iniciodesesion", data , pruebalogin)
