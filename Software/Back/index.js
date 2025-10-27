@@ -21,12 +21,10 @@ for (let i=0; i<usuarioArray.length; i++){
     if (nombre===usuarioArray[i].nombre && apellido===usuarioArray[i].apellido && contraseña===usuarioArray[i].contraseña){
         respuesta = true
     }
-    if (respuesta == true){
-return success = true
+return respuesta
+}
+}
 
-}
-}
-}
 
 subscribePOSTEvent ("iniciodesesion", login);
 
