@@ -1,9 +1,9 @@
-
-let BotonEstudiante = document.getElementById("Estudiante");
-function IrEstudiante (){
+let BotonVolver = document.getElementById("BotonVolver");
+function VolverAlInicio (){
     window.location.href='../Pantalla de inicio estudiantes/Inicio estudiantes.html'
 }
-BotonEstudiante.addEventListener("click", (IrEstudiante));
+BotonVolver.addEventListener("click", (VolverAlInicio));
+
 const Preguntas = [
     { pregunta: "Luis tiene 25 años, pesa 67 kilos y se realizo un tatuaje hace 8 meses", Respuesta: true, Numero: 1 },
     { pregunta: "Juana tiene 29 años y esta embarazada de 2 meses", Respuesta: false, Numero: 2 },

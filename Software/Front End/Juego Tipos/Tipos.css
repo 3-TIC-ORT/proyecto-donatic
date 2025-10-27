@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @font-face {
+      font-family: 'Montserrat-SemiBold';
+      src: url(../../../Montserrat/static/Montserrat-SemiBold.ttf);
+  }
+
+  body{
+      background-color: #3996D0;
+      font-family: 'Montserrat-SemiBold';
+      max-width:100vw;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      gap: 4rem;
+  }
+  
+  .container-blanco{
+      background-color: #FFFFFF;
+      height: 12rem;
+      width: 74rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 2rem;
+      border: 1rem solid #FFFFFF;
+  }
+  .logo{
+      height: 8rem;
+      width: 10rem;
+  }
+  .BotonVolver{
+      background-color: transparent;
+      border: 0rem solid transparent;
+      height: 6.5rem;
+      width: 6.5rem;
+      cursor: pointer;
+  }
+  .FlechaVolver{
+      height: 6rem;
+      width: 6rem;
+  }
+  .Indicador{
+    width: 66rem;
+    height: 36rem;
+    background-color: #236995;
+    border: 0.5rem solid #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    color: #FFFFFF;
+    font-size: 1rem;
+  }

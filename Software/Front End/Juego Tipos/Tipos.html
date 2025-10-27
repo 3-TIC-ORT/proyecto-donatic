@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipos</title>
+    <link rel="stylesheet" href="Tipos.css">
     <link rel="icon" href="../../../Imagenes/LOGO DEFINITIVO.png" type="image/x-icon">
 </head>
 <body>
-    <button type="button" id="Estudiante">Volver</button>
-    <div id="Indicador">
-        <h1>Esta persona puede donar?</h1>
+    <div class="container-blanco">
+        <button id="BotonVolver" class="BotonVolver">
+            <img src="../../../Imagenes/flecha salir.png" alt="FlechaSalir" class="FlechaVolver">
+        </button>
+        <img src="../../../Imagenes/LOGO DEFINITIVO.png" alt="Logo DonaTIC" class="logo">
+    </div>
+    
+    <div id="Indicador" class="Indicador">
         <h2 id="pregunta"></h2>
-        <button type="button" id="btnV">Si</button>
-        <button type="button" id="btnF">No</button>
+        <button type="button" id="btnV">PUEDE DONAR</button>
+        <button type="button" id="btnF">NO PUEDE DONAR</button>
         <p id="puntaje">Puntaje: 0</p>
     </div>
+
     <script src="Tipos.js"></script>
 </body>
 </html>
