@@ -64,12 +64,13 @@ function gestionPerfil ({nombre, apellido, nuevoNombre, nuevoApellido, nuevaCont
 let usuariosJSON = fs.readFileSync ("usuarios.json", "utf-8")
 let usuariosArray = JSON.parse (usuariosJSON)
 for (let i = 0; i<usuariosArray.length; i++){
-    if (nombre == usuariosArray.nombre[i] && apellido == usuariosArray.apellido[i]){
+    if (usuariosArray[i].nombre == nombre && usuariosArray[i].apellido == apellido){
 usuariosArray[i] = [nuevoNombre, nuevoApellido, nuevaContraseña, nuevaClase, nuevaFoto]
 let usuariosjson = JSON.stringify(usuariosArray)
 fs.writeFileSync ("usuarios.json", usuariosjson)
     }
 }
+return usuariosArray
 }
 subscribePOSTEvent("gestionPerfil", gestionPerfil);
     startServer()
