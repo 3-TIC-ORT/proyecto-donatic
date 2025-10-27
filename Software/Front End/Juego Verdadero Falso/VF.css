@@ -1,6 +1,10 @@
 body{
     background-color: blue;
 }
+@font-face{
+    font-family: 'Montserrat';
+    src: url(../../../Montserrat/static/Montserrat-SemiBold.ttf);
+}
 header{
     height: 5rem;
     background-color: #FFFFFF;
@@ -28,12 +32,45 @@ header{
     cursor: pointer;
 }
 #Indicador{
-    width: 50%;
-    height: 12rem;
-    position: absolute;
- background-color: blanchedalmond;
-    transition: background-color 0.3s;
+background-color: #2c5a7a;
+border: 2px solid #ffffff;
+padding: 40px; 
+margin: 20px auto;
+width: 80%;
+height: 20rem;
+display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  gap: 4rem;              
 }
+#pregunta {
+    color: white;
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: bold;
+  font-family:"Montserrat";
+    margin: 0;
+    width: 60%;
+    margin-top: 2rem;
+  }
+  .botonzito{
+    display: inline-block; 
+  margin: 0 10px;      
+  padding: 12px 30px;   
+width: 14rem;
+height: 3rem;
+  border: none;
+  border-radius: 4px;
+/*letra:*/
+  font-weight: bold;
+  font-size: 1.5em;
+  cursor: pointer;
+  font-family:"Montserrat";
+  }
+  #btnF{
+    background-color:red ;
+    color: #FFFFFF;
+  }
 .correcto{
 background-color: green;
 }
