@@ -65,7 +65,21 @@ let usuariosJSON = fs.readFileSync ("usuarios.json", "utf-8")
 let usuariosArray = JSON.parse (usuariosJSON)
 for (let i = 0; i<usuariosArray.length; i++){
     if (usuariosArray[i].nombre == nombre && usuariosArray[i].apellido == apellido){
-usuariosArray[i] = [nuevoNombre, nuevoApellido, nuevaContraseña, nuevaClase, nuevaFoto]
+if(nuevoNombre){
+    usuariosArray[i].nombre = nuevoNombre
+}
+if(nuevoApellido){
+    usuariosArray[i].apellido = nuevoApellido
+}
+if(nuevaContraseña){
+    usuariosArray[i].contraseña = nuevaContraseña
+}
+if(nuevaClase){
+    usuariosArray[i].clase = nuevaClase
+}
+if(nuevaFoto){
+    usuariosArray[i].foto = nuevaFoto
+}
 let usuariosjson = JSON.stringify(usuariosArray)
 fs.writeFileSync ("usuarios.json", usuariosjson)
     }
