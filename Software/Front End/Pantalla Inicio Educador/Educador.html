@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio Educador</title>
     <link rel="icon" href="../../../Imagenes/LOGO DEFINITIVO.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Pantalla Inicio Educador/Educador.css">
 </head>
 <body>
-    <button type="button" id="BotonIrInfo">Subir Info</button>
-    <button type="button" id="BotonCerrarSesion">Cerrar Sesión</button>
-    <button type="button" id="BotonClases">Clases</button>
-    <button type="button" id="BotonIrEstadisticas">Stats</button>
-    <button type="button" id="BotonGestionarPerfil">Gestionar Perfil</button>
+    <div class="container-blanco">
+        <div class="BotonesCG">
+            <button type="button" id="BotonGestionarPerfil" class="BotonCG">
+                <img src="../../../Imagenes/gestion de perfil.png" alt="Gestionar Perfil">
+            </button>
+            <button type="button" id="BotonCerrarSesion" class="BotonCG">
+                <img src="../../../Imagenes/logo cerrar sesión.png" alt="Cerrar Sesion">
+            </button>    
+        </div>
+        
+        <img src="../../../Imagenes/LOGO DEFINITIVO.png" alt="Logo DonaTIC" class="logo">
+    </div>
+    <button type="button" id="BotonIrInfo" class="BotonICE">Subir Info</button>
+    <button type="button" id="BotonClases" class="Boton ICE">Clases</button>
+    <button type="button" id="BotonIrEstadisticas" class="BotonICE">Stats</button>
     <script src="Educador.js"></script>
 </body>
 </html>

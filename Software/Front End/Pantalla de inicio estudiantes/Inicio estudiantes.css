@@ -9,7 +9,7 @@
   }
 
   body{
-      background-color: #236995;
+      background-color: #C31315;
       font-family: 'Montserrat-SemiBold';
       max-width:100vw;
       min-height: 100vh;
@@ -33,6 +33,20 @@
 .logo{
     height: 8rem;
     width: 10rem;
+}
+.BotonesCG{
+    height: 5rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.BotonCG{
+    height: 5rem;
+    width: 5rem;
+    background-color: transparent;
+    border: 0rem solid transparent;
+    cursor: pointer;
 }
 .BotonIJ{
     background-color: #3996D0;
@@ -58,18 +72,4 @@
 .Juegos{
     height: 90%;
     width: 8rem;
-}
-.BotonesCG{
-    height: 5rem;
-    width: 12rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.BotonCG{
-    height: 5rem;
-    width: 5rem;
-    background-color: transparent;
-    border: 0rem solid transparent;
-    cursor: pointer;
 }
