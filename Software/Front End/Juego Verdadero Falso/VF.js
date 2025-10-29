@@ -1,8 +1,9 @@
 const Preguntas = [
     { pregunta: "LAS DONACIONES DE SANGRE PUEDEN DEBILITAR AL CUERPO PERMANENTEMENTE", Respuesta: false, Numero: 1 },
-    { pregunta: "¿AL DONAR SANGRE, ME PUEDO CONTAGIAR DE ALGUNA ENFERMEDAD?", Respuesta: false, Numero: 2 },
-    { pregunta: "¿2 + 3 es 5?", Respuesta: true, Numero: 3 },
-    { pregunta: "¿2 + 4 es 6?", Respuesta: true, Numero: 3 },
+    { pregunta: "LA SANGRE DONADA SE PUEDE DIVIDIR EN COMPONENTES", Respuesta: true, Numero: 2 },
+    { pregunta: "AL TOMAR MEDICAMENTOS, NO TENGO LA POSIBILIDAD DE DONAR SANGRE", Respuesta: false, Numero: 3 },
+    { pregunta: "DESPUÉS DE DONAR UNA VEZ, NO PUEDO DONAR NUNCA MÁS", Respuesta: false, Numero: 3 },
+    { pregunta: "GRACIAS A LOS EXAMENES PREVIOS A LA DONACIÓN, SE PUEDE DETECTAR ALGUNA ENFERMEDAD", Respuesta: true, Numero: 2 },
 ];
 
 
