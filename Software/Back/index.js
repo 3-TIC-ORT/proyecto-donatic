@@ -37,6 +37,13 @@ return clase
 }
 subscribePOSTEvent("creaciondeclases", crearClase);
 
+function mostrarClase (){
+    let clasesJSON = fs.readFileSync ("clases.json", "utf-8")
+    let clasesArray = JSON.parse (clasesJSON) 
+    return clasesArray
+}
+subscribeGETEvent("mostrarclases", mostrarClase)
+
 function juegos (data){
 let juegosJSON = fs.readFileSync ("juegos.json", "utf-8")
 let juegosArray = JSON.parse (juegosJSON)
