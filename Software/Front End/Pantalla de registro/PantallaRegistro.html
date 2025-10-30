@@ -9,18 +9,20 @@
 </head>
 <body>
     <button type="button" id="Botonvolver">Volver a la pantalla de inicio</button>
-    <form action="" method="">
+    <form >
         <h2>Formulario de registro</h2>
         <h5>Nombre y apellido:</h5>
-        <input type="text" name="nombreYapellido" placeholder="Ingresa tu nombre y apellido">
+        <input type="text" name="nombreYapellido" id="inputNombre" placeholder="Ingresa tu nombre y apellido">
         <h5>Contraseña:</h5>
-        <input type="password" name="contraseña" placeholder="Ingresa tu contraseña">
+        <input type="password" name="contraseña" id="inputContrasena" placeholder="Ingresa tu contraseña">
         <h5>Código de clase</h5>
-        <input type="text" name="código" placeholder="Ingresa el código de tu clase">
+        <input type="text" name="código" id="inputCodigoClase" placeholder="Ingresa el código de tu clase">
         <h5>Foto de perfil:</h5>
-        <input type="file" name="fotodeperfil" placeholder="Selecciona tu foto de perfil"
-    ></form>
+        <input type="file" name="fotodeperfil" id="inputFotoPerfil" placeholder="Selecciona tu foto de perfil">
+    </form>
     <button type="button" id="BotonRegistrarse">Registrarse</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
     <script src="PantallaRegistro.js"></script>
 </body>
 </html>
