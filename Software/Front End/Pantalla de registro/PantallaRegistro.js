@@ -19,16 +19,10 @@ BotonRegistrarse.addEventListener("click", () => {
         clave: contrasena,
         codigoClase: codigo,
         foto: fotoDePerfil
-    };
-
-
-    postEvent("REGISTRO", datosRegistro, (respuesta) => {
-        console.log("Respuesta del Backend:", respuesta);
-        if (respuesta && respuestaDelBackend.true) {
+    }
+    postEvent("registro", datosRegistro, (respuesta) => {
             window.location.href = '../Pantalla Inicio Educador/Educador.html';
-        } else {
-            alert("Error en el registro: " + (respuestaDelBackend ? respuestaDelBackend.mensaje : "El servidor no respondió."));
-        }
+    
     });
 });
 
