@@ -67,8 +67,8 @@ if (BtnF) {
     });
 }
 mostrarPregunta();
-let BotonEstudiante = document.getElementById("Estudiante");
-function IrEstudiante (){
+let BotonVolver = document.getElementById("BotonVolver");
+function VolverAlInicio (){
     window.location.href='../Pantalla de inicio estudiantes/Inicio estudiantes.html'
 }
-BotonEstudiante.addEventListener("click", (IrEstudiante));
+BotonVolver.addEventListener("click", (VolverAlInicio));
