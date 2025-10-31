@@ -1,4 +1,4 @@
-let BotonCerrarLaSesion = document.getElementById("ButonCerrarSesion");
+let BotonCerrarLaSesion = document.getElementById("ButonVolver");
 function CerrarSesion (){
     window.location.href='../pantalla de inicio no registrados/pantalla de inicio no registrados.html'
 }
