@@ -13,12 +13,12 @@ return usuario
 
 subscribePOSTEvent("registro", registro);
 
-function login ({nombre, apellido, contraseña}){
+function login ({nombreCompleto, contraseña}){
 let usuario = fs.readFileSync("usuarios.json", "utf-8")
 let usuarioArray = JSON.parse(usuario);
 let respuesta = false;
 for (let i=0; i<usuarioArray.length; i++){
-    if (nombre===usuarioArray[i].nombre && apellido===usuarioArray[i].apellido && contraseña===usuarioArray[i].contraseña){
+    if (nombreCompleto===usuarioArray[i].nombreCompleto && contraseña===usuarioArray[i].contraseña){
         respuesta = true
     }
 return respuesta
@@ -67,6 +67,14 @@ return info
 }
 subscribePOSTEvent("subirInfo", subirinfo);
 
+function mostrarInfo (){
+    let pizarronJSON = fs.readFileSync ("pizarron.json", "utf-8")
+    let pizarronArray = JSON.parse (pizarronJSON) 
+    return pizarronArray
+}
+subscribeGETEvent("mostrarinfo", mostrarInfo)
+
+
 function gestionPerfil ({nombre, apellido, nuevoNombre, nuevoApellido, nuevaContraseña, nuevaClase, nuevaFoto}){
 let usuariosJSON = fs.readFileSync ("usuarios.json", "utf-8")
 let usuariosArray = JSON.parse (usuariosJSON)
@@ -96,3 +104,7 @@ return usuariosArray
 subscribePOSTEvent("gestionPerfil", gestionPerfil);
     startServer()
 
+//  tengo que mejorar lo de las clases, osea que se unan alumnos. para eso debo descubrir como sumarlos al array dentro del objeto en usuarios.json,
+// es lo mismo que debo usar para ir sumando los resultados de los juegos. 
+// tengo que separar el rol, ya que no viene con el registro sino que antes, aparte
+// si tengo tiempo puedo agregar que los comentarios/posts esten linkeados a un usuario 
