@@ -1,6 +1,6 @@
 let BotonVolver = document.getElementById("VolverInicio");
 function VolverAlInicio (){
-    window.location.href='../Pantalla de gestion de perfil educador/GestionPerfilEdu.html'
+    window.location.href='../Pantalla Inicio Educador/Educador.html'
 }
 BotonVolver.addEventListener("click", (VolverAlInicio));
 

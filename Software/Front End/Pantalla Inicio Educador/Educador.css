@@ -23,7 +23,7 @@
   .container-blanco{
     background-color: #FFFFFF;
     height: 12rem;
-    width: 74rem;
+    width: 94%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,7 +32,7 @@
 }
 .logo{
     height: 8rem;
-    width: 10rem;
+    width: 9.5rem;
 }
 .BotonesCG{
     height: 5rem;
@@ -45,6 +45,20 @@
     height: 5rem;
     width: 5rem;
     background-color: transparent;
-    border: 0rem solid transparent;
+    border: none;
+    cursor: pointer;
+}
+.BotonICE{
+    background-color: #F66451;
+    border-radius: 0.5rem;
+    border: 0.5rem solid #FFFFFF;
+    width: 88%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    color: #FFFFFF;
+    font-size: 3rem;
     cursor: pointer;
 }
