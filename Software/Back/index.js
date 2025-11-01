@@ -44,6 +44,14 @@ function mostrarClase (){
 }
 subscribeGETEvent("mostrarclases", mostrarClase)
 
+function unirseAClase ({clase, nombreAlumno}){
+let clasesJSON = fs.readFileSync ("clases.json", "utf-8")
+    let clasesArray = JSON.parse (clasesJSON) 
+    for(let i = 0; i<clasesArray.length; i++){
+        if (clasesArray[i].)
+    }
+}
+
 function juegos (data){
 let juegosJSON = fs.readFileSync ("juegos.json", "utf-8")
 let juegosArray = JSON.parse (juegosJSON)
