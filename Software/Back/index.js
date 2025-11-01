@@ -48,9 +48,18 @@ function unirseAClase ({clase, nombreAlumno}){
 let clasesJSON = fs.readFileSync ("clases.json", "utf-8")
     let clasesArray = JSON.parse (clasesJSON) 
     for(let i = 0; i<clasesArray.length; i++){
-        if (clasesArray[i].)
+        if (clasesArray[i].ID == clase){
+            if (!clasesArray.alumnos){
+                clasesArray.alumnos = []
+            }
+            clasesArray[i].alumnos.push (nombreAlumno)
+        }
     }
+    let clasesjson = JSON.stringify (clasesArray)
+fs.writeFileSync ("clases.json", clasesjson)
+return clasesArray
 }
+subscribePOSTEvent ("unirseAClase", unirseAClase)
 
 function juegos (data){
 let juegosJSON = fs.readFileSync ("juegos.json", "utf-8")
@@ -63,6 +72,21 @@ return juegosResultado
 }
 
 subscribePOSTEvent("juegosResultados", juegos);
+
+function sumarPuntajeJuego ({nombreAlumno, juego, puntaje}){
+let juegosJSON = fs.readFileSync ("juegos.json", "utf-8")
+    let juegosArray = JSON.parse (juegosJSON) 
+    for(let i = 0; i<juegosArray.length; i++){
+        if (juegosArray[i].nombre == clase){
+            if (!clasesArray.alumnos){
+                clasesArray.alumnos = []
+            }
+            clasesArray[i].alumnos.push (nombreAlumno)
+        }
+    }
+    let clasesjson = JSON.stringify (clasesArray)
+fs.writeFileSync ("clases.json", clasesjson)
+return clasesArray
 
 function subirinfo (data){
 let pizarronJSON = fs.readFileSync ("pizarron.json", "utf-8")
