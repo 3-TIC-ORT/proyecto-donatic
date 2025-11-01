@@ -73,20 +73,20 @@ return juegosResultado
 
 subscribePOSTEvent("juegosResultados", juegos);
 
-function sumarPuntajeJuego ({nombreAlumno, juego, puntaje}){
+function sumarPuntajeJuego ({nombreAlumno, juego, resultado}){
 let juegosJSON = fs.readFileSync ("juegos.json", "utf-8")
     let juegosArray = JSON.parse (juegosJSON) 
     for(let i = 0; i<juegosArray.length; i++){
-        if (juegosArray[i].nombre == clase){
-            if (!clasesArray.alumnos){
-                clasesArray.alumnos = []
+        if (juegosArray[i].nombreDelAlumno == nombreAlumno){
+            if (!juegosArray.resultados){
+                juegosArray.resultados = []
             }
-            clasesArray[i].alumnos.push (nombreAlumno)
+            juegosArray[i].resultados.push ({juego, puntaje})
         }
     }
-    let clasesjson = JSON.stringify (clasesArray)
-fs.writeFileSync ("clases.json", clasesjson)
-return clasesArray
+    let juegosjson = JSON.stringify (juegosArray)
+fs.writeFileSync ("juegos.json", juegosjson)
+return juegosArray
 
 function subirinfo (data){
 let pizarronJSON = fs.readFileSync ("pizarron.json", "utf-8")
