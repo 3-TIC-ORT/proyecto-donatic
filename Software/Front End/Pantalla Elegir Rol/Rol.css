@@ -75,8 +75,14 @@ main{
 .Est{
     background-color: #216995;
 }
+.Est:hover{
+    outline: 0.7rem solid #3996D0;
+}
 .Edu{
     background-color: #C31315;
+}
+.Edu:hover{
+    outline: 0.7rem solid #F66451;
 }
 .ImgEdu{
     height: 20rem;

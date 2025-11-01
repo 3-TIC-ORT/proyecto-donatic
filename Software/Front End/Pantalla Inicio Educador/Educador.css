@@ -18,7 +18,7 @@
       align-items: center;
       margin-top: 2rem;
       margin-bottom: 2rem;
-      gap: 3rem;
+      gap: 2rem;
   }
   .container-blanco{
     background-color: #FFFFFF;
@@ -48,11 +48,12 @@
     border: none;
     cursor: pointer;
 }
+
 .BotonICE{
     background-color: #F66451;
     border-radius: 0.5rem;
     border: 0.5rem solid #FFFFFF;
-    width: 88%;
+    width: 90%;
     height: 10rem;
     display: flex;
     align-items: center;
@@ -61,4 +62,8 @@
     color: #FFFFFF;
     font-size: 3rem;
     cursor: pointer;
+}
+.BotonICE:hover{
+    height: 13rem;
+    transition: 1s;
 }
