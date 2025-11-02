@@ -38,7 +38,10 @@ body{
     background-color: transparent;
     border: 0rem solid transparent;
     height: 6.5rem;
-    width: 6.5rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     cursor: pointer;
 }
 .FlechaVolver{

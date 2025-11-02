@@ -5,15 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Clases</title>
     <link rel="icon" href="../../../Imagenes/LOGO DEFINITIVO.png" type="image/x-icon">
+    <link rel="stylesheet" href="CrearClases.css">
 </head>
 <body>
-    <button type="button" id="BotonClases">Volver</button>
-    <h1>Crear Clase</h1>
-    <input type="text" name="Nombre de Clase" id="nombreClase" placeholder="Nombre de la clase">
-    <p>Contraseña:</p>
-    <input type="text" name="Contraseña de Clase" id="contraseñaClase">
-    <p></p>
-    <button type="button" id="botonCrear">Crear</button>
+    <div class="container-blanco">
+        <button type="button" id="BotonClases" class="BotonVolver">
+                <img src="../../../Imagenes/flecha salir.png" alt="FlechaSalir" class="FlechaVolver">
+        </button>
+        <div class="CrearClase">CREAR CLASE</div>
+        <img src="../../../Imagenes/LOGO DEFINITIVO.png" alt="Logo DonaTIC" class="logo">
+    </div>
+
+    <input type="text" name="Nombre de Clase" id="nombreClase" class="nombreClase" placeholder="NOMBRE DE LA CLASE">
+    <button class="codigo">
+        GENERAR CÓDIGO DE CLASE
+        <img src="../../../Imagenes/icono aleatrorio.png" alt="aleatorio" class="aleatorio">
+    </button>
+    <div class="divs">
+        <input type="text" maxlength="1" oninput="moveNext(this, 'input2')" onkeydown="moveBack(event, null)" class="input" id="input1">
+        <input type="text" maxlength="1" oninput="moveNext(this, 'input3')" onkeydown="moveBack(event, 'input1')" class="input" id="input2">
+        <input type="text" maxlength="1" oninput="moveNext(this, 'input4')" onkeydown="moveBack(event, 'input2')" class="input" id="input3">
+        <input type="text" maxlength="1" oninput="moveNext(this, null)" onkeydown="moveBack(event, 'input3')" class="input" id="input4">
+    </div>
+
+    <input type="text" name="Contraseña de Clase" id="contraseñaClase" placeholder="Contraseña">
+
+    <button type="button" id="botonCrear" class="Confirmar">CONFIRMAR</button>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
     <script src="CrearClases.js"></script>
