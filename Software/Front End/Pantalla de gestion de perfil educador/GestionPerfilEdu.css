@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(../../../Montserrat/static/Montserrat-Medium.ttf);
+}
+body{
+    background-color: #F5EFEE;
+    max-width:100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+header{
+    width: 100%;
+    height: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    height: 8rem;
+    width: 9.5rem;
+}
+.personitaroja{
+    height: 6rem;
+    width: 5.2rem;
+}
+.BotonVolver{
+    background-color: transparent;
+    border: none;
+    height: 6.5rem;
+    width: 6.5rem;
+    cursor: pointer;
+}
+.FlechaVolver{
+    height: 6rem;
+    width: 6rem;
+}
+.FormGestionAlumno{
+    width: 80%;
+    height: 35rem;
+    background-color: #F66451;
+    border: 0.5rem solid #C31315;
+    border-radius: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.formulario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.ContainerInputs{
+    width: 32rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.inp{
+    height: 4rem;
+    width: 32rem;
+    background-color: #FFFFFF;
+    border: 0.2rem solid #C31315;
+    color: #000000;
+    font-family: 'Montserrat-Medium';
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+::placeholder{
+    color: #C31315;
+}
+.CS{
+    height: 5rem;
+    width: 32rem;
+    background-color: #FFFFFF;
+    border: 0.2rem solid #C31315;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #C31315;
+    font-family: 'Montserrat-Medium';
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.ImgCS{
+    height: 4rem;
+    width: 4rem;
+}
+.FotoPerfil{
+    height: 15rem;
+    width: 22rem;
+    background-color: #FFFFFF;
+    border: 0.2rem solid #C31315;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #C31315;
+    font-family: 'Montserrat-Medium';
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1rem;
+
+}
+.SubirInput{
+    display: none;
+}
+.subir-label {
+  display: flex;
+  background: none;
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  cursor: pointer;
+}
+.Subir{
+    height: 7rem;
+    width: 7rem;
+}
+.upload-label:hover {
+  background-color: #b52020;
+  color: white;
+}
+
+.Confirmar{
+    width: 16rem;
+    height: 5rem;
+    background-color: #C31315;
+    border: 0.1rem solid #FFFFFF;
+    border-radius: 0.5rem;
+    font-family: 'Montserrat-Medium';
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.Confirmar:hover{
+box-shadow: 0.5rem 0.5rem 1rem #30303061}
