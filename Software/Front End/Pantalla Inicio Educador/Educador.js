@@ -18,7 +18,7 @@ BotonCerrarLaSesion.addEventListener("click", (CerrarSesion));
 
     let BotonIrClases = document.getElementById("BotonClases");
 function IrClases (){
-    window.location.href='../Pantalla Gestionar Clases/Clases.html'
+    window.location.href='../Pantalla clases/Clases.html'
 }
 BotonIrClases.addEventListener("click", (IrClases));
 
