@@ -47,7 +47,7 @@ header{
     height: 6rem;
     width: 6rem;
 }
-.FormGestionAlumno{
+.FormGestionEducador{
     width: 80%;
     height: 35rem;
     background-color: #F66451;
@@ -100,6 +100,7 @@ header{
     font-size: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    cursor: pointer;
 }
 .ImgCS{
     height: 4rem;
