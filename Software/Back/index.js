@@ -87,6 +87,8 @@ let juegosJSON = fs.readFileSync ("juegos.json", "utf-8")
     let juegosjson = JSON.stringify (juegosArray)
 fs.writeFileSync ("juegos.json", juegosjson)
 return juegosArray
+}
+subscibePOSTEvent ("sumarPuntaje",sumarPuntajeJuego)
 
 function subirinfo (data){
 let pizarronJSON = fs.readFileSync ("pizarron.json", "utf-8")
