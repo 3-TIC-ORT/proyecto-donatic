@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(../../../Montserrat/static/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url(../../../Montserrat/static/Montserrat-ExtraBold.ttf);
+}
+body{
+    background-color: #F5EFEE;
+    max-width:100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+header{
+    width: 80%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    height: 8rem;
+    width: 9.5rem;
+}
+.BotonVolver{
+    background-color: transparent;
+    border: none;
+    height: 6rem;
+    width: 9.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+.FlechaVolver{
+    height: 6rem;
+    width: 6rem;
+    cursor: pointer;
+}
+
+/*A partir de acá es la pantalla para el alumno*/
+.Titulo{
+    height: 5rem;
+    width: 30rem;
+    background-color: #3996D0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat-ExtraBold';
+    color: #FFFFFF;
+    font-size: 3rem;
+}
+.Inicio{
+    width: 80%;
+    height: 38rem;
+    background-color: #3996D0;
+    border: 0.5rem solid #236995;
+    border-radius: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+.Input{
+    height: 3rem;
+    width: 80%;
+    background-color: #FFFFFF;
+    border: 0.2rem solid #236995;
+    color: #000000;
+    font-family: 'Montserrat-Medium';
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.Confirmar{
+    width: 16rem;
+    height: 5rem;
+    background-color: #236995;
+    border: 0.1rem solid #FFFFFF;
+    border-radius: 0.5rem;
+    font-family: 'Montserrat-Medium';
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.Confirmar:hover{
+box-shadow: 0.5rem 0.5rem 1rem #30303061}

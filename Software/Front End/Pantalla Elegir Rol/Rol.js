@@ -1,7 +1,12 @@
-const BotonCerrarLaSesion = document.getElementById("ButonVolver");
+const BotonSalir = document.getElementById("ButonVolver");
 const BotonEducador = document.getElementById("Educador");
 const BotonEstudiante = document.getElementById("Estudiante");
 const SesionUsuario = localStorage.getItem('sesiónUsuario');
+
+function Salir (){
+    window.location.href = '../Pantalla de inicio no registrados/pantalla de inicio no registrados.html'
+}
+BotonSalir.addEventListener("click", (Salir));
 
 BotonEducador.addEventListener('click', (e) => {
     localStorage.removeItem('rolUsuario')

@@ -1,13 +1,16 @@
 connect2Server();
-let BotonVolver= document.getElementById("VolverMenu")
 let mailImput=document.getElementById("escribir.email")
 let passwordImput =document.getElementById("escribir.contra")
 let FormInicio= document.getElementById("FormInicio");
 const Botoniniciarsesion = document.getElementById("BotonIniciarSesion");
-BotonVolver.addEventListener("click", FuncionRegresar);
-function FuncionRegresar (){
-window.location.href = '../Pantalla de inicio no registrados/pantalla de inicio no registrados.html'
+
+let Botonvolver = document.getElementById("Botonvolver");
+function Funcionvolver (){
+    window.location.href = '../Pantalla de inicio no registrados/pantalla de inicio no registrados.html'
 }
+Botonvolver.addEventListener("click", Funcionvolver)
+
+
 FormInicio.addEventListener("submit", (e)=>{
   e.preventDefault();
 
