@@ -12,10 +12,10 @@ BotonEducador.addEventListener('click', (e) => {
     localStorage.removeItem('rolUsuario')
     localStorage.setItem('rolUsuario', 'Educador')
     if (SesionUsuario == 'registro'){
-        window.location.href='../Pantalla de registro/PantallaRegistro.html'
+        window.location.href='../Pantalla de registro educador/PantallaRegistro.html'
     }
     else{
-    window.location.href = '../Pantalla de Inicio de Sesion/Inicio de sesion.html'
+    window.location.href = '../Pantalla de Inicio de Sesion educador/Inicio de sesion.html'
     }
 
 })

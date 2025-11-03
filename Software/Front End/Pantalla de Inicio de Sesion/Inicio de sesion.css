@@ -73,15 +73,18 @@ header{
     gap: 4rem;
 }
 .Input{
-    height: 3rem;
+    height: 4rem;
     width: 80%;
     background-color: #FFFFFF;
     border: 0.2rem solid #236995;
-    color: #000000;
+    color: #236995;
     font-family: 'Montserrat-Medium';
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+::placeholder{
+    color: #236995;
 }
 .Confirmar{
     width: 16rem;

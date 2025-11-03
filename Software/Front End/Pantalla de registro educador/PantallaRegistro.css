@@ -47,12 +47,10 @@ header{
     width: 6rem;
     cursor: pointer;
 }
-
-/*Todo lo que sigue a partir de ahora es solo la pantalla para el alumno*/
 .Titulo{
     height: 5rem;
     width: 30rem;
-    background-color: #F66451;
+    background-color: #3996D0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,37 +61,22 @@ header{
 .Registro{
     width: 80%;
     height: 38rem;
-    background-color: #3996D0;
-    border: 0.5rem solid #236995;
+    background-color: #F66451;
+    border: 0.5rem solid #C31315;
     border-radius: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-}
-.formulario{
-    height: auto;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.inputs{
-    width: 57%;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
 }
+
 .Input{
     height: 3rem;
-    width: 100%;
+    width: 90%;
     background-color: #FFFFFF;
-    border: 0.2rem solid #236995;
-    color: #236995;
+    border: 0.2rem solid #C31315;
+    color: #C31315;
     font-family: 'Montserrat-Medium';
     font-size: 1.5rem;
     padding-left: 1rem;
@@ -104,40 +87,19 @@ header{
     flex-direction: row;
 }
 ::placeholder{
-    color: #236995;
-}
-.divs{
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-.cuadrado{
-    height: 2rem;
-    width: 2rem;
-    background-color: transparent;
-    border: 0.2rem solid #236995;
-    color: #236995;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    color: #C31315;
 }
 .FotoPerfil{
     height: 13rem;
-    width: 38%;
+    width: 25rem;
     background-color: #FFFFFF;
-    border: 0.2rem solid #236995;
+    border: 0.2rem solid #C31315;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #236995;
+    color: #C31315;
     font-family: 'Montserrat-Medium';
     font-size: 1.7rem;
     padding-left: 1rem;
@@ -159,7 +121,7 @@ header{
 .Confirmar{
     width: 16rem;
     height: 5rem;
-    background-color: #236995;
+    background-color: #C31315;
     border: 0.1rem solid #FFFFFF;
     border-radius: 0.5rem;
     font-family: 'Montserrat-Medium';

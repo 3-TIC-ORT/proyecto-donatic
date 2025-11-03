@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonaTIC</title>
+    <link rel="stylesheet" href="PantallaRegistro.css">
+    <link rel="icon" href="../../../Imagenes/LOGO DEFINITIVO.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+            <button type="button" id="Botonvolver" class="BotonVolver">
+                    <img src="../../../Imagenes/flecha salir.png" alt="FlechaSalir" class="FlechaVolver">
+            </button>
+            <div class="Titulo">REGISTRO</div>
+            <img src="../../../Imagenes/LOGO DEFINITIVO.png" alt="Logo DonaTIC" class="logo">
+    </header>
+    <form class="Registro">
+                <input type="text" name="nombreYapellido" id="inputNombre" placeholder="NOMBRE Y APELLIDO" class="Input">
+                <input type="password" name="contraseña" id="inputContrasena" placeholder="CONTRASEÑA" class="Input">  
+
+            <div class="FotoPerfil">
+                <p>FOTO DE PERFIL</p>
+                <input type="file" name="fotodeperfil" id="inputFotoPerfil" class="SubirInput" style="display: none;">
+                <label for="inputFotoPerfil" class="subir-label">
+                    <img src="../../../Imagenes/subir imagen logo.png" class="Subir" alt="Subir">
+                </label>
+            </div>
+        
+        <button type="button" id="BotonRegistrarse" class="Confirmar">CONFIRMAR</button>
+
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
+    <script src="PantallaRegistro.js"></script>
+</body>
+</html>
