@@ -8,15 +8,22 @@
     <link rel="icon" href="../../../Imagenes/LOGO DEFINITIVO.png" type="image/x-icon">
 </head>
 <body>
-    <button type="button" id="VolverMenu"> Volver a la pantalla de inicio </button>
-    <h1>Inicio de sesión</h1>
-    <p>email:</p>
-    <form id="FormInicio">
-    <input type="text" name="email" id="escribir.email" placeholder="Ejemplo@gmail.com">
-    <p>contraseña:</p>
-    <input type="text" name="contraseña" id="escribir.contra"> <br> <br>
-    <button type="submit" id="BotonIniciarSesion">Iniciar sesion</button>
-</form>
+    <header>
+        <button type="button" id="Botonvolver" class="BotonVolver">
+                <img src="../../../Imagenes/flecha salir.png" alt="FlechaSalir" class="FlechaVolver">
+        </button>
+        <div class="Titulo">INICIAR SESION</div>
+        <img src="../../../Imagenes/LOGO DEFINITIVO.png" alt="Logo DonaTIC" class="logo">
+    </header>
+
+    <form id="FormInicio" class="Inicio">
+    <input type="text" name="email" id="escribir.email" placeholder="NOMBRE Y APELLIDO" class="Input">
+    <input type="text" name="contraseña" id="escribir.contra" placeholder="CONTRASEÑA" class="Input">
+    <button type="submit" id="BotonIniciarSesion" class="Confirmar">CONFIRMAR</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
     <script src="Inicio de sesion.js"></script>
 </body>
 </html>

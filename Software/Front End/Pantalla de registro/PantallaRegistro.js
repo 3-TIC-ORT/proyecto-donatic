@@ -26,5 +26,16 @@ BotonRegistrarse.addEventListener("click", () => {
     });
 });
 
+function moveNext(current, nextId) {
+    if (current.value.length === 1 && nextId) {
+      document.getElementById(nextId).focus();
+    }
+  }
+  function moveBack(event, prevId) {
+    if (event.key === "Backspace" && !event.target.value && prevId) {
+      document.getElementById(prevId).focus();
+    }
+  }
+
 
 
