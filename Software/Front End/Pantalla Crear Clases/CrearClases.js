@@ -10,11 +10,20 @@ function moveNext(current, nextId) {
   }
 }
 function moveBack(event, prevId) {
-  // Si presiona Backspace y el input está vacío, volver al anterior
   if (event.key === "Backspace" && !event.target.value && prevId) {
     document.getElementById(prevId).focus();
   }
 }
+
+let BotonAleatorio =document.getElementById("aleatorio"); 
+function Random() {
+  const inputs = document.querySelectorAll('.input');
+  inputs.forEach(input => {
+    const randomNum = Math.floor(Math.random() * 10);
+    input.value = randomNum;
+  });
+}
+BotonAleatorio.addEventListener("click", (Random));
 
 let Nombre = document.getElementById("nombreClase");
 let Contraseña = document.getElementById("contraseñaClase");
