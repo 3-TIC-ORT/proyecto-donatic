@@ -17,8 +17,8 @@
     "url": "https://github.com/3-TIC-ORT/proyecto-donatic/issues"
   },
   "homepage": "https://github.com/3-TIC-ORT/proyecto-donatic#readme",
-  "description": "",
   "dependencies": {
     "soquetic": "^1.4.2"
-  }
+  },
+  "description": ""
 }

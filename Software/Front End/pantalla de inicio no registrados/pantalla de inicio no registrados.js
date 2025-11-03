@@ -9,5 +9,11 @@ function Registrarse (){
 BotonRegistrarse.addEventListener("click",(e)=>{
     localStorage.removeItem('sesiónUsuario')
     localStorage.setItem('sesiónUsuario', 'registro')   
+    window.location.href = '../Pantalla Elegir Rol/Rol.html';
+
 });
-BotonIniciarSesion.addEventListener("click",(IniciarSesion));
+BotonIniciarSesion.addEventListener("click",(e)=>{
+    localStorage.removeItem('sesiónUsuario')
+    localStorage.setItem('sesiónUsuario','sesión')
+    window.location.href = '../Pantalla Elegir Rol/Rol.html';
+});
