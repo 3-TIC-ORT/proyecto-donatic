@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Info</title>
     <link rel="icon" href="../../../Imagenes/LOGO DEFINITIVO.png" type="image/x-icon">
+    <link rel="stylesheet" href="CrearInfo.css">
 </head>
 <body>
-    <button type="button" id="ButonCerrarSesion">Cerrar Sesión</button>
-    <button type="button" id="VolverAlInicio">Volver Al Inicio</button><br><br>
+    <div class="container-blanco">
+        <button type="button" id="VolverInicio" class="BotonVolver">
+            <img src="../../../Imagenes/flecha salir.png" alt="FlechaSalir" class="FlechaVolver">
+        </button>
+        <img src="../../../Imagenes/LOGO DEFINITIVO.png" alt="Logo DonaTIC" class="logo">
+    </div>
+
     <Input type="text" id="InfoInput" placeholder="Subir Info"></Input>
     <button type="button" id="SubirLaInfo">Subir Info</button>
     <ul id="Info">Info</ul>

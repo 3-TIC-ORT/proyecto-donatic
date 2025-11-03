@@ -1,4 +1,4 @@
-let BotonVolver = document.getElementById("VolverAlInicio");
+let BotonVolver = document.getElementById("VolverInicio");
 
 function VolveralInicio (){
     window.location.href='../Pantalla Inicio Educador/Educador.html'
