@@ -1,15 +1,15 @@
-let BotonCerrarLaSesion = document.getElementById("ButonVolver");
-function CerrarSesion (){
-    window.location.href='../pantalla de inicio no registrados/pantalla de inicio no registrados.html'
-}
-BotonCerrarLaSesion.addEventListener("click", (CerrarSesion));
-let BotonEstudiante = document.getElementById("Estudiante");
-function IrEstudiante (){
-    window.location.href='../Pantalla de Inicio de Sesion/Inicio de sesion.html'
-}
-BotonEstudiante.addEventListener("click", (IrEstudiante));
-let BotonEducador = document.getElementById("Educador");
-function IrEducador (){
+const BotonCerrarLaSesion = document.getElementById("ButonVolver");
+const BotonEducador = document.getElementById("Educador");
+const BotonEstudiante = document.getElementById("Estudiante");
+
+BotonEducador.addEventListener('click', (e) => {
+    localStorage.removeItem('rolUsuario')
+    localStorage.setItem('rolUsuario', 'Educador')
     window.location.href='../Pantalla de registro/PantallaRegistro.html'
-}
-BotonEducador.addEventListener("click", (IrEducador));
+})
+
+BotonEstudiante.addEventListener('click', (e) => {
+    localStorage.removeItem('rolUsuario')
+    localStorage.setItem('rolUsuario', 'Estudiante')
+    window.location.href='../Pantalla de registro/PantallaRegistro.html'
+})

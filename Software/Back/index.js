@@ -8,6 +8,7 @@ let usuario = data
 usuariosArray.push (usuario)
 let usuariosjson = JSON.stringify (usuariosArray)
 fs.writeFileSync ("usuarios.json", usuariosjson)
+unirseAClase({clase, nombreAlumno})
 return usuario
 }
 
@@ -42,7 +43,7 @@ function mostrarClase (){
     let clasesArray = JSON.parse (clasesJSON) 
     return clasesArray
 }
-subscribeGETEvent("mostrarclases", mostrarClase)
+subscribeGETEvent("mostrarClase", mostrarClase)
 
 function unirseAClase ({clase, nombreAlumno}){
 let clasesJSON = fs.readFileSync ("clases.json", "utf-8")
@@ -88,7 +89,7 @@ let juegosJSON = fs.readFileSync ("juegos.json", "utf-8")
 fs.writeFileSync ("juegos.json", juegosjson)
 return juegosArray
 }
-subscibePOSTEvent ("sumarPuntaje",sumarPuntajeJuego)
+subscribePOSTEvent ("sumarPuntaje",sumarPuntajeJuego)
 
 function subirinfo (data){
 let pizarronJSON = fs.readFileSync ("pizarron.json", "utf-8")
