@@ -59,10 +59,9 @@
     justify-content: space-around;
 }
 
-
 .tarjeta{
-    height: 25rem;
-    width: 19rem;
+    height: 26rem;
+    width: 20rem;
     background-color: #FFFFFF;
     border: 0.7rem solid #236695;
     border-radius: 2rem;
@@ -79,7 +78,6 @@
 
 }
 .tarjeta:hover{
-    transform: scale(1.05);
     border: 0.7rem solid #F66451;
 
 }
@@ -93,11 +91,8 @@
     text-align: center;
     font-family: 'Montserrat-Regular';
     font-size: 1.6rem;
-    padding: 0.5rem;
+    padding: 0.7rem;
     gap: 1rem;
-}
-.dos{
-    gap: 0.5rem;
 }
 .juego.hover {
     opacity: 0;
