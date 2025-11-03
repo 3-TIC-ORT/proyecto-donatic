@@ -4,9 +4,14 @@
     box-sizing: border-box;
   }
   @font-face {
-      font-family: 'Montserrat-SemiBold';
-      src: url(../../../Montserrat/static/Montserrat-SemiBold.ttf);
+      font-family: 'Montserrat-Regular';
+      src: url(../../../Montserrat/static/Montserrat-Regular.ttf);
   }
+  @font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(../../../Montserrat/static/Montserrat-Medium.ttf);
+}
+
 
   body{
       background-color: #3996D0;
@@ -53,7 +58,9 @@
     align-items: center;
     justify-content: space-around;
 }
-.Juego{
+
+
+.tarjeta{
     height: 25rem;
     width: 19rem;
     background-color: #FFFFFF;
@@ -65,9 +72,54 @@
     justify-content: center;
     gap: 2rem;
     cursor: pointer;
-    font-family: 'Montserrat-SemiBold';
+    font-family: 'Montserrat-Regular';
     font-size: 1.3rem;
+    position: relative;
+    overflow: hidden;
+
 }
-.Juego:hover{
+.tarjeta:hover{
     transform: scale(1.05);
+    border: 0.7rem solid #F66451;
+
+}
+.juego {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Montserrat-Regular';
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    gap: 1rem;
+}
+.dos{
+    gap: 0.5rem;
+}
+.juego.hover {
+    opacity: 0;
+} 
+.tarjeta:hover .juego.hover {
+    opacity: 1;
+} 
+.tarjeta:hover .juego.original {
+    opacity: 0;
+} 
+.jugar {
+    height: 4rem;
+    width: 10rem;
+    background-color: #F66451;
+    border: 0.2rem solid #FFFFFF;
+    color: #FFFFFF;
+    border-radius: 1rem;
+    font-family: 'Montserrat-Medium';
+    font-size: 2rem;
+    box-shadow: 0.5rem 0.5rem 1rem #30303061;
+    cursor: pointer;
+}  
+.jugar:hover {
+    background-color: #f83920;
 }

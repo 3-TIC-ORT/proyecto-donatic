@@ -4,20 +4,20 @@ function VolverAlInicio (){
 }
 BotonVolver.addEventListener("click", (VolverAlInicio));
 
-let BotonJuego1 = document.getElementById("JuegoVF");
+let BotonJuego2 = document.getElementById("Juego2");
 function IrVF (){
     window.location.href='../Juego Verdadero Falso/VF.html'
 }
-BotonJuego1.addEventListener("click", (IrVF));
+BotonJuego2.addEventListener("click", (IrVF));
 
-let BotonJuego2 = document.getElementById("JuegoTipos");
+let BotonJuego3 = document.getElementById("Juego3");
 function IrTipos (){
     window.location.href='../Juego Tipos/Tipos.html'
 }
-BotonJuego2.addEventListener("click", (IrTipos));
+BotonJuego3.addEventListener("click", (IrTipos));
 
-let BotonJuego3 = document.getElementById("JuegoUnir");
+let BotonJuego1 = document.getElementById("Juego1");
 function IrJuegoUnir (){
     window.location.href='../Juego unir con flechas/JuegoUnir.html'
 }
-BotonJuego3.addEventListener("click",(IrJuegoUnir));
+BotonJuego1.addEventListener("click",(IrJuegoUnir));
