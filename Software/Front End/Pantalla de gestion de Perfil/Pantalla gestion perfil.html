@@ -26,8 +26,16 @@
             
             <div class="claseYfoto">
                 <div class="ClaseYCerrar">
-                    <input type="text" name="Clase" placeholder="CAMBIAR CLASE" class="C">
-                    <button type="button" id="BotonCerrarSesion" class="C Close">
+                <div name="Clase" id="inputCodigoClase" class="C">
+                    CAMBIAR CLASE
+                    <div class="divs">
+                        <input type="text" maxlength="1" oninput="moveNext(this, 'input2')" onkeydown="moveBack(event, null)" class="cuadrado" id="input1">
+                        <input type="text" maxlength="1" oninput="moveNext(this, 'input3')" onkeydown="moveBack(event, 'input1')" class="cuadrado" id="input2">
+                        <input type="text" maxlength="1" oninput="moveNext(this, 'input4')" onkeydown="moveBack(event, 'input2')" class="cuadrado" id="input3">
+                        <input type="text" maxlength="1" oninput="moveNext(this, null)" onkeydown="moveBack(event, 'input3')" class="cuadrado" id="input4">
+                    </div>
+                </div>                      
+                <button type="button" id="BotonCerrarSesion" class="C Close">
                         CERRAR SESION
                         <img src="../../../Imagenes/cerrar sesion azul.png" alt="Cerrar Sesion" class="Cerrar">
                     </button>
