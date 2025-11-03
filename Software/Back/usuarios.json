@@ -1,1 +1,60 @@
-[{"nombreCompleto":"zuri oliver","clave":"123zur","rol":"estudiante","codigoClase":"Zg57","foto":""},{"nombreCompleto":"pepe borjes","clave":"1234","codigoClase":"1234"},{"nombreCompleto":"pepe borjes","clave":"1234","codigoClase":"1234"},{"nombreCompleto":"pepardo","clave":"1234","codigoClase":"1234"},{"nombreCompleto":"dante","clave":"2341","codigoClase":"g657"},{"nombreCompleto":"Sofia Sturzenegger","clave":"12345678910","codigoClase":"1234"},{"nombreCompleto":"","clave":"","codigoClase":""},{"nombreCompleto":"Martito Morales","clave":"complexion","codigoClase":"davo"}]
+[
+  {
+    "nombreCompleto": "zuri oliver",
+    "clave": "123zur",
+    "rol": "estudiante",
+    "codigoClase": "Zg57",
+    "foto": ""
+  },
+  {
+    "nombreCompleto": "pepe borjes",
+    "clave": "1234",
+    "codigoClase": "1234"
+  },
+  {
+    "nombreCompleto": "pepe borjes",
+    "clave": "1234",
+    "codigoClase": "1234"
+  },
+  {
+    "nombreCompleto": "pepardo",
+    "clave": "1234",
+    "codigoClase": "1234"
+  },
+  {
+    "nombreCompleto": "dante",
+    "clave": "2341",
+    "codigoClase": "g657"
+  },
+  {
+    "nombreCompleto": "Sofia Sturzenegger",
+    "clave": "12345678910",
+    "codigoClase": "1234"
+  },
+  {
+    "nombreCompleto": "",
+    "clave": "",
+    "codigoClase": ""
+  },
+  {
+    "nombreCompleto": "Martito Morales",
+    "clave": "complexion",
+    "codigoClase": "davo"
+  },
+  {
+    "nombreAlumno": "marto",
+    "ID": "4g6U"
+  },
+  {
+    "nombreAlumno": "marto",
+    "ID": "4g6U"
+  },
+  {
+    "nombreAlumno": "marto",
+    "codigoClase": "4g6U"
+  },
+  {
+    "nombreAlumno": "marto",
+    "codigoClase": "4g6U"
+  }
+]

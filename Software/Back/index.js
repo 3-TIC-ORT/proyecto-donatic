@@ -4,14 +4,14 @@ import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } fro
 function registro (data){
 let usuariosJSON = fs.readFileSync ("usuarios.json", "utf-8")
 let usuariosArray = JSON.parse (usuariosJSON)
-let usuario = data
+let usuario =  data
 usuariosArray.push (usuario)
-let usuariosjson = JSON.stringify (usuariosArray)
+let usuariosjson = JSON.stringify (usuariosArray, null, 2)
 fs.writeFileSync ("usuarios.json", usuariosjson)
-unirseAClase({clase, nombreAlumno})
+unirseAClase({codigoClase, nombreAlumno})
 return usuario
-}
 
+}
 subscribePOSTEvent("registro", registro);
 
 function login ({nombreCompleto, contraseña}){
@@ -32,7 +32,7 @@ let clasesJSON = fs.readFileSync ("clases.json", "utf-8")
 let clasesArray = JSON.parse (clasesJSON)
 let clase = data
 clasesArray.push (clase)
-let clasesjson = JSON.stringify (clasesArray)
+let clasesjson = JSON.stringify (clasesArray, null, 2)
 fs.writeFileSync ("clases.json", clasesjson)
 return clase
 }
@@ -45,18 +45,18 @@ function mostrarClase (){
 }
 subscribeGETEvent("mostrarClase", mostrarClase)
 
-function unirseAClase ({clase, nombreAlumno}){
+function unirseAClase ({codigoClase, nombreAlumno}){
 let clasesJSON = fs.readFileSync ("clases.json", "utf-8")
     let clasesArray = JSON.parse (clasesJSON) 
     for(let i = 0; i<clasesArray.length; i++){
-        if (clasesArray[i].ID == clase){
+        if (clasesArray[i].codigoClase == codigoClase){
             if (!clasesArray.alumnos){
                 clasesArray.alumnos = []
             }
             clasesArray[i].alumnos.push (nombreAlumno)
         }
     }
-    let clasesjson = JSON.stringify (clasesArray)
+    let clasesjson = JSON.stringify (clasesArray, null, 2)
 fs.writeFileSync ("clases.json", clasesjson)
 return clasesArray
 }
@@ -67,7 +67,7 @@ let juegosJSON = fs.readFileSync ("juegos.json", "utf-8")
 let juegosArray = JSON.parse (juegosJSON)
 let juegosResultado = data
 juegosArray.push (juegosResultado)
-let juegosjson = JSON.stringify (juegosArray)
+let juegosjson = JSON.stringify (juegosArray, null, 2)
 fs.writeFileSync ("juegos.json", juegosjson)
 return juegosResultado
 }
@@ -85,7 +85,7 @@ let juegosJSON = fs.readFileSync ("juegos.json", "utf-8")
             juegosArray[i].resultados.push ({juego, resultado})
         }
     }
-    let juegosjson = JSON.stringify (juegosArray)
+    let juegosjson = JSON.stringify (juegosArray, null, 2)
 fs.writeFileSync ("juegos.json", juegosjson)
 return juegosArray
 }
@@ -96,7 +96,7 @@ let pizarronJSON = fs.readFileSync ("pizarron.json", "utf-8")
 let pizarronArray = JSON.parse (pizarronJSON)
 let info = data
 pizarronArray.push (info)
-let pizarronjson = JSON.stringify (pizarronArray)
+let pizarronjson = JSON.stringify (pizarronArray, null, 2)
 fs.writeFileSync ("pizarron.json", pizarronjson)
 return info
 }
@@ -130,7 +130,7 @@ if(nuevaClase){
 if(nuevaFoto){
     usuariosArray[i].foto = nuevaFoto
 }
-let usuariosjson = JSON.stringify(usuariosArray)
+let usuariosjson = JSON.stringify(usuariosArray, null, 2)
 fs.writeFileSync ("usuarios.json", usuariosjson)
     }
 }
@@ -139,7 +139,3 @@ return usuariosArray
 subscribePOSTEvent("gestionPerfil", gestionPerfil);
     startServer()
 
-//  tengo que mejorar lo de las clases, osea que se unan alumnos. para eso debo descubrir como sumarlos al array dentro del objeto en usuarios.json,
-// es lo mismo que debo usar para ir sumando los resultados de los juegos. 
-// tengo que separar el rol, ya que no viene con el registro sino que antes, aparte
-// si tengo tiempo puedo agregar que los comentarios/posts esten linkeados a un usuario 

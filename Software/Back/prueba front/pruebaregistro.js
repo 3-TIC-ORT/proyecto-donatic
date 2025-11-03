@@ -1,9 +1,9 @@
 connect2Server();
-let data = "zuri"
+let data = {nombreAlumno:"marto", codigoClase: "4g6U"}
 function pruebaregistro (data){
-    alert (data)
+    console.log (data)
 }
-postEvent ("registro", data )
+postEvent ("registro", data, pruebaregistro)
 
 
 
