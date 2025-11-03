@@ -82,7 +82,7 @@ let juegosJSON = fs.readFileSync ("juegos.json", "utf-8")
             if (!juegosArray.resultados){
                 juegosArray.resultados = []
             }
-            juegosArray[i].resultados.push ({juego, puntaje})
+            juegosArray[i].resultados.push ({juego, resultado})
         }
     }
     let juegosjson = JSON.stringify (juegosArray)
