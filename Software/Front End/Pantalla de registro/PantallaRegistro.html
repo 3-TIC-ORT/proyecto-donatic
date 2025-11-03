@@ -20,7 +20,15 @@
             <div class="inputs">
                 <input type="text" name="nombreYapellido" id="inputNombre" placeholder="NOMBRE Y APELLIDO" class="Input">
                 <input type="password" name="contraseña" id="inputContrasena" placeholder="CONTRASEÑA" class="Input">
-                <input type="text" name="código" id="inputCodigoClase" placeholder="CÓDIGO DE CLASE" class="Input">    
+                <div name="código" id="inputCodigoClase" class="Input">
+                    CÓDIGO DE CLASE
+                    <div class="divs">
+                        <input type="text" maxlength="1" oninput="moveNext(this, 'input2')" onkeydown="moveBack(event, null)" class="cuadrado" id="input1">
+                        <input type="text" maxlength="1" oninput="moveNext(this, 'input3')" onkeydown="moveBack(event, 'input1')" class="cuadrado" id="input2">
+                        <input type="text" maxlength="1" oninput="moveNext(this, 'input4')" onkeydown="moveBack(event, 'input2')" class="cuadrado" id="input3">
+                        <input type="text" maxlength="1" oninput="moveNext(this, null)" onkeydown="moveBack(event, 'input3')" class="cuadrado" id="input4">
+                    </div>
+                </div>    
             </div>
 
             <div class="FotoPerfil">
