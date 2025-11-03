@@ -6,12 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selector de Juego</title>
     <link rel="icon" href="../../../Imagenes/LOGO DEFINITIVO.png" type="image/x-icon">
+    <link rel="stylesheet" href="Selector de Juegos.css">
 </head>
 <body>
-    <button type="button" id="VolverInicio">Volver</button>
-    <button type="button" id="JuegoVF">Juego Verdadero o Falso</button>
-    <button type="button" id="JuegoTipos">Juego Compatibilidad</button>
-    <button type="button" id="JuegoUnir">Juego Unir con flechas</button>
+    <div class="container-blanco">
+        <button type="button" id="VolverInicio" class="BotonVolver">
+                <img src="../../../Imagenes/flecha salir.png" alt="FlechaSalir" class="FlechaVolver">
+        </button>
+        <img src="../../../Imagenes/LOGO DEFINITIVO.png" alt="Logo DonaTIC" class="logo">
+    </div>
+    
+    <di class="container-juegos">
+        <button type="button" id="JuegoUnir" class="Juego">
+            <img src="../../../Imagenes/LOGO DEFINITIVO.png" alt="Compatibilidad sanginea" class="logo">
+            COMPATIBILIDAD SANGUINEA
+        </button>    
+        <button type="button" id="JuegoVF" class="Juego">
+            <img src="../../../Imagenes/LOGO DEFINITIVO.png" alt="Verdadero o falso" class="logo">
+            VERDADERO O FALSO
+        </button>
+        <button type="button" id="JuegoTipos" class="Juego">
+            <img src="../../../Imagenes/LOGO DEFINITIVO.png" alt="¿Es apto para donar?" class="logo">
+            ¿ES APTO PARA DONAR?
+        </button>
+    </div>
+
     <script src="Selector de Juegos.js"></script>
 </body>
 </html>
