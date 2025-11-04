@@ -3,6 +3,7 @@ let mailImput=document.getElementById("escribir.email")
 let passwordImput =document.getElementById("escribir.contra")
 let FormInicio= document.getElementById("FormInicio");
 const Botoniniciarsesion = document.getElementById("BotonIniciarSesion");
+const RolUsuario = localStorage.getItem('rolUsuario')
 
 let Botonvolver = document.getElementById("Botonvolver");
 function Funcionvolver (){
@@ -24,7 +25,12 @@ FormInicio.addEventListener("submit", (e)=>{
   }
   else{
     alert("Bienvenido" + respuesta.nombre)
+    if (RolUsuario='Estudiante'){
     window.location.href = "../Pantalla de inicio estudiantes/inicio estudiantes.html"
+    }
+    else{
+      window.location.href = "../Pantalla de inicio educador/inicio educador.html"
+    }
   }  
  });
 });
