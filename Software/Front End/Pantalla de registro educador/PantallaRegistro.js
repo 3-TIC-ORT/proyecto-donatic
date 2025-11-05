@@ -12,12 +12,10 @@ function Funcionvolver (){
 BotonRegistrarse.addEventListener("click", () => {
     const nombre = inputNombreYApellido.value;
     const contrasena = inputContrasena.value;
-    const codigo = inputCodigo.value;
     const fotoDePerfil = inputFileFoto.files[0]; 
     const datosRegistro = {
         nombreCompleto: nombre,
         clave: contrasena,
-        codigoClase: codigo,
         foto: fotoDePerfil
     }
     postEvent("registro", datosRegistro, (respuesta) => {
