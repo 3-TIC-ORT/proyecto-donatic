@@ -139,3 +139,5 @@ return usuariosArray
 subscribePOSTEvent("gestionPerfil", gestionPerfil);
     startServer()
 
+// hacer que guarde rol pq no me viene con el registro. tmp se guarda la clase?!
+//arreglar porque con el registro no se une a clase
