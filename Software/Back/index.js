@@ -8,7 +8,7 @@ let usuario =  data
 usuariosArray.push (usuario)
 let usuariosjson = JSON.stringify (usuariosArray, null, 2)
 fs.writeFileSync ("usuarios.json", usuariosjson)
-unirseAClase({codigoClase, nombreAlumno})
+unirseAClase({codigoClase: data.codigoClase, nombreAlumno: data.nombreAlumno})
 return usuario
 
 }
