@@ -1,6 +1,6 @@
 let BotonVolver = document.getElementById("BotonVolver");
 function VolverAlInicio (){
-    window.location.href='../Pantalla de inicio estudiantes/Inicio estudiantes.html'
+    window.location.href='../Pantalla de Juegos/Selector de Juegos.html'
 }
 BotonVolver.addEventListener("click", (VolverAlInicio));
 

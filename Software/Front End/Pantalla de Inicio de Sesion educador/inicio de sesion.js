@@ -23,8 +23,8 @@ FormInicio.addEventListener("submit", (e)=>{
     alert (respuesta.error);
   }
   else{
-    alert("Bienvenido" + respuesta.nombre)
-    window.location.href = "../Pantalla de inicio estudiantes/inicio estudiantes.html"
+    alert("Bienvenido " + respuesta.nombre)
+    window.location.href = "../Pantalla inicio Educador/Educador.html"
   }  
  });
 });

@@ -24,13 +24,8 @@ FormInicio.addEventListener("submit", (e)=>{
     alert (respuesta.error);
   }
   else{
-    alert("Bienvenido" + respuesta.nombre)
-    if (RolUsuario='Estudiante'){
+    alert("Bienvenido " + respuesta.nombre)
     window.location.href = "../Pantalla de inicio estudiantes/inicio estudiantes.html"
-    }
-    else{
-      window.location.href = "../Pantalla de inicio educador/inicio educador.html"
-    }
   }  
  });
 });

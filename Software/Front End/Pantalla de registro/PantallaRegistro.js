@@ -21,7 +21,7 @@ BotonRegistrarse.addEventListener("click", () => {
         foto: fotoDePerfil
     }
     postEvent("registro", datosRegistro, (respuesta) => {
-            window.location.href = '../Pantalla Inicio Educador/Educador.html';
+            window.location.href = '../Pantalla de inicio estudiantes/inicio estudiantes.html';
     
     });
 });
