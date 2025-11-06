@@ -3,10 +3,6 @@
     "creador": "pepe",
     "nombre": "3TD",
     "codigoClase": "4g6U",
-    "alumnos": [
-      "zuri",
-      "lu",
-      "marto"
-    ]
+    "alumnos": ["zuri", "lu", "marto"]
   }
 ]
