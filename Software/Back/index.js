@@ -14,16 +14,16 @@ return usuario
 }
 subscribePOSTEvent("registro", registro);
 
-function login ({nombreCompleto, contraseña}){
+function login (data){
 let usuario = fs.readFileSync("usuarios.json", "utf-8")
 let usuarioArray = JSON.parse(usuario);
 let respuesta = false;
 for (let i=0; i<usuarioArray.length; i++){
-    if (nombreCompleto===usuarioArray[i].nombreCompleto && contraseña===usuarioArray[i].contraseña){
+    if (data.nombreCompleto===usuarioArray[i].nombreCompleto && data.clave===usuarioArray[i].clave){
         respuesta = true
     }
-return respuesta
 }
+return respuesta
 }
 subscribePOSTEvent ("iniciodesesion", login);
 

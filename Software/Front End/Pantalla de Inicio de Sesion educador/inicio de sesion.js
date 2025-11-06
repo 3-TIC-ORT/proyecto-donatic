@@ -15,8 +15,8 @@ FormInicio.addEventListener("submit", (e)=>{
   e.preventDefault();
 
   let datosLogin={
-    mail: mailImput.value,
-    password: passwordImput.value,
+    nombreCompleto: mailImput.value,
+    clave: passwordImput.value,
   };
  postEvent("iniciodesesion", datosLogin, (respuesta) =>{
   if (respuesta.false){
