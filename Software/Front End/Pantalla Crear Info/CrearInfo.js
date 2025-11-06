@@ -29,5 +29,6 @@ subirInfo.addEventListener("click", function () {
       li.className = "tipocomentario";
       ulInfo.appendChild(li);
     }
+    postEvent("subirInfo", ListadeInfo, () => {});
   }
 });
