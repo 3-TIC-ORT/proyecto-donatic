@@ -1,4 +1,5 @@
-    let BotonIrClases = document.getElementById("BotonClases");
+  connect2Server()
+  let BotonIrClases = document.getElementById("BotonClases");
 function IrClases (){
     window.location.href='../Pantalla clases/Clases.html'
 }
@@ -26,7 +27,6 @@ function Random() {
 BotonAleatorio.addEventListener("click", (Random));
 
 let Nombre = document.getElementById("nombreClase");
-let Contraseña = document.getElementById("contraseñaClase");
 let BotonCrear = document.getElementById("botonCrear");
 let datosRegistro = {
     nombre: Nombre,
@@ -35,3 +35,4 @@ let datosRegistro = {
 BotonCrear.addEventListener("click",(click) => {
     alert(Nombre.value +", "+ Contraseña.value);
   })
+  PostEvent("Creación ")

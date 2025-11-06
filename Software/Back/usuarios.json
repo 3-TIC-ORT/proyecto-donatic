@@ -88,5 +88,35 @@
   {
     "nombreCompleto": "",
     "clave": ""
+  },
+  {
+    "nombreCompleto": "Felix Reparador",
+    "clave": "Mentita",
+    "codigoClase": "4g6U"
+  },
+  {
+    "nombreCompleto": "juancito",
+    "clave": "1234",
+    "codigoClase": "4g6U"
+  },
+  {
+    "nombreCompleto": "pepe",
+    "clave": "1234",
+    "codigoClase": "4g6U"
+  },
+  {
+    "nombreCompleto": "hola",
+    "clave": "1234",
+    "codigoClase": "4g6U"
+  },
+  {
+    "nombreCompleto": "zuri",
+    "clave": "123445678",
+    "codigoClase": "4g6U"
+  },
+  {
+    "nombreCompleto": "zuri",
+    "clave": "asfddasdsa",
+    "codigoClase": "4g6U"
   }
 ]

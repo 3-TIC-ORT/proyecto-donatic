@@ -3,7 +3,10 @@ const Botonvolver = document.getElementById("Botonvolver");
 const BotonRegistrarse = document.getElementById("BotonRegistrarse");
 const inputNombreYApellido = document.getElementById("inputNombre");
 const inputContrasena = document.getElementById("inputContrasena");
-const inputCodigo = document.getElementById("inputCodigoClase");
+const inputCodigo1 = document.getElementById("input1");
+const inputCodigo2 = document.getElementById("input2");
+const inputCodigo3 = document.getElementById("input3");
+const inputCodigo4 = document.getElementById("input4");
 const inputFileFoto = document.getElementById("inputFotoPerfil");
 Botonvolver.addEventListener("click", Funcionvolver)
 function Funcionvolver (){
@@ -12,8 +15,11 @@ function Funcionvolver (){
 BotonRegistrarse.addEventListener("click", () => {
     const nombre = inputNombreYApellido.value;
     const contrasena = inputContrasena.value;
-    const codigo = inputCodigo.value;
     const fotoDePerfil = inputFileFoto.files[0]; 
+    const codigo = inputCodigo1.value + 
+                   inputCodigo2.value + 
+                   inputCodigo3.value + 
+                   inputCodigo4.value;
     const datosRegistro = {
         nombreCompleto: nombre,
         clave: contrasena,

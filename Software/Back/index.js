@@ -1,143 +1,163 @@
 import fs from "fs";
-import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic";
+import {
+  subscribeGETEvent,
+  subscribePOSTEvent,
+  realTimeEvent,
+  startServer,
+} from "soquetic";
 
-function registro (data){
-let usuariosJSON = fs.readFileSync ("usuarios.json", "utf-8")
-let usuariosArray = JSON.parse (usuariosJSON)
-let usuario =  data
-usuariosArray.push (usuario)
-let usuariosjson = JSON.stringify (usuariosArray, null, 2)
-fs.writeFileSync ("usuarios.json", usuariosjson)
-unirseAClase({codigoClase: data.codigoClase, nombreAlumno: data.nombreAlumno})
-return usuario
-
+function registro(data) {
+  let usuariosJSON = fs.readFileSync("usuarios.json", "utf-8");
+  let usuariosArray = JSON.parse(usuariosJSON);
+  let usuario = data;
+  usuariosArray.push(usuario);
+  let usuariosjson = JSON.stringify(usuariosArray, null, 2);
+  fs.writeFileSync("usuarios.json", usuariosjson);
+  unirseAClase({
+    codigoClase: data.codigoClase,
+    nombreCompleto: data.nombreCompleto,
+  });
+  return usuario;
 }
 subscribePOSTEvent("registro", registro);
 
-function login ({nombreCompleto, contraseña}){
-let usuario = fs.readFileSync("usuarios.json", "utf-8")
-let usuarioArray = JSON.parse(usuario);
-let respuesta = false;
-for (let i=0; i<usuarioArray.length; i++){
-    if (nombreCompleto===usuarioArray[i].nombreCompleto && contraseña===usuarioArray[i].contraseña){
-        respuesta = true
+function login({ nombreCompleto, contraseña }) {
+  let usuario = fs.readFileSync("usuarios.json", "utf-8");
+  let usuarioArray = JSON.parse(usuario);
+  let respuesta = false;
+  for (let i = 0; i < usuarioArray.length; i++) {
+    if (
+      nombreCompleto === usuarioArray[i].nombreCompleto &&
+      contraseña === usuarioArray[i].contraseña
+    ) {
+      respuesta = true;
     }
-return respuesta
+    return respuesta;
+  }
 }
-}
-subscribePOSTEvent ("iniciodesesion", login);
+subscribePOSTEvent("iniciodesesion", login);
 
-function crearClase (data){
-let clasesJSON = fs.readFileSync ("clases.json", "utf-8")
-let clasesArray = JSON.parse (clasesJSON)
-let clase = data
-clasesArray.push (clase)
-let clasesjson = JSON.stringify (clasesArray, null, 2)
-fs.writeFileSync ("clases.json", clasesjson)
-return clase
+function crearClase(data) {
+  let clasesJSON = fs.readFileSync("clases.json", "utf-8");
+  let clasesArray = JSON.parse(clasesJSON);
+  let clase = data;
+  clasesArray.push(clase);
+  let clasesjson = JSON.stringify(clasesArray, null, 2);
+  fs.writeFileSync("clases.json", clasesjson);
+  return clase;
 }
 subscribePOSTEvent("creaciondeclases", crearClase);
 
-function mostrarClase (){
-    let clasesJSON = fs.readFileSync ("clases.json", "utf-8")
-    let clasesArray = JSON.parse (clasesJSON) 
-    return clasesArray
+function mostrarClase() {
+  let clasesJSON = fs.readFileSync("clases.json", "utf-8");
+  let clasesArray = JSON.parse(clasesJSON);
+  return clasesArray;
 }
-subscribeGETEvent("mostrarClase", mostrarClase)
+subscribeGETEvent("mostrarClase", mostrarClase);
 
-function unirseAClase ({codigoClase, nombreAlumno}){
-let clasesJSON = fs.readFileSync ("clases.json", "utf-8")
-    let clasesArray = JSON.parse (clasesJSON) 
-    for(let i = 0; i<clasesArray.length; i++){
-        if (clasesArray[i].codigoClase == codigoClase){
-            if (!clasesArray.alumnos){
-                clasesArray.alumnos = []
-            }
-            clasesArray[i].alumnos.push (nombreAlumno)
-        }
+function unirseAClase({ codigoClase, nombreCompleto }) {
+  let clasesJSON = fs.readFileSync("clases.json", "utf-8");
+  let clasesArray = JSON.parse(clasesJSON);
+  for (let i = 0; i < clasesArray.length; i++) {
+    if (clasesArray[i].codigoClase == codigoClase) {
+      if (!clasesArray.alumnos) {
+        clasesArray.alumnos = [];
+      }
+      clasesArray[i].alumnos.push(nombreCompleto);
     }
-    let clasesjson = JSON.stringify (clasesArray, null, 2)
-fs.writeFileSync ("clases.json", clasesjson)
-return clasesArray
+  }
+  clasesJSON = JSON.stringify(clasesArray, null, 2);
+  fs.writeFileSync("clases.json", clasesJSON);
+  return clasesArray;
 }
-subscribePOSTEvent ("unirseAClase", unirseAClase)
+subscribePOSTEvent("unirseAClase", unirseAClase);
 
-function juegos (data){
-let juegosJSON = fs.readFileSync ("juegos.json", "utf-8")
-let juegosArray = JSON.parse (juegosJSON)
-let juegosResultado = data
-juegosArray.push (juegosResultado)
-let juegosjson = JSON.stringify (juegosArray, null, 2)
-fs.writeFileSync ("juegos.json", juegosjson)
-return juegosResultado
+function juegos(data) {
+  let juegosJSON = fs.readFileSync("juegos.json", "utf-8");
+  let juegosArray = JSON.parse(juegosJSON);
+  let juegosResultado = data;
+  juegosArray.push(juegosResultado);
+  let juegosjson = JSON.stringify(juegosArray, null, 2);
+  fs.writeFileSync("juegos.json", juegosjson);
+  return juegosResultado;
 }
 
 subscribePOSTEvent("juegosResultados", juegos);
 
-function sumarPuntajeJuego ({nombreAlumno, juego, resultado}){
-let juegosJSON = fs.readFileSync ("juegos.json", "utf-8")
-    let juegosArray = JSON.parse (juegosJSON) 
-    for(let i = 0; i<juegosArray.length; i++){
-        if (juegosArray[i].nombreDelAlumno == nombreAlumno){
-            if (!juegosArray.resultados){
-                juegosArray.resultados = []
-            }
-            juegosArray[i].resultados.push ({juego, resultado})
-        }
+function sumarPuntajeJuego({ nombreAlumno, juego, resultado }) {
+  let juegosJSON = fs.readFileSync("juegos.json", "utf-8");
+  let juegosArray = JSON.parse(juegosJSON);
+  for (let i = 0; i < juegosArray.length; i++) {
+    if (juegosArray[i].nombreDelAlumno == nombreAlumno) {
+      if (!juegosArray.resultados) {
+        juegosArray.resultados = [];
+      }
+      juegosArray[i].resultados.push({ juego, resultado });
     }
-    let juegosjson = JSON.stringify (juegosArray, null, 2)
-fs.writeFileSync ("juegos.json", juegosjson)
-return juegosArray
+  }
+  let juegosjson = JSON.stringify(juegosArray, null, 2);
+  fs.writeFileSync("juegos.json", juegosjson);
+  return juegosArray;
 }
-subscribePOSTEvent ("sumarPuntaje",sumarPuntajeJuego)
+subscribePOSTEvent("sumarPuntaje", sumarPuntajeJuego);
 
-function subirinfo (data){
-let pizarronJSON = fs.readFileSync ("pizarron.json", "utf-8")
-let pizarronArray = JSON.parse (pizarronJSON)
-let info = data
-pizarronArray.push (info)
-let pizarronjson = JSON.stringify (pizarronArray, null, 2)
-fs.writeFileSync ("pizarron.json", pizarronjson)
-return info
+function subirinfo(data) {
+  let pizarronJSON = fs.readFileSync("pizarron.json", "utf-8");
+  let pizarronArray = JSON.parse(pizarronJSON);
+  let info = data;
+  pizarronArray.push(info);
+  let pizarronjson = JSON.stringify(pizarronArray, null, 2);
+  fs.writeFileSync("pizarron.json", pizarronjson);
+  return info;
 }
 subscribePOSTEvent("subirInfo", subirinfo);
 
-function mostrarInfo (){
-    let pizarronJSON = fs.readFileSync ("pizarron.json", "utf-8")
-    let pizarronArray = JSON.parse (pizarronJSON) 
-    return pizarronArray
+function mostrarInfo() {
+  let pizarronJSON = fs.readFileSync("pizarron.json", "utf-8");
+  let pizarronArray = JSON.parse(pizarronJSON);
+  return pizarronArray;
 }
-subscribeGETEvent("mostrarinfo", mostrarInfo)
+subscribeGETEvent("mostrarinfo", mostrarInfo);
 
-
-function gestionPerfil ({nombre, apellido, nuevoNombre, nuevoApellido, nuevaContraseña, nuevaClase, nuevaFoto}){
-let usuariosJSON = fs.readFileSync ("usuarios.json", "utf-8")
-let usuariosArray = JSON.parse (usuariosJSON)
-for (let i = 0; i<usuariosArray.length; i++){
-    if (usuariosArray[i].nombre == nombre && usuariosArray[i].apellido == apellido){
-if(nuevoNombre){
-    usuariosArray[i].nombre = nuevoNombre
-}
-if(nuevoApellido){
-    usuariosArray[i].apellido = nuevoApellido
-}
-if(nuevaContraseña){
-    usuariosArray[i].contraseña = nuevaContraseña
-}
-if(nuevaClase){
-    usuariosArray[i].clase = nuevaClase
-}
-if(nuevaFoto){
-    usuariosArray[i].foto = nuevaFoto
-}
-let usuariosjson = JSON.stringify(usuariosArray, null, 2)
-fs.writeFileSync ("usuarios.json", usuariosjson)
+function gestionPerfil({
+  nombre,
+  apellido,
+  nuevoNombre,
+  nuevoApellido,
+  nuevaContraseña,
+  nuevaClase,
+  nuevaFoto,
+}) {
+  let usuariosJSON = fs.readFileSync("usuarios.json", "utf-8");
+  let usuariosArray = JSON.parse(usuariosJSON);
+  for (let i = 0; i < usuariosArray.length; i++) {
+    if (
+      usuariosArray[i].nombre == nombre &&
+      usuariosArray[i].apellido == apellido
+    ) {
+      if (nuevoNombre) {
+        usuariosArray[i].nombre = nuevoNombre;
+      }
+      if (nuevoApellido) {
+        usuariosArray[i].apellido = nuevoApellido;
+      }
+      if (nuevaContraseña) {
+        usuariosArray[i].contraseña = nuevaContraseña;
+      }
+      if (nuevaClase) {
+        usuariosArray[i].clase = nuevaClase;
+      }
+      if (nuevaFoto) {
+        usuariosArray[i].foto = nuevaFoto;
+      }
+      let usuariosjson = JSON.stringify(usuariosArray, null, 2);
+      fs.writeFileSync("usuarios.json", usuariosjson);
     }
-}
-return usuariosArray
+  }
+  return usuariosArray;
 }
 subscribePOSTEvent("gestionPerfil", gestionPerfil);
-    startServer()
+startServer();
 
 // hacer que guarde rol pq no me viene con el registro. tmp se guarda la clase?!
 //arreglar porque con el registro no se une a clase
