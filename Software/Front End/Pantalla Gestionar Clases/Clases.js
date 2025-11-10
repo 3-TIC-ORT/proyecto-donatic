@@ -1,3 +1,4 @@
+    connect2Server()
     let BotonVolverAtras = document.getElementById("VolverAtras");
 function VolveralInicio (){
     window.location.href='../Pantalla clases/Clases.html'
@@ -9,13 +10,18 @@ let Clases = [
     {name: "SegundoK", cantidadAlumnos: 24 },
     {name: "TerceroD", cantidadAlumnos: 12 }
 ]
-;//Valen despues hay que hacer que estos datos sean los que vienen de crear clase
 
 const contenedorData = document.getElementById('Nombre');
 
 
-Clases.forEach(clase => {
-    const pClase = document.createElement('p');
-    pClase.textContent = `Curso: ${clase.name} - Alumnos: ${clase.cantidadAlumnos}`;
-    contenedorData.appendChild(pClase);
-});
+getEvent("mostrarClase", (clasesRecibidas) => {
+    
+    if (Array.isArray(clasesRecibidas)) {
+        
+        clasesRecibidas.forEach(clase => {
+            const pClase = document.createElement('p');
+            pClase.textContent = `Curso: ${clase.nombre} - Alumnos: ${clase.alumnos}`;
+            contenedorData.appendChild(pClase);
+        }); 
+    }
+}); 
