@@ -21,18 +21,21 @@ function registro(data) {
 }
 subscribePOSTEvent("registro", registro);
 
-function login (data){
-let usuario = fs.readFileSync("usuarios.json", "utf-8")
-let usuarioArray = JSON.parse(usuario);
-let respuesta = false;
-for (let i=0; i<usuarioArray.length; i++){
-    if (data.nombreCompleto===usuarioArray[i].nombreCompleto && data.clave===usuarioArray[i].clave){
-        respuesta = true
+function login(data) {
+  let usuario = fs.readFileSync("usuarios.json", "utf-8");
+  let usuarioArray = JSON.parse(usuario);
+  let respuesta = false;
+  for (let i = 0; i < usuarioArray.length; i++) {
+    if (
+      data.nombreCompleto === usuarioArray[i].nombreCompleto &&
+      data.clave === usuarioArray[i].clave
+    ) {
+      respuesta = true;
     }
+  }
+  return respuesta;
 }
-return respuesta
-}
-subscribePOSTEvent ("iniciodesesion", login);
+subscribePOSTEvent("iniciodesesion", login);
 
 function crearClase(data) {
   let clasesJSON = fs.readFileSync("clases.json", "utf-8");
@@ -53,6 +56,7 @@ function mostrarClase() {
 subscribeGETEvent("mostrarClase", mostrarClase);
 
 function unirseAClase({ codigoClase, nombreCompleto }) {
+  //estan mal los nombres en el json, arreglar
   let clasesJSON = fs.readFileSync("clases.json", "utf-8");
   let clasesArray = JSON.parse(clasesJSON);
   for (let i = 0; i < clasesArray.length; i++) {
