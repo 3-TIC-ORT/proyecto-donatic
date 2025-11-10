@@ -1,3 +1,4 @@
+const BotonVolver = document.getElementById("VolverInicio");
 function VolverAlInicio (){
     window.location.href='../Pantalla de inicio estudiantes/Inicio estudiantes.html'
 }
