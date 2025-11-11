@@ -63,5 +63,25 @@
     "nombreCompleto": "Pepe el romano",
     "clave": "1234",
     "codigoClase": "9777"
+  },
+  {
+    "nombreCompleto": "jjjjj",
+    "clave": "ñeeee",
+    "codigoClase": "9777"
+  },
+  {
+    "nombreCompleto": "crema pastelera",
+    "clave": "nesquick",
+    "codigoClase": "9777"
+  },
+  {
+    "nombreCompleto": "como hizo",
+    "clave": "eso",
+    "codigoClase": "9777"
+  },
+  {
+    "nombreCompleto": "ñibli",
+    "clave": "ñibli",
+    "codigoClase": "9777"
   }
 ]

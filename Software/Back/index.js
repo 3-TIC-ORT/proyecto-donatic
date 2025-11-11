@@ -61,10 +61,11 @@ function unirseAClase({ codigoClase, nombreCompleto }) {
   let clasesArray = JSON.parse(clasesJSON);
   for (let i = 0; i < clasesArray.length; i++) {
     if (clasesArray[i].codigoClase == codigoClase) {
-      if (!clasesArray.alumnos) {
-        clasesArray.alumnos = [];
+      if (!clasesArray[i].alumnos) {
+        clasesArray[i].alumnos = [];
       }
       clasesArray[i].alumnos.push(nombreCompleto);
+      break;
     }
   }
   clasesJSON = JSON.stringify(clasesArray, null, 2);
