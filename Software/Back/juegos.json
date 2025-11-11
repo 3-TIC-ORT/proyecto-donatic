@@ -1,1 +1,10 @@
-[{"nombreDelAlumno":"pepe","resultados":[{"juego":1,"resultado":"4/4"},{"juego":2,"resultado":"1/10"}]},{"nombreDelAlumno":"juan"}]
+[
+  {
+    "nombreDelAlumno": "pepe",
+    "resultados": [
+      { "juego": 1, "resultado": "4/4" },
+      { "juego": 2, "resultado": "1/10" }
+    ]
+  },
+  { "nombreDelAlumno": "juan" }
+]

@@ -1,62 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donatic</title>
-    <link rel="stylesheet" href="Pantalla gestion perfil.css">
-    <link rel="icon" href="../../../Imagenes/LOGO DEFINITIVO.png" type="image/x-icon">
-</head>
-<body>
+    <link rel="stylesheet" href="Pantalla gestion perfil.css" />
+    <link
+      rel="icon"
+      href="../../../Imagenes/LOGO DEFINITIVO.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
     <header>
-    <button type="button" id="VolverInicio" class="BotonVolver">
-        <img src="../../../Imagenes/flecha salir.png" alt="FlechaSalir" class="FlechaVolver">
-    </button>
-    <img src="../../../Imagenes/gestion de perfil est.png" alt="Educador" class="personitaazul">
-    <img src="../../../Imagenes/LOGO DEFINITIVO.png" alt="Logo DonaTIC" class="logo">
+      <button type="button" id="VolverInicio" class="BotonVolver">
+        <img
+          src="../../../Imagenes/flecha salir.png"
+          alt="FlechaSalir"
+          class="FlechaVolver"
+        />
+      </button>
+      <img
+        src="../../../Imagenes/gestion de perfil est.png"
+        alt="Educador"
+        class="personitaazul"
+      />
+      <img
+        src="../../../Imagenes/LOGO DEFINITIVO.png"
+        alt="Logo DonaTIC"
+        class="logo"
+      />
     </header>
 
-
     <form class="FormGestionAlumno" id="">
-        
-        <div class="formulario">
-            <input type="text" name="nombreYapellido" placeholder="NOMBRE Y APELLIDO" class="Inputs">
-            <input type="password" name="contraseña" placeholder="CONTRASEÑA" class="Inputs">
-            
-            <div class="claseYfoto">
-                <div class="ClaseYCerrar">
-                <div name="Clase" id="inputCodigoClase" class="C">
-                    CAMBIAR CLASE
-                    <div class="divs">
-                        <input type="text" maxlength="1" oninput="moveNext(this, 'input2')" onkeydown="moveBack(event, null)" class="cuadrado" id="input1">
-                        <input type="text" maxlength="1" oninput="moveNext(this, 'input3')" onkeydown="moveBack(event, 'input1')" class="cuadrado" id="input2">
-                        <input type="text" maxlength="1" oninput="moveNext(this, 'input4')" onkeydown="moveBack(event, 'input2')" class="cuadrado" id="input3">
-                        <input type="text" maxlength="1" oninput="moveNext(this, null)" onkeydown="moveBack(event, 'input3')" class="cuadrado" id="input4">
-                    </div>
-                </div>                      
-                <button type="button" id="BotonCerrarSesion" class="C Close">
-                        CERRAR SESION
-                        <img src="../../../Imagenes/cerrar sesion azul.png" alt="Cerrar Sesion" class="Cerrar">
-                    </button>
-                </div>
-                
-                <div class="FotoPerfil">
-                    <p>FOTO DE PERFIL</p>
-                    <input type="file" id="foto-perfil" style="display: none;">
-                    <label for="foto-perfil" class="subir-label">
-                        <img src="../../../Imagenes/subir imagen logo azul.png" class="Subir" alt="Subir">
-                    </label>
-                </div>        
+      <div class="formulario">
+        <input
+          type="text"
+          name="nombreYapellido"
+          placeholder="NOMBRE Y APELLIDO"
+          class="Inputs"
+        />
+        <input
+          type="password"
+          name="contraseña"
+          placeholder="CONTRASEÑA"
+          class="Inputs"
+        />
+
+        <div class="claseYfoto">
+          <div class="ClaseYCerrar">
+            <div name="Clase" id="inputCodigoClase" class="C">
+              CAMBIAR CLASE
+              <div class="divs">
+                <input
+                  type="text"
+                  maxlength="1"
+                  oninput="moveNext(this, 'input2')"
+                  onkeydown="moveBack(event, null)"
+                  class="cuadrado"
+                  id="input1"
+                />
+                <input
+                  type="text"
+                  maxlength="1"
+                  oninput="moveNext(this, 'input3')"
+                  onkeydown="moveBack(event, 'input1')"
+                  class="cuadrado"
+                  id="input2"
+                />
+                <input
+                  type="text"
+                  maxlength="1"
+                  oninput="moveNext(this, 'input4')"
+                  onkeydown="moveBack(event, 'input2')"
+                  class="cuadrado"
+                  id="input3"
+                />
+                <input
+                  type="text"
+                  maxlength="1"
+                  oninput="moveNext(this, null)"
+                  onkeydown="moveBack(event, 'input3')"
+                  class="cuadrado"
+                  id="input4"
+                />
+              </div>
             </div>
+            <button type="button" id="BotonCerrarSesion" class="C Close">
+              CERRAR SESION
+              <img
+                src="../../../Imagenes/cerrar sesion azul.png"
+                alt="Cerrar Sesion"
+                class="Cerrar"
+              />
+            </button>
+          </div>
+
+          <div class="FotoPerfil">
+            <p>FOTO DE PERFIL</p>
+            <input type="file" id="foto-perfil" style="display: none" />
+            <label for="foto-perfil" class="subir-label">
+              <img
+                src="../../../Imagenes/subir imagen logo azul.png"
+                class="Subir"
+                alt="Subir"
+              />
+            </label>
+          </div>
         </div>
+      </div>
 
-        <button class="Confirmar">CONFIRMAR</button>
-
+      <button class="Confirmar">CONFIRMAR</button>
     </form>
 
-            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
     <script src="Pantalla gestion perfil.js"></script>
-
-</body>
+  </body>
 </html>

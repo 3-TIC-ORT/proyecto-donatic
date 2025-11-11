@@ -56,7 +56,6 @@ function mostrarClase() {
 subscribeGETEvent("mostrarClase", mostrarClase);
 
 function unirseAClase({ codigoClase, nombreCompleto }) {
-  //estan mal los nombres en el json, arreglar
   let clasesJSON = fs.readFileSync("clases.json", "utf-8");
   let clasesArray = JSON.parse(clasesJSON);
   for (let i = 0; i < clasesArray.length; i++) {
@@ -91,8 +90,8 @@ function sumarPuntajeJuego({ nombreAlumno, juego, resultado }) {
   let juegosArray = JSON.parse(juegosJSON);
   for (let i = 0; i < juegosArray.length; i++) {
     if (juegosArray[i].nombreDelAlumno == nombreAlumno) {
-      if (!juegosArray.resultados) {
-        juegosArray.resultados = [];
+      if (!juegosArray[i].resultados) {
+        juegosArray[i].resultados = [];
       }
       juegosArray[i].resultados.push({ juego, resultado });
     }
@@ -120,6 +119,13 @@ function mostrarInfo() {
   return pizarronArray;
 }
 subscribeGETEvent("mostrarinfo", mostrarInfo);
+
+function mostrarPuntaje() {
+  let juegosJSON = fs.readFileSync("juegos.json", "utf-8");
+  let juegosArray = JSON.parse(juegosJSON);
+  return juegosArray;
+}
+subscribeGETEvent("mostrarPuntaje", mostrarPuntaje);
 
 function gestionPerfil({
   nombre,
