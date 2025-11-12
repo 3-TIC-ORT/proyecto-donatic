@@ -61,6 +61,18 @@ const elementoPregunta = document.getElementById("pregunta");
 const BtnV = document.getElementById("btnV");
 const BtnF = document.getElementById("btnF");
 const elementoPuntaje = document.getElementById("puntaje");
+function mostrarPopUp(mensaje) {
+  let popup = document.getElementById("popup1");
+  popup.style.display = "flex";
+  popup.querySelector("#CuadradoCorrecto").textContent = mensaje;
+}
+const popup = document.getElementById("popup1");
+const botonSiguiente = document.getElementById("PasarSiguiente");
+
+botonSiguiente.addEventListener("click", () => {
+  popup.style.display = "none";
+  mostrarPregunta();
+});
 function mostrarPregunta() {
   if (NumeroPregunta < Preguntas.length) {
     elementoPregunta.textContent = Preguntas[NumeroPregunta].pregunta;
@@ -84,11 +96,11 @@ function verificarRespuesta(respuestaUsuario) {
   const preguntaActual = Preguntas[NumeroPregunta];
 
   if (respuestaUsuario === preguntaActual.Respuesta) {
-    alert("¡Correcto!");
+   mostrarPopUp("Correcto!")
     Indicador.classList.add("correcto");
     Puntaje++;
   } else {
-    alert(`¡Incorrecto!`);
+    mostrarPopUp("Incorrecto")
     Indicador.classList.add("incorrecto");
   }
 

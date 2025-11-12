@@ -110,3 +110,34 @@ body{
   background-color: #FFFFFF;
   color: #3996D0;
 }
+#popup1 {
+  display: none;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;  
+}
+
+.popupcontent {
+  background-color: #3996D0;
+  color: white;
+  font-size: 2rem;
+  width: 400px;
+  height: 200px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#CuadradoCorrecto {
+  font-size: 2rem;
+  text-align: center;
+}
