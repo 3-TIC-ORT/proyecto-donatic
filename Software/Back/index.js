@@ -92,6 +92,8 @@ function sumarPuntajeJuego({ nombreCompleto, juego, resultado }) {
   for (let i = 0; i < juegosArray.length; i++) {
     if (juegosArray[i].nombreCompleto === nombreCompleto) {
       jugador = juegosArray[i];
+      break;
+    }
     }
     if (!jugador) {
       jugador = { nombreCompleto, resultados: [] };
@@ -102,7 +104,7 @@ function sumarPuntajeJuego({ nombreCompleto, juego, resultado }) {
       jugador.resultados = [];
     }
     jugador.resultados.push({ juego, resultado });
-  }
+  
   let juegosjson = JSON.stringify(juegosArray, null, 2);
   fs.writeFileSync("juegos.json", juegosjson);
   return juegosArray;
@@ -135,10 +137,8 @@ function mostrarPuntaje() {
 subscribeGETEvent("mostrarPuntaje", mostrarPuntaje);
 
 function gestionPerfil({
-  nombre,
-  apellido,
-  nuevoNombre,
-  nuevoApellido,
+  nombreCompleto,
+  nuevoNombreCompleto,
   nuevaContraseña,
   nuevaClase,
   nuevaFoto,
@@ -147,15 +147,12 @@ function gestionPerfil({
   let usuariosArray = JSON.parse(usuariosJSON);
   for (let i = 0; i < usuariosArray.length; i++) {
     if (
-      usuariosArray[i].nombre == nombre &&
-      usuariosArray[i].apellido == apellido
+      usuariosArray[i].nombreCompleto == nombreCompleto
     ) {
-      if (nuevoNombre) {
-        usuariosArray[i].nombre = nuevoNombre;
+      if (nuevoNombreCompleto) {
+        usuariosArray[i].nombreCompleto = nuevoNombreCompleto;
       }
-      if (nuevoApellido) {
-        usuariosArray[i].apellido = nuevoApellido;
-      }
+      
       if (nuevaContraseña) {
         usuariosArray[i].contraseña = nuevaContraseña;
       }
@@ -174,5 +171,3 @@ function gestionPerfil({
 subscribePOSTEvent("gestionPerfil", gestionPerfil);
 startServer();
 
-// hacer que guarde rol pq no me viene con el registro. tmp se guarda la clase?!
-//arreglar porque con el registro no se une a clase
