@@ -3,6 +3,7 @@ let mailImput=document.getElementById("escribir.email")
 let passwordImput =document.getElementById("escribir.contra")
 let FormInicio= document.getElementById("FormInicio");
 const Botoniniciarsesion = document.getElementById("BotonIniciarSesion");
+const nombreUsuario = localStorage.getItem('nombreUsuario');
 
 let Botonvolver = document.getElementById("Botonvolver");
 function Funcionvolver (){
@@ -23,6 +24,7 @@ FormInicio.addEventListener("submit", (e)=>{
     alert (respuesta.error);
   }
   else{
+    localStorage.setItem('nombreUsuario', datosLogin.nombreCompleto);
     alert("Bienvenido " + respuesta.nombre)
     window.location.href = "../Pantalla inicio Educador/Educador.html"
   }  

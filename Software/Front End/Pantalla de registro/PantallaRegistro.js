@@ -29,6 +29,7 @@ BotonRegistrarse.addEventListener("click", () => {
     foto: fotoDePerfil,
   };
   postEvent("registro", datosRegistro, (respuesta) => {
+    localStorage.setItem('nombreUsuario', nombre)
     window.location.href =
       "../Pantalla de inicio estudiantes/inicio estudiantes.html";
   });
