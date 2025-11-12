@@ -1,10 +1,10 @@
 [
   {
-    "nombreDelAlumno": "pepe",
+    "nombreCompleto": "pepe",
     "resultados": [
       { "juego": 1, "resultado": "4/4" },
       { "juego": 2, "resultado": "1/10" }
     ]
   },
-  { "nombreDelAlumno": "juan" }
+  { "nombreCompleto": "juan" }
 ]

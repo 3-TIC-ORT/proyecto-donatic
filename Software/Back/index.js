@@ -85,16 +85,23 @@ function juegos(data) {
 
 subscribePOSTEvent("juegosResultados", juegos);
 
-function sumarPuntajeJuego({ nombreAlumno, juego, resultado }) {
+function sumarPuntajeJuego({ nombreCompleto, juego, resultado }) {
   let juegosJSON = fs.readFileSync("juegos.json", "utf-8");
   let juegosArray = JSON.parse(juegosJSON);
+  let jugador = null;
   for (let i = 0; i < juegosArray.length; i++) {
-    if (juegosArray[i].nombreDelAlumno == nombreAlumno) {
-      if (!juegosArray[i].resultados) {
-        juegosArray[i].resultados = [];
-      }
-      juegosArray[i].resultados.push({ juego, resultado });
+    if (juegosArray[i].nombreCompleto === nombreCompleto) {
+      jugador = juegosArray[i];
     }
+    if (!jugador) {
+      jugador = { nombreCompleto, resultados: [] };
+      juegosArray.push(jugador);
+    }
+
+    if (!jugador.resultados) {
+      jugador.resultados = [];
+    }
+    jugador.resultados.push({ juego, resultado });
   }
   let juegosjson = JSON.stringify(juegosArray, null, 2);
   fs.writeFileSync("juegos.json", juegosjson);
