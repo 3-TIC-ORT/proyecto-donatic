@@ -87,12 +87,14 @@
   {
     "nombreCompleto": "pepe",
     "clave": "",
-    "codigoClase": ""
+    "codigoClase": "",
+    "contraseña": "4321"
   },
   {
     "nombreCompleto": "pepe",
     "clave": "",
-    "codigoClase": ""
+    "codigoClase": "",
+    "contraseña": "4321"
   },
   {
     "nombreCompleto": "pepe4",
@@ -102,5 +104,11 @@
   {
     "nombreCompleto": "zuri anda",
     "clave": ""
+  },
+  {
+    "nombreCompleto": "pepe",
+    "clave": "1234",
+    "codigoClase": "9777",
+    "contraseña": "4321"
   }
 ]

@@ -139,7 +139,7 @@ subscribeGETEvent("mostrarPuntaje", mostrarPuntaje);
 function gestionPerfil({
   nombreCompleto,
   nuevoNombreCompleto,
-  nuevaContraseña,
+  nuevaClave,
   nuevaClase,
   nuevaFoto,
 }) {
@@ -154,7 +154,7 @@ function gestionPerfil({
       }
       
       if (nuevaContraseña) {
-        usuariosArray[i].contraseña = nuevaContraseña;
+        usuariosArray[i].clave = nuevaClave;
       }
       if (nuevaClase) {
         usuariosArray[i].clase = nuevaClase;

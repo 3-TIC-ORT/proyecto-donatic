@@ -49,7 +49,7 @@ botonConfirmar.addEventListener("click", (e) => {
         nombreCompleto: nombreCompletoOriginal, 
         
         nuevoNombreCompleto: nuevoNombreCompleto, 
-        nuevaContraseña: nuevaContrasena,
+        nuevaClave: nuevaContrasena,
         nuevaClase: nuevoCodigoClase.length === 4 ? nuevoCodigoClase : undefined,
         nuevaFoto: nuevaFotoFile, 
     };
