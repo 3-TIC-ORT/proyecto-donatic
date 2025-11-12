@@ -19,6 +19,7 @@ FormInicio.addEventListener("submit", (e)=>{
     nombreCompleto: mailImput.value,
     clave: passwordImput.value,
   };
+  localStorage.setItem('nombreUsuario', datosLogin.nombreCompleto);
  postEvent("iniciodesesion", datosLogin, (respuesta) =>{
   if (respuesta.false){
     alert (respuesta.error);
