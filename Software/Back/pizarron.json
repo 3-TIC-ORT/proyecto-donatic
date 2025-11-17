@@ -1,11 +1,10 @@
 [
   {
-    "post": "yo done sangre"
+    "titulo": "nn",
+    "contenido": "nnn"
   },
   {
-    "post": "yo no done sangre"
-  },
-  {
-    "post":"quiero budin"
+    "titulo": "Prueba",
+    "contenido": "Este es un mensaje de prueba en el pizarrón."
   }
 ]

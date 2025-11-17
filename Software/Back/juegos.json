@@ -24,5 +24,14 @@
         "resultado": "7/10"
       }
     ]
+  },
+  {
+    "nombreCompleto": "meñe",
+    "resultados": [
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 70
+      }
+    ]
   }
 ]
