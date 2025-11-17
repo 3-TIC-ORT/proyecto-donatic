@@ -4,6 +4,12 @@ let BotonVolver = document.getElementById("VolverInicio");
 const popup = document.getElementById ("popup");
 popup.style.display = "none";
 
+const subirinfo = document.getElementById ("subirinfo");
+
+subirinfo.addEventListener ("click", function()  {
+  popup.style.display = "block";
+})
+
 function VolveralInicio() {
   window.location.href = "../Pantalla Inicio Educador/Educador.html";
 }
