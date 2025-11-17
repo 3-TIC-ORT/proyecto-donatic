@@ -1,3 +1,6 @@
+connect2Server()
+const nombreCompleto = localStorage.getItem('nombreUsuario');
+const juego = "Verdadero/Falso";
 const Preguntas = [
   {
     pregunta:
@@ -78,11 +81,20 @@ function mostrarPregunta() {
     elementoPregunta.textContent = Preguntas[NumeroPregunta].pregunta;
   } else {
     elementoPregunta.textContent = `Tu puntaje final es: ${Puntaje} de ${Preguntas.length}.`;
-    //Aca va a ir el post event
+
 
     BtnV.disabled = true;
     BtnF.disabled = true;
-  }
+    const datosPuntaje = {
+      nombreCompleto: nombreCompleto, 
+       juego: juego,                   
+       Puntaje: Puntaje                
+       };
+      
+       postEvent("juegosResultados", datosPuntaje, (juegosArray) => {
+       console.log("✅ Puntaje enviado y guardado. Respuesta del servidor:", juegosArray); 
+        });
+       }
   if (elementoPuntaje) {
     elementoPuntaje.textContent = `Puntaje: ${Puntaje}`;
   }

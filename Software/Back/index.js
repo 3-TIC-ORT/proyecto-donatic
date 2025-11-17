@@ -85,7 +85,7 @@ function juegos(data) {
 
 subscribePOSTEvent("juegosResultados", juegos);
 
-function sumarPuntajeJuego({ nombreCompleto, juego, resultado }) {
+function sumarPuntajeJuego({ nombreCompleto, juego, puntaje }) {
   let juegosJSON = fs.readFileSync("juegos.json", "utf-8");
   let juegosArray = JSON.parse(juegosJSON);
   let jugador = null;
@@ -100,11 +100,11 @@ function sumarPuntajeJuego({ nombreCompleto, juego, resultado }) {
     juegosArray.push(jugador);
   }
 
-  if (!jugador.resultados) {
-    jugador.resultados = [];
-  }
-  jugador.resultados.push({ juego, resultado });
-
+    if (!jugador.resultados) {
+      jugador.resultados = [];
+    }
+    jugador.resultados.push({ juego, puntaje });
+  
   let juegosjson = JSON.stringify(juegosArray, null, 2);
   fs.writeFileSync("juegos.json", juegosjson);
   return juegosArray;
