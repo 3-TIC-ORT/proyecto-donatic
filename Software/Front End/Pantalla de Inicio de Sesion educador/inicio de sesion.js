@@ -1,32 +1,35 @@
 connect2Server();
-let mailImput=document.getElementById("escribir.email")
-let passwordImput =document.getElementById("escribir.contra")
-let FormInicio= document.getElementById("FormInicio");
+let mailImput = document.getElementById("escribir.email");
+let passwordImput = document.getElementById("escribir.contra");
+let FormInicio = document.getElementById("FormInicio");
 const Botoniniciarsesion = document.getElementById("BotonIniciarSesion");
-const nombreUsuario = localStorage.getItem('nombreUsuario');
+const RolUsuario = localStorage.getItem("rolUsuario");
 
 let Botonvolver = document.getElementById("Botonvolver");
-function Funcionvolver (){
-    window.location.href = '../Pantalla de inicio no registrados/pantalla de inicio no registrados.html'
+function Funcionvolver() {
+  window.location.href =
+    "../Pantalla de inicio no registrados/pantalla de inicio no registrados.html";
 }
-Botonvolver.addEventListener("click", Funcionvolver)
+if (Botonvolver) {
+  Botonvolver.addEventListener("click", Funcionvolver);
+}
 
-
-FormInicio.addEventListener("submit", (e)=>{
+FormInicio.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  let datosLogin={
+  let datosLogin = {
     nombreCompleto: mailImput.value,
     clave: passwordImput.value,
   };
- postEvent("iniciodesesion", datosLogin, (respuesta) =>{
-  if (respuesta.false){
-    alert (respuesta.error);
-  }
-  else{
-    localStorage.setItem('nombreUsuario', datosLogin.nombreCompleto);
-    alert("Bienvenido " + respuesta.nombre)
-    window.location.href = "../Pantalla inicio Educador/Educador.html"
-  }  
- });
+  postEvent("iniciodesesion", datosLogin, (respuesta) => {
+    if (respuesta === true) {
+      localStorage.setItem("nombreUsuario", datosLogin.nombreCompleto);
+      alert("Bienvenido " + datosLogin.nombreCompleto);
+      window.location.href = "../Pantalla Inicio educador/Educador.html";
+    } else {
+      alert(
+        "Error de inicio de sesión: El usuario o la clave son incorrectos."
+      );
+    }
+  });
 });

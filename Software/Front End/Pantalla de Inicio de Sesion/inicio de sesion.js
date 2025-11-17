@@ -10,7 +10,9 @@ function Funcionvolver() {
   window.location.href =
     "../Pantalla de inicio no registrados/pantalla de inicio no registrados.html";
 }
-Botonvolver.addEventListener("click", Funcionvolver);
+if (Botonvolver) {
+  Botonvolver.addEventListener("click", Funcionvolver);
+}
 
 FormInicio.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -19,14 +21,16 @@ FormInicio.addEventListener("submit", (e) => {
     nombreCompleto: mailImput.value,
     clave: passwordImput.value,
   };
-  localStorage.setItem("nombreUsuario", datosLogin.nombreCompleto);
   postEvent("iniciodesesion", datosLogin, (respuesta) => {
-    if (respuesta.false) {
-      alert(respuesta.error);
-    } else {
-      alert("Bienvenido " + respuesta.nombre);
+    if (respuesta === true) {
+      localStorage.setItem("nombreUsuario", datosLogin.nombreCompleto);
+      alert("Bienvenido " + datosLogin.nombreCompleto);
       window.location.href =
         "../Pantalla de inicio estudiantes/inicio estudiantes.html";
+    } else {
+      alert(
+        "Error de inicio de sesión: El usuario o la clave son incorrectos."
+      );
     }
   });
 });
