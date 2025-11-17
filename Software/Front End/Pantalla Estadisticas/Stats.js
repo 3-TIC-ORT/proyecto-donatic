@@ -1,15 +1,11 @@
 connect2Server();
-let BotonCerrarLaSesion = document.getElementById("BotonCerrarSesion");
-function CerrarSesion() {
-  window.location.href =
-    "../pantalla de inicio no registrados/pantalla de inicio no registrados.html";
+
+let BotonVolver = document.getElementById("VolverInicio");
+function VolverAlInicio (){
+    window.location.href='../Pantalla Inicio Educador/Educador.html'
 }
-BotonCerrarLaSesion.addEventListener("click", CerrarSesion);
-let BotonVolverAtras = document.getElementById("VolverAtras");
-function VolveralInicio() {
-  window.location.href = "../Pantalla Inicio Educador/Educador.html";
-}
-BotonVolverAtras.addEventListener("click", VolveralInicio);
+BotonVolver.addEventListener("click", (VolverAlInicio));
+
 let Stats = [
   { name: "Manolito", Puntaje: 10 },
   { name: "Luis", Puntaje: 8 },
