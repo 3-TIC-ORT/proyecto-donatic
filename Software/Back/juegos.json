@@ -43,5 +43,10 @@
     "nombreCompleto": "pepe",
     "juego": "Verdadero/Falso",
     "Puntaje": 6
+  },
+  {
+    "nombreCompleto": "",
+    "juego": "Puede Donar?",
+    "Puntaje": 4
   }
 ]

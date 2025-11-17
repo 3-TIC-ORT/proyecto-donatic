@@ -1,5 +1,7 @@
 connect2Server()
 let BotonVolver = document.getElementById("BotonVolver");
+const nombreCompleto = localStorage.getItem('nombreUsuario');
+const juego = "Puede Donar?";
 function VolverAlInicio (){
     window.location.href='../Pantalla de Juegos/Selector de Juegos.html'}
 BotonVolver.addEventListener("click", (VolverAlInicio));
@@ -36,14 +38,20 @@ function mostrarPregunta() {
 
         BtnV.disabled = true;
         BtnF.disabled = true;
+        const datosPuntaje = {
+            nombreCompleto: nombreCompleto, 
+             juego: juego,                   
+             Puntaje: Puntaje                
+             };
+            
+             postEvent("juegosResultados", datosPuntaje, (juegosArray) => {
+             console.log("✅ Puntaje enviado y guardado. Respuesta del servidor:", juegosArray); 
+              });
+             }
     }
     if (elementoPuntaje) {
         elementoPuntaje.textContent = `Puntaje: ${Puntaje}`;
     }
-
-
-    
-}
     if (elementoPuntaje) {
         elementoPuntaje.textContent = `Puntaje: ${Puntaje}`;
     } 
