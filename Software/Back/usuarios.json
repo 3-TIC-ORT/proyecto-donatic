@@ -112,5 +112,9 @@
     "clave": "1234",
     "codigoClase": "9777",
     "contraseña": "4321"
+  },
+  {
+    "nombreCompleto": "",
+    "clave": ""
   }
 ]
