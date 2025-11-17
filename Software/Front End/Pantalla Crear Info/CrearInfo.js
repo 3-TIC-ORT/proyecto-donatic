@@ -1,14 +1,18 @@
 connect2Server();
 let BotonVolver = document.getElementById("VolverInicio");
 
-const popup = document.getElementById ("popup");
+const popup = document.getElementById("popup");
 popup.style.display = "none";
 
-const subirinfo = document.getElementById ("subirinfo");
-
-subirinfo.addEventListener ("click", function()  {
+const subirinfo = document.getElementById("subirinfo");
+subirinfo.addEventListener("click", function () {
   popup.style.display = "block";
-})
+});
+
+const confirmar = document.getElementById("confirmar");
+confirmar.addEventListener("click", function () {
+  popup.style.display = "none";
+});
 
 function VolveralInicio() {
   window.location.href = "../Pantalla Inicio Educador/Educador.html";
