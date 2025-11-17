@@ -27,22 +27,10 @@
     ]
   },
   {
-    "nombre": "Tiritas Rojas",
-    "codigo": "6511",
+    "nombre": "joaco",
+    "codigoClase": "1873",
     "alumnos": [
-      "shulio"
+      "male"
     ]
-  },
-  {
-    "nombre": "Tiritas Rojas",
-    "codigo": "1031"
-  },
-  {
-    "nombre": "",
-    "codigo": "3069"
-  },
-  {
-    "nombre": "ñibli",
-    "codigo": "5980"
   }
 ]

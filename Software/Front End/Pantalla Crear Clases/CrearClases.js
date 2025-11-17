@@ -2,47 +2,50 @@ connect2Server();
 
 let BotonIrClases = document.getElementById("BotonClases");
 function IrClases() {
-    window.location.href = '../Pantalla clases/Clases.html'
+  window.location.href = "../Pantalla clases/Clases.html";
 }
 BotonIrClases.addEventListener("click", IrClases);
 
 function moveNext(current, nextId) {
-    if (current.value.length === 1 && nextId) {
-        document.getElementById(nextId).focus();
-    }
+  if (current.value.length === 1 && nextId) {
+    document.getElementById(nextId).focus();
+  }
 }
 function moveBack(event, prevId) {
-    if (event.key === "Backspace" && !event.target.value && prevId) {
-        document.getElementById(prevId).focus();
-    }
+  if (event.key === "Backspace" && !event.target.value && prevId) {
+    document.getElementById(prevId).focus();
+  }
 }
 
 let BotonAleatorio = document.getElementById("aleatorio");
 function Random() {
-    const inputs = document.querySelectorAll('.input');
-    inputs.forEach(input => {
-        const randomNum = Math.floor(Math.random() * 10);
-        input.value = randomNum;
-    });
+  const inputs = document.querySelectorAll(".input");
+  inputs.forEach((input) => {
+    const randomNum = Math.floor(Math.random() * 10);
+    input.value = randomNum;
+  });
 }
 BotonAleatorio.addEventListener("click", Random);
 
 let Nombre = document.getElementById("nombreClase");
-const inputsCodigo = document.querySelectorAll('.input'); 
+const inputsCodigo = document.querySelectorAll(".input");
 let BotonCrear = document.getElementById("botonCrear");
 
 BotonCrear.addEventListener("click", () => {
-    
-    const codigoClase = Array.from(inputsCodigo).map(input => input.value).join('');
+  const codigoClase = Array.from(inputsCodigo)
+    .map((input) => input.value)
+    .join("");
 
-    let datosRegistro = {
-        nombre: Nombre.value, 
-        codigo: codigoClase   
-    };
+  let datosRegistro = {
+    nombre: Nombre.value,
+    codigoClase: codigoClase,
+  };
 
-    alert("Datos a enviar: " + datosRegistro.nombre + ", " + datosRegistro.codigo);
+  alert(
+    "Datos a enviar: " + datosRegistro.nombre + ", " + datosRegistro.codigoClase
+  );
 
-    postEvent("creaciondeclases", datosRegistro, (respuestaDelBackend) => {
-        console.log("Clase creada, confirmación recibida:", respuestaDelBackend);
-    });
+  postEvent("creaciondeclases", datosRegistro, (respuestaDelBackend) => {
+    console.log("Clase creada, confirmación recibida:", respuestaDelBackend);
+  });
 });
