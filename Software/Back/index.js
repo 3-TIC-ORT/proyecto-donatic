@@ -100,11 +100,8 @@ function sumarPuntajeJuego({ nombreCompleto, juego, puntaje }) {
     juegosArray.push(jugador);
   }
 
-    if (!jugador.resultados) {
-      jugador.resultados = [];
-    }
-    jugador.resultados.push({ juego, puntaje });
-  
+  jugador.resultados.push({ juego, puntaje });
+
   let juegosjson = JSON.stringify(juegosArray, null, 2);
   fs.writeFileSync("juegos.json", juegosjson);
   return juegosArray;

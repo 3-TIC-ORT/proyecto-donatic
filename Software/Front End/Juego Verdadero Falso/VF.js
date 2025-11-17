@@ -1,5 +1,8 @@
-connect2Server()
-const nombreCompleto = localStorage.getItem('nombreUsuario');
+//marto dice que el botón no tiene diseño acorde a la estética general del programa en cuestión
+// los botones aparecen luego de terminar el juego
+
+connect2Server();
+const nombreCompleto = localStorage.getItem("nombreUsuario");
 const juego = "Verdadero/Falso";
 const Preguntas = [
   {
@@ -82,19 +85,21 @@ function mostrarPregunta() {
   } else {
     elementoPregunta.textContent = `Tu puntaje final es: ${Puntaje} de ${Preguntas.length}.`;
 
-
     BtnV.disabled = true;
     BtnF.disabled = true;
     const datosPuntaje = {
-      nombreCompleto: nombreCompleto, 
-       juego: juego,                   
-       Puntaje: Puntaje                
-       };
-      
-       postEvent("juegosResultados", datosPuntaje, (juegosArray) => {
-       console.log("✅ Puntaje enviado y guardado. Respuesta del servidor:", juegosArray); 
-        });
-       }
+      nombreCompleto: nombreCompleto,
+      juego: juego,
+      Puntaje: Puntaje,
+    };
+
+    postEvent("juegosResultados", datosPuntaje, (juegosArray) => {
+      console.log(
+        "✅ Puntaje enviado y guardado. Respuesta del servidor:",
+        juegosArray
+      );
+    });
+  }
   if (elementoPuntaje) {
     elementoPuntaje.textContent = `Puntaje: ${Puntaje}`;
   }
@@ -108,11 +113,11 @@ function verificarRespuesta(respuestaUsuario) {
   const preguntaActual = Preguntas[NumeroPregunta];
 
   if (respuestaUsuario === preguntaActual.Respuesta) {
-   mostrarPopUp("Correcto!")
+    mostrarPopUp("Correcto!");
     Indicador.classList.add("correcto");
     Puntaje++;
   } else {
-    mostrarPopUp("Incorrecto")
+    mostrarPopUp("Incorrecto");
     Indicador.classList.add("incorrecto");
   }
 
