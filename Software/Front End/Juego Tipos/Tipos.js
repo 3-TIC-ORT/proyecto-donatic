@@ -1,3 +1,4 @@
+connect2Server()
 let BotonVolver = document.getElementById("BotonVolver");
 function VolverAlInicio (){
     window.location.href='../Pantalla de Juegos/Selector de Juegos.html'}

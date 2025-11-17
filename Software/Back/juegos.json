@@ -2,9 +2,46 @@
   {
     "nombreCompleto": "pepe",
     "resultados": [
-      { "juego": 1, "resultado": "4/4" },
-      { "juego": 2, "resultado": "1/10" }
+      {
+        "juego": 1,
+        "resultado": "4/4"
+      },
+      {
+        "juego": 2,
+        "resultado": "1/10"
+      }
     ]
   },
-  { "nombreCompleto": "juan" }
+  {
+    "nombreCompleto": "juan"
+  },
+  {
+    "resultados": [
+      {
+        "juego": "Verdadero/Falso"
+      },
+      {
+        "juego": "Verdadero/Falso"
+      },
+      {
+        "juego": "Verdadero/Falso"
+      },
+      {
+        "juego": "Verdadero/Falso"
+      },
+      {
+        "juego": "Verdadero/Falso"
+      }
+    ]
+  },
+  {
+    "nombreCompleto": "pepe",
+    "juego": "Verdadero/Falso",
+    "Puntaje": 6
+  },
+  {
+    "nombreCompleto": "pepe",
+    "juego": "Verdadero/Falso",
+    "Puntaje": 6
+  }
 ]
