@@ -28,7 +28,10 @@
   },
   {
     "nombre": "Tiritas Rojas",
-    "codigo": "6511"
+    "codigo": "6511",
+    "alumnos": [
+      "shulio"
+    ]
   },
   {
     "nombre": "Tiritas Rojas",
@@ -37,5 +40,9 @@
   {
     "nombre": "",
     "codigo": "3069"
+  },
+  {
+    "nombre": "ñibli",
+    "codigo": "5980"
   }
 ]

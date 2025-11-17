@@ -42,6 +42,14 @@
       {
         "juego": "Verdadero/Falso",
         "resultado": 5
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 74
+      },
+      {
+        "juego": "Puede Donar?",
+        "resultado": 4
       }
     ]
   }

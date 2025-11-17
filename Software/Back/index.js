@@ -73,18 +73,6 @@ function unirseAClase({ codigoClase, nombreCompleto }) {
 }
 subscribePOSTEvent("unirseAClase", unirseAClase);
 
-function juegos(data) {
-  let juegosJSON = fs.readFileSync("juegos.json", "utf-8");
-  let juegosArray = JSON.parse(juegosJSON);
-  let juegosResultado = data;
-  juegosArray.push(juegosResultado);
-  let juegosjson = JSON.stringify(juegosArray, null, 2);
-  fs.writeFileSync("juegos.json", juegosjson);
-  return juegosResultado;
-}
-
-subscribePOSTEvent("juegosResultados", juegos);
-
 function sumarPuntajeJuego({ nombreCompleto, juego, Puntaje }) {
   let juegosJSON = fs.readFileSync("juegos.json", "utf-8");
   let juegosArray = JSON.parse(juegosJSON);
