@@ -3,7 +3,7 @@
     "nombreCompleto": "pepe",
     "resultados": [
       {
-        "juego": 1,
+        "juego": "VF",
         "resultado": "4/4"
       },
       {
@@ -13,43 +13,15 @@
     ]
   },
   {
-    "nombreCompleto": null,
-    "juego": "Verdadero/Falso",
-    "Puntaje": 5
-  },
-  {
-    "nombreCompleto": null,
-    "juego": "Verdadero/Falso",
-    "Puntaje": 5
-  },
-  {
-    "nombreCompleto": null,
-    "juego": "Verdadero/Falso",
-    "Puntaje": 5
-  },
-  {
-    "nombreCompleto": null,
-    "juego": "Verdadero/Falso",
-    "Puntaje": 5
-  },
-  {
-    "nombreCompleto": "como hizo",
+    "nombreCompleto": "juan",
     "resultados": [
       {
-        "juego": "Verdadero/Falso",
-        "resultado": 5
+        "juego": 1,
+        "resultado": "3/4"
       },
       {
-        "juego": "Verdadero/Falso",
-        "resultado": 5
-      },
-      {
-        "juego": "afinidad sanguínea",
-        "resultado": 74
-      },
-      {
-        "juego": "Puede Donar?",
-        "resultado": 4
+        "juego": 2,
+        "resultado": "7/10"
       }
     ]
   }
