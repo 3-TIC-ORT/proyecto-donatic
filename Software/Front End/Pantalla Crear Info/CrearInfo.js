@@ -1,6 +1,9 @@
 connect2Server();
 let BotonVolver = document.getElementById("VolverInicio");
 
+const popup = document.getElementById ("popup");
+popup.style.display = "none";
+
 function VolveralInicio() {
   window.location.href = "../Pantalla Inicio Educador/Educador.html";
 }
