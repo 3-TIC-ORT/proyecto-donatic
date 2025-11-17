@@ -94,11 +94,11 @@ function sumarPuntajeJuego({ nombreCompleto, juego, puntaje }) {
       jugador = juegosArray[i];
       break;
     }
-    }
-    if (!jugador) {
-      jugador = { nombreCompleto, resultados: [] };
-      juegosArray.push(jugador);
-    }
+  }
+  if (!jugador) {
+    jugador = { nombreCompleto, resultados: [] };
+    juegosArray.push(jugador);
+  }
 
     if (!jugador.resultados) {
       jugador.resultados = [];
@@ -146,14 +146,12 @@ function gestionPerfil({
   let usuariosJSON = fs.readFileSync("usuarios.json", "utf-8");
   let usuariosArray = JSON.parse(usuariosJSON);
   for (let i = 0; i < usuariosArray.length; i++) {
-    if (
-      usuariosArray[i].nombreCompleto == nombreCompleto
-    ) {
+    if (usuariosArray[i].nombreCompleto == nombreCompleto) {
       if (nuevoNombreCompleto) {
         usuariosArray[i].nombreCompleto = nuevoNombreCompleto;
       }
-      
-      if (nuevaContraseña) {
+
+      if (nuevaClave) {
         usuariosArray[i].clave = nuevaClave;
       }
       if (nuevaClase) {
@@ -170,4 +168,3 @@ function gestionPerfil({
 }
 subscribePOSTEvent("gestionPerfil", gestionPerfil);
 startServer();
-
