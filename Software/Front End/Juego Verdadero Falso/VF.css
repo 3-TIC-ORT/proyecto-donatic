@@ -84,6 +84,45 @@ body {
   border-style: solid;
   border-color: #F66451;
 }
+.blanquito {
+  position: absolute;
+  width: 578px;
+  height: 118px;
+  top: 60px;
+  left: 38px;
+  border-radius: 14px;
+  background-color: white;
+  opacity: 1;
+}
+.blanquito h3 {
+  font-family: "Montserrat-Medium", sans-serif;
+  text-align: center;
+  padding-top: 15px;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #C31315;
+}
+.pasarinco{
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  width: 60px;
+  height: 60px;
+  top: 440px;
+  opacity: 1;
+  left: 580px;
+}
+.moraleja {
+  font-family: "Montserrat-Medium",sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;  
+  opacity: 1;
+}
 .BotonVolver {
   background-color: transparent;
   border: 0rem solid transparent;
