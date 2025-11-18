@@ -218,34 +218,34 @@ body {
 #Info {
   display: none;
 }
-.Container{
+.Container {
   width: 94%;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 2rem;
-  margin-top:2rem ;
+  margin-top: 2rem;
   flex-wrap: wrap;
 }
-.tarjeta{
-    height: auto;
-    width: 25rem;
-    background-color: #FFFFFF ;
-    border: 0.2rem solid rgb ;
-    border-radius: 0.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    gap: 1rem;
-    padding: 1rem;
-    font-family: 'Montserrat-medium';
-  }
-  .titulo{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.3rem;
-  }
+.tarjeta {
+  height: auto;
+  width: 25rem;
+  background-color: #ffffff;
+  border: 0.2rem solid rgb;
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem;
+  font-family: "Montserrat-medium";
+}
+.titulo {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}

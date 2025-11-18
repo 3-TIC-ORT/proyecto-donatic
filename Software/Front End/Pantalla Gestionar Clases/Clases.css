@@ -1,105 +1,114 @@
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-@font-face { 
-    font-family: 'Montserrat-Medium'; 
-    src: url(../../../Montserrat/static/Montserrat-Medium.ttf); 
-} 
-@font-face { 
-    font-family: 'Montserrat-ExtraBold'; 
-    src: url(../../../Montserrat/static/Montserrat-ExtraBold.ttf); 
-} 
 @font-face {
-    font-family: 'Montserrat-SemiBold';
-    src: url(../../../Montserrat/static/Montserrat-SemiBold.ttf);
+  font-family: "Montserrat-Medium";
+  src: url(../../../Montserrat/static/Montserrat-Medium.ttf);
 }
-body { 
-    background-color: #F66451; 
-    max-width:100vw; 
-    min-height: 100vh; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    margin-top: 2rem; 
-    margin-bottom: 3rem; 
-    gap: 4rem; 
-} 
-.container-blanco { 
-    background-color: #FFFFFF; 
-    height: 12rem; 
-    width: 93%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    border-radius: 2rem; 
-    border: 1rem solid #FFFFFF; 
-} 
-.logo { 
-    height: 8rem; 
-    width: 10rem; 
-} 
-.BotonVolver { 
-    background-color: transparent; 
-    border: 0rem solid transparent; 
-    height: 6.5rem; 
-    width: 10rem; 
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start; 
-} 
-.FlechaVolver { 
-    height: 6rem; 
-    width: 6rem; 
-    cursor: pointer; 
-} 
-.VerClases { 
-    height: 5rem; 
-    width: 30rem; 
-    background-color: #3996D0; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    font-family: 'Montserrat-ExtraBold'; 
-    color: #FFFFFF; 
-    font-size: 3rem; 
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url(../../../Montserrat/static/Montserrat-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url(../../../Montserrat/static/Montserrat-SemiBold.ttf);
+}
+body {
+  background-color: #f66451;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  gap: 4rem;
+}
+.container-blanco {
+  background-color: #ffffff;
+  height: 12rem;
+  width: 93%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2rem;
+  border: 1rem solid #ffffff;
+}
+.logo {
+  height: 8rem;
+  width: 10rem;
+}
+#clases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 0 auto;
 }
 
 .clase {
-    border: 0.2rem solid #C31315;
-    background-color: #FFFFFF;
-    padding: 10px;
-    margin: 10px 0;
-    width: 250px;
-    border-radius: 6px;
-    font-family: 'Montserrat-SemiBold';
+  width: auto;
+}
+.BotonVolver {
+  background-color: transparent;
+  border: 0rem solid transparent;
+  height: 6.5rem;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.FlechaVolver {
+  height: 6rem;
+  width: 6rem;
+  cursor: pointer;
+}
+.VerClases {
+  height: 5rem;
+  width: 30rem;
+  background-color: #3996d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat-ExtraBold";
+  color: #ffffff;
+  font-size: 3rem;
+}
+
+.clase {
+  border: 0.2rem solid #c31315;
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 10px 0;
+  width: 250px;
+  border-radius: 6px;
+  font-family: "Montserrat-SemiBold";
 }
 
 .titulo-clase {
-    font-weight: bold;
-    cursor: pointer;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .btn-alumnos {
-    background-color: #ddd;
-    padding: 5px;
-    margin-top: 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    font-family: 'Montserrat-SemiBold';
-
+  background-color: #ddd;
+  padding: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "Montserrat-SemiBold";
 }
 
 .lista-alumnos p {
-    margin: 3px 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    color: #3996D0;
-    background-color: #FFFFFF;
-    border: 0.1rem solid #3996D0;
-    margin-top: 1rem;
-    font-family: 'Montserrat-SemiBold';
+  margin: 3px 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #3996d0;
+  background-color: #ffffff;
+  border: 0.1rem solid #3996d0;
+  margin-top: 1rem;
+  font-family: "Montserrat-SemiBold";
 }

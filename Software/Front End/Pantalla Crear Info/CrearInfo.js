@@ -8,10 +8,7 @@ const confirmar = document.getElementById("confirmar");
 const inputTitulo = document.getElementById("tituloposteo");
 const inputInformacion = document.getElementById("informacion");
 
-let ListadeInfo = [];
-const inputInfo = document.getElementById("InfoInput");
-const subirInfo = document.getElementById("SubirLaInfo");
-const ulInfo = document.getElementById("Info");
+const contenedorPrincipal = document.querySelector(".Container");
 
 function VolveralInicio() {
   window.location.href = "../Pantalla Inicio Educador/Educador.html";
@@ -48,6 +45,7 @@ if (confirmar) {
 
       postEvent("subirInfo", datosPosteo, (respuesta) => {
         console.log("Información subida con éxito:", respuesta);
+        cargarPostsEnTarjetas();
       });
 
       if (inputTitulo) inputTitulo.value = "";
@@ -59,24 +57,50 @@ if (confirmar) {
   });
 }
 
-if (subirInfo) {
-  subirInfo.addEventListener("click", function () {
-    const info = inputInfo ? inputInfo.value.trim() : "";
+function cargarPostsEnTarjetas() {
+  if (!contenedorPrincipal) {
+    console.error(
+      "ERROR: No se encontró el contenedor principal con la clase '.Container'."
+    );
+    return;
+  }
+
+  contenedorPrincipal.innerHTML = "";
+
+  getEvent("mostrarinfo", (posteosRecibidos) => {
+    if (!Array.isArray(posteosRecibidos) || posteosRecibidos.length === 0) {
+      contenedorPrincipal.textContent = "";
+      return;
+    }
+
+    posteosRecibidos.forEach((post, index) => {
+      const tituloPost = post.titulo || "Post sin Título";
+      const contenidoPost = post.contenido || "Post sin Contenido";
+
+      const tarjetaActual = document.createElement("div");
+      tarjetaActual.classList.add("tarjeta");
+
+      tarjetaActual.innerHTML = `
+                <div class="titulo">${tituloPost}</div>
+                <div class="info">${contenidoPost}</div>
+            `;
+
+      contenedorPrincipal.appendChild(tarjetaActual);
+    });
+  });
+}
+
+cargarPostsEnTarjetas();
+
+setInterval(cargarPostsEnTarjetas, 5000);
+
+if (document.getElementById("SubirLaInfo")) {
+  document.getElementById("SubirLaInfo").addEventListener("click", function () {
+    const info = document.getElementById("InfoInput")
+      ? document.getElementById("InfoInput").value.trim()
+      : "";
 
     if (info !== "") {
-      ListadeInfo.push(info);
-      if (inputInfo) inputInfo.value = "";
-
-      if (ulInfo) ulInfo.innerHTML = "";
-
-      for (let i = 0; i < ListadeInfo.length; i++) {
-        const li = document.createElement("li");
-        li.textContent = ListadeInfo[i];
-        li.className = "tipocomentario";
-        if (ulInfo) ulInfo.appendChild(li);
-      }
-
-      postEvent("subirInfoListaSimple", ListadeInfo, () => {});
     }
   });
 }
