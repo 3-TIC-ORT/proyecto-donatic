@@ -23,5 +23,23 @@
     "nombreCompleto": "male",
     "clave": "1234",
     "codigoClase": "1873"
+  },
+  {
+    "nombreCompleto": "crema pastelera",
+    "clave": "cerrado"
+  },
+  {
+    "nombreCompleto": "dsffasfd",
+    "clave": "wdfasf",
+    "codigoClase": "3343"
+  },
+  {
+    "nombreCompleto": "dsfadsfs",
+    "clave": "dsafdsf"
+  },
+  {
+    "nombreCompleto": "2432423",
+    "clave": "4355",
+    "codigoClase": "deea"
   }
 ]
