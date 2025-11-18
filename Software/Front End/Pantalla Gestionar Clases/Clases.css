@@ -11,6 +11,10 @@
     font-family: 'Montserrat-ExtraBold'; 
     src: url(../../../Montserrat/static/Montserrat-ExtraBold.ttf); 
 } 
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url(../../../Montserrat/static/Montserrat-SemiBold.ttf);
+}
 body { 
     background-color: #F66451; 
     max-width:100vw; 
@@ -60,4 +64,42 @@ body {
     font-family: 'Montserrat-ExtraBold'; 
     color: #FFFFFF; 
     font-size: 3rem; 
+}
+
+.clase {
+    border: 0.2rem solid #C31315;
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin: 10px 0;
+    width: 250px;
+    border-radius: 6px;
+    font-family: 'Montserrat-SemiBold';
+}
+
+.titulo-clase {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-alumnos {
+    background-color: #ddd;
+    padding: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Montserrat-SemiBold';
+
+}
+
+.lista-alumnos p {
+    margin: 3px 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #3996D0;
+    background-color: #FFFFFF;
+    border: 0.1rem solid #3996D0;
+    margin-top: 1rem;
+    font-family: 'Montserrat-SemiBold';
 }

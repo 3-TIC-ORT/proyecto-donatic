@@ -32,5 +32,17 @@
     "alumnos": [
       "male"
     ]
+  },
+  {
+    "nombre": "Quinto B",
+    "codigoClase": "3601"
+  },
+  {
+    "nombre": "Cuarto G",
+    "codigoClase": "6901"
+  },
+  {
+    "nombre": "hola",
+    "codigoClase": "0478"
   }
 ]
