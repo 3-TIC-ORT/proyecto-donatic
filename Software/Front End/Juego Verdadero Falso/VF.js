@@ -10,6 +10,7 @@ const Preguntas = [
       "LAS DONACIONES DE SANGRE PUEDEN DEBILITAR AL CUERPO PERMANENTEMENTE",
     Respuesta: false,
     Numero: 1,
+    Moraleja: "Pepe"
   },
   {
     pregunta: "AL DONAR SANGRE, ME PUEDO CONTAGIAR DE ALGUNA ENFERMEDAD",
@@ -77,6 +78,7 @@ const botonSiguiente = document.getElementById("PasarSiguiente");
 
 botonSiguiente.addEventListener("click", () => {
   popup.style.display = "none";
+  NumeroPregunta ++;
   mostrarPregunta();
 });
 function mostrarPregunta() {

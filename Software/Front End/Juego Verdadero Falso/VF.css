@@ -37,6 +37,53 @@ body {
   height: 8rem;
   width: 10rem;
 }
+.popup1 {
+  position: absolute;
+  width: 560px;
+  height: 200px;
+  opacity: 1;
+  top: 475px;
+  left: 398px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: white;
+  background-color: #3996D0;
+  padding: 10px;
+  gap: 10px;
+}
+.popup1 h3{
+  font-family: "Montserrat-Medium", sans-serif;
+  text-align: center;
+  padding-top: 15px;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+}
+.pasar {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  width: 60px;
+  height: 60px;
+  top: 120px;
+  opacity: 1;
+  left: 240px;
+}
+.popupinco{
+  position: absolute;
+  width: 660px;
+  height: 520px;
+  background-color: #C31315;
+  opacity: 1;
+  top: 315px;
+  left: 340px;
+  border-width: 3px;
+  border-radius: 14px;
+  border-style: solid;
+  border-color: #F66451;
+}
 .BotonVolver {
   background-color: transparent;
   border: 0rem solid transparent;
@@ -109,32 +156,6 @@ body {
 #btnV {
   background-color: #ffffff;
   color: #3996d0;
-}
-#popup1 {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.popupcontent {
-  background-color: #3996d0;
-  color: white;
-  font-size: 2rem;
-  width: 400px;
-  height: 200px;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
 }
 
 #CuadradoCorrecto {
