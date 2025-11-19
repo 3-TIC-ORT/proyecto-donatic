@@ -1,52 +1,30 @@
 [
   {
-    "creador": "pepe",
+    "creador": "dante",
     "nombre": "3TD",
-    "codigoClase": "4g6U",
+    "codigoClase": "2323",
     "alumnos": [
       "zuri",
       "lu",
-      "marto"
-    ]
-  },
-  {
-    "nombre": "erkfhrheaiu",
-    "codigoClase": "0997"
-  },
-  {
-    "nombre": "pepe",
-    "codigoClase": "1427"
-  },
-  {
-    "nombre": "pruebita",
-    "codigoClase": "9777",
-    "alumnos": [
-      "ñibli",
-      "pepe",
-      "jknwfekbjsfv"
-    ]
-  },
-  {
-    "nombre": "joaco",
-    "codigoClase": "1873",
-    "alumnos": [
+      "marto",
       "male"
     ]
   },
   {
-    "nombre": "Quinto B",
-    "codigoClase": "3601"
+    "nombre": "4MB",
+    "codigoClase": "9777"
   },
   {
-    "nombre": "Cuarto G",
-    "codigoClase": "6901"
+    "nombre": "1Q",
+    "codigoClase": "1234",
+    "alumnos": [
+      "justo",
+      "dante",
+      "valen"
+    ]
   },
   {
-    "nombre": "hola",
-    "codigoClase": "0478"
-  },
-  {
-    "nombre": "748",
-    "codigoClase": "0746"
+    "nombre": "2D",
+    "codigoClase": "1630"
   }
 ]

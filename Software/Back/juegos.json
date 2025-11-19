@@ -1,48 +1,17 @@
 [
   {
-    "nombreCompleto": "pepe",
+    "nombreCompleto": "male",
     "resultados": [
       {
-        "juego": "VF",
-        "resultado": "4/4"
+        "juego": "Verdadero/Falso",
+        "resultado": 5
       },
-      {
-        "juego": 2,
-        "resultado": "1/10"
-      }
-    ]
-  },
-  {
-    "nombreCompleto": "juan",
-    "resultados": [
-      {
-        "juego": 1,
-        "resultado": "3/4"
-      },
-      {
-        "juego": 2,
-        "resultado": "7/10"
-      }
-    ]
-  },
-  {
-    "nombreCompleto": "meñe",
-    "resultados": [
       {
         "juego": "afinidad sanguínea",
-        "resultado": 70
-      }
-    ]
-  },
-  {
-    "nombreCompleto": null,
-    "resultados": [
-      {
-        "juego": "Verdadero/Falso",
-        "resultado": 0
+        "resultado": 90
       },
       {
-        "juego": "Verdadero/Falso",
+        "juego": "Puede Donar?",
         "resultado": 6
       }
     ]
