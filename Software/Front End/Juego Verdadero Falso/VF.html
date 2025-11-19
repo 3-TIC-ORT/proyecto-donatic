@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Verdadero o Falso</title>
-    <link rel="stylesheet" href="VF.css">
-    <link rel="icon" href="../../../Imagenes/LOGO DEFINITIVO.png" type="image/x-icon">
-</head>
-<body>
+    <link rel="stylesheet" href="VF.css" />
+    <link
+      rel="icon"
+      href="../../../Imagenes/LOGO DEFINITIVO.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
     <div class="container-blanco">
-        <button id="BotonVolver" class="BotonVolver">
-            <img src="../../../Imagenes/flecha salir.png" alt="FlechaSalir" class="FlechaVolver">
-        </button>
-        <img src="../../../Imagenes/LOGO DEFINITIVO.png" alt="Logo DonaTIC" class="logo">
+      <button id="BotonVolver" class="BotonVolver">
+        <img
+          src="../../../Imagenes/flecha salir.png"
+          alt="FlechaSalir"
+          class="FlechaVolver"
+        />
+      </button>
+      <img
+        src="../../../Imagenes/LOGO DEFINITIVO.png"
+        alt="Logo DonaTIC"
+        class="logo"
+      />
     </div>
 
     <div id="Indicador" class="Indicador">
-        <h2 id="pregunta"></h2>
-        <div class="botones">
-            <button type="button" id="btnV" class="botonzito">VERDADERO</button>
-            <button type="button" id="btnF" class="botonzito">FALSO</button>
-        </div>
+      <h2 id="pregunta"></h2>
+      <div class="botones">
+        <button type="button" id="btnV" class="botonzito">VERDADERO</button>
+        <button type="button" id="btnF" class="botonzito">FALSO</button>
+      </div>
     </div>
     <div id="popup1" class="popup1">
-        <h3>¡CORRECTO!</h3>
-        <button id="PasarSiguiente" class="pasar">
-            <img src="/Imagenes/flecha siguiente.png" alt="siguiente">
-        </button>
+      <h3>¡CORRECTO!</h3>
+      <button id="PasarSiguiente" class="pasar">
+        <img src="/Imagenes/flecha siguiente.png" alt="siguiente" />
+      </button>
     </div>
     <div id="popupinco" class="popupinco">
-        <div class="blanquito">
+      <div class="blanquito">
         <h3>INCORRECTO</h3>
-        </div>
-        <button id="PasarSiguiente" class="pasarinco">
-            <img src="/Imagenes/flecha siguiente.png" alt="siguiente">
-        </button>
+        <p class="moraleja"></p>
+      </div>
+      <button id="PasarSiguienteInco" class="pasarinco">
+        <img src="/Imagenes/flecha siguiente.png" alt="siguiente" />
+      </button>
     </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
     <script src="VF.js"></script>
-</body>
+  </body>
 </html>
