@@ -1,15 +1,5 @@
 [
   {
-    "nombreCompleto": "pipu vargas",
-    "clave": "4321",
-    "codigoClase": "1234"
-  },
-  {
-    "nombreCompleto": "meñe",
-    "clave": "meñe",
-    "codigoClase": "2323"
-  },
-  {
     "nombreCompleto": "zuri",
     "clave": "1234",
     "codigoClase": "2323"
@@ -21,25 +11,7 @@
   },
   {
     "nombreCompleto": "male",
-    "clave": "1234",
-    "codigoClase": "1873"
-  },
-  {
-    "nombreCompleto": "crema pastelera",
-    "clave": "cerrado"
-  },
-  {
-    "nombreCompleto": "dsffasfd",
-    "clave": "wdfasf",
-    "codigoClase": "3343"
-  },
-  {
-    "nombreCompleto": "dsfadsfs",
-    "clave": "dsafdsf"
-  },
-  {
-    "nombreCompleto": "2432423",
-    "clave": "4355",
-    "codigoClase": "deea"
+    "clave": "2323",
+    "codigoClase": "2323"
   }
 ]
