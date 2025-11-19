@@ -15,5 +15,26 @@
         "resultado": 6
       }
     ]
+  },
+  {
+    "nombreCompleto": null,
+    "resultados": [
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 74
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 74
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 74
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 74
+      }
+    ]
   }
 ]

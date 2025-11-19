@@ -1,8 +1,11 @@
 connect2Server();
 let BotonVolver = document.getElementById("BotonVolver");
 const nombreCompleto = localStorage.getItem("nombreUsuario");
+const popup = document.getElementById("popup")
+const bien=document.getElementById("bien")
 const juego = "afinidad sanguínea";
 function VolverAlInicio() {
+  popup.classList.add("display")
   window.location.href = "../Pantalla de Juegos/Selector de Juegos.html";
 }
 BotonVolver.addEventListener("click", VolverAlInicio);
@@ -379,11 +382,10 @@ function cargarNivel() {
       );
     });
 
-    alert(`¡Felicidades! Has terminado el juego. 
-        Total de Respuestas Correctas: ${aciertosGlobales} de ${
-      ORDEN_NIVELES.length * 16
-    } posibles.`);
-
+    popup.classList.remove("display")
+    bien.textContent =`Lograste hacer  ${aciertosGlobales} de ${
+  ORDEN_NIVELES.length * 16
+} de forma correcta.`
     aciertosGlobales = 0;
     nivelActualIndex = 0;
 
@@ -451,9 +453,6 @@ function verificarRespuestas() {
   });
 
   aciertosGlobales += aciertosNivelActual;
-
-  alert(`¡Nivel ${claveNivel} completado!
-    Respuestas Correctas: ${aciertosNivelActual} de ${totalPosible}.`);
 
   nivelActualIndex++;
 

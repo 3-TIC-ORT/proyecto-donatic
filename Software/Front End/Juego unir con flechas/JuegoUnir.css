@@ -11,6 +11,45 @@
     font-family: 'Montserrat-bold';
     src: url(../../../Montserrat/static/Montserrat-Bold.ttf);
 }
+.popup{
+    position: absolute;
+    width: 899px;
+    height: 400px;
+    top: 417px;
+    left: 200px;
+    background-color: #236995;
+    border-radius: 14px;
+    border-width: 3px;
+    gap: 6px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.display{
+    display: none;
+}
+.bien{
+    width: 627px;
+height: 259px;
+gap: 10px;
+angle: 0 deg;
+opacity: 1;
+padding-top: 20px;
+padding-right: 10px;
+padding-bottom: 20px;
+padding-left: 10px;
+font-family: "Montserrat";
+font-weight: 600;
+font-style: "SemiBold";
+font-size: 60px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+}
   body{
       background-color: #3996D0;
       font-family: 'Montserrat';
