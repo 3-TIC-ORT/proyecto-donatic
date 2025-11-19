@@ -50,14 +50,14 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 2rem;
   padding: 0 1rem;
 }
 
 .post-card {
   background-color: #ffffff;
-  width: clamp(250px, 45%, 400px);
+  width: clamp(250px, 45%, 300px);
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
