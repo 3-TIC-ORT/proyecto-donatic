@@ -18,26 +18,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
         juegosArray.forEach((jugador) => {
           if (jugador.nombreCompleto && jugador.resultados) {
-            const pJugador = document.createElement("h3");
-            pJugador.textContent = ` Jugador: ${jugador.nombreCompleto}`;
-            contenedorData.appendChild(pJugador);
+            if (jugador.nombreCompleto && jugador.resultados) {
 
-            jugador.resultados.forEach((resultado) => {
-              const pStat = document.createElement("p");
+              const bloque = document.createElement("div");
+              bloque.classList.add("jugador-bloque");
+          
+              const pJugador = document.createElement("h3");
+              pJugador.textContent = `Jugador: ${jugador.nombreCompleto}`;
+          
+              const columnaStats = document.createElement("div");
+              columnaStats.classList.add("columna-stats");
+          
+              jugador.resultados.forEach((resultado) => {
+                  const nombreJuego = resultado.juego;
+                  const puntaje =
+                      resultado.resultado ||
+                      resultado.Puntaje ||
+                      resultado.puntaje ||
+                      "N/A";
+          
+                  if (nombreJuego) {
+                      const fila = document.createElement("div");
+                      fila.classList.add("fila-stat");
+          
+                      const pJuego = document.createElement("p");
+                      pJuego.textContent = `• ${nombreJuego}`;
+          
+                      const pPuntaje = document.createElement("p");
+                      pPuntaje.textContent = `Puntaje Total: ${puntaje}`;
+          
+                      fila.appendChild(pJuego);
+                      fila.appendChild(pPuntaje);
+                      columnaStats.appendChild(fila);
+                  }
+              });
+          
+              bloque.appendChild(pJugador);
+              bloque.appendChild(columnaStats);
+              contenedorData.appendChild(bloque);
+          }
+          
+          
 
-              const nombreJuego = resultado.juego;
-
-              const puntaje =
-                resultado.resultado ||
-                resultado.Puntaje ||
-                resultado.puntaje ||
-                "N/A";
-
-              if (nombreJuego) {
-                pStat.textContent = `  • ${nombreJuego} - Puntaje Total: ${puntaje}`;
-                contenedorData.appendChild(pStat);
-              }
-            });
           } else if (
             jugador.nombreCompleto &&
             jugador.juego &&
