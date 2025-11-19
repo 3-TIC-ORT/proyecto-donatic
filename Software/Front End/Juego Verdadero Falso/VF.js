@@ -94,7 +94,6 @@ function ocultarPopUp() {
 ocultarPopUp();
 
 function mostrarPopUp(mensaje) {
-  let popup = document.getElementById("popup1");
   popup.style.display = "block";
   popup.querySelector("#CuadradoCorrecto").textContent = mensaje;
 }
@@ -110,6 +109,7 @@ const botonSiguiente = document.getElementById("PasarSiguiente");
 
 botonSiguiente.addEventListener("click", () => {
   ocultarPopUp();
+  Puntaje++;
   NumeroPregunta++;
   mostrarPregunta();
 });

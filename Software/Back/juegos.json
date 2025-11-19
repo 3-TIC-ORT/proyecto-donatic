@@ -33,5 +33,18 @@
         "resultado": 70
       }
     ]
+  },
+  {
+    "nombreCompleto": null,
+    "resultados": [
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 0
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 6
+      }
+    ]
   }
 ]
