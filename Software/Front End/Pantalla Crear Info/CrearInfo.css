@@ -222,8 +222,8 @@ body {
   height: auto;
   width: 30%;
   background-color: #ffffff;
-  border: 0.2rem solid rgb;
-  border-radius: 0.2rem;
+  border: 0.2rem solid  #f66451;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
