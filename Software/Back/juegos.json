@@ -15,5 +15,30 @@
         "resultado": 6
       }
     ]
+  },
+  {
+    "nombreCompleto": null,
+    "resultados": [
+      {
+        "juego": "Puede Donar?",
+        "resultado": 0
+      },
+      {
+        "juego": "Puede Donar?",
+        "resultado": 0
+      },
+      {
+        "juego": "Puede Donar?",
+        "resultado": 0
+      },
+      {
+        "juego": "Puede Donar?",
+        "resultado": 0
+      },
+      {
+        "juego": "Puede Donar?",
+        "resultado": 5
+      }
+    ]
   }
 ]

@@ -79,14 +79,13 @@ const Preguntas = [
     Moraleja: "Laura no puede donar. Haber recibido una transfusión de sangre es un criterio de exclusión permanente.",
   },
 ];
-// --- Fin de Preguntas ---
 
 let NumeroPregunta = 0;
 let Puntaje = 0;
 const elementoPregunta = document.getElementById("pregunta");
 const BtnV = document.getElementById("btnV");
 const BtnF = document.getElementById("btnF");
-const elementoPuntaje = document.getElementById("puntaje");
+const elementoPuntaje = document.getElementById("puntaje"); 
 const popup = document.getElementById("popup1");
 const popupincorrecto = document.getElementById("popupinco");
 const botonSiguiente = document.getElementById("PasarSiguiente"); // Botón 'Siguiente' (Correcto/Omitir)
@@ -102,7 +101,6 @@ ocultarPopUp();
 
 function mostrarPopUp(mensaje) {
   popup.style.display = "block";
-  popup.querySelector("#CuadradoCorrecto").textContent = mensaje;
 }
 
 function mostrarPopUpIncorrecto(texto) {
@@ -114,9 +112,11 @@ function mostrarPopUpIncorrecto(texto) {
 function mostrarPregunta() {
   if (NumeroPregunta < Preguntas.length) {
     elementoPregunta.textContent = Preguntas[NumeroPregunta].pregunta;
+    
     if (elementoPuntaje) {
-      elementoPuntaje.textContent = `Puntaje: ${Puntaje}`;
+      elementoPuntaje.textContent = `Puntaje: ${Puntaje}`; 
     }
+    
     BtnV.disabled = false;
     BtnF.disabled = false;
   } else {
@@ -124,15 +124,16 @@ function mostrarPregunta() {
 
     BtnV.disabled = true;
     BtnF.disabled = true;
+    
     const datosPuntaje = {
       nombreCompleto: nombreCompleto,
       juego: juego,
-      Puntaje: Puntaje,
+      Puntaje: Puntaje, 
     };
 
     postEvent("sumarPuntaje", datosPuntaje, (juegosArray) => {
       console.log(
-        "✅ Puntaje enviado y guardado. Respuesta del servidor:",
+        " Puntaje enviado y guardado. Respuesta del servidor:",
         juegosArray
       );
     });
@@ -160,7 +161,12 @@ function verificarRespuesta(respuestaUsuario) {
     if (Indicador) {
         Indicador.classList.add("correcto");
     }
-    Puntaje++; 
+        Puntaje++; 
+    
+    if (elementoPuntaje) {
+        elementoPuntaje.textContent = `Puntaje: ${Puntaje}`; 
+    }
+    
   } else {
     mostrarPopUpIncorrecto(preguntaActual);
     if (Indicador) {
@@ -174,7 +180,6 @@ function pasarSiguientePregunta() {
     NumeroPregunta++; 
     mostrarPregunta();
 }
-
 
 if (BtnV) {
   BtnV.addEventListener("click", () => {
@@ -190,14 +195,10 @@ if (BtnF) {
 
 if (botonSiguiente) {
   botonSiguiente.addEventListener("click", pasarSiguientePregunta);
-} else {
-  console.error("Error: Elemento 'PasarSiguiente' no encontrado.");
 }
 
 if (botonSiguienteInco) {
   botonSiguienteInco.addEventListener("click", pasarSiguientePregunta);
-} else {
-  console.error("Error: Elemento 'PasarSiguienteInco' no encontrado.");
 }
 
 mostrarPregunta();
