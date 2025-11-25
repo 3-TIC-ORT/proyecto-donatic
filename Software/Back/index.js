@@ -165,14 +165,14 @@ function gestionPerfil({
   let clasesJSON = fs.readFileSync("clases.json", "utf-8");
   let clasesArray = JSON.parse(clasesJSON);
   for (let i = 0; i < clasesArray.length; i++) {
-    for (let i = 0; i < clasesArray.alumnos.length; i++) {
-      if (clasesArray.alumnos[i] === nombreCompleto) {
-        clasesArray.alumnos[i] = nuevoNombreCompleto;
+    for (let j = 0; j < clasesArray[i].alumnos.length; j++) {
+      if (clasesArray[i].alumnos[j] === nombreCompleto) {
+        clasesArray[i].alumnos[j] = nuevoNombreCompleto;
       }
     }
   }
   let clasesjson = JSON.stringify(clasesArray, null, 2);
-  fs.writeFileSync("juegos.json", clasesjson);
+  fs.writeFileSync("clases.json", clasesjson);
   return usuariosArray;
 }
 subscribePOSTEvent("gestionPerfil", gestionPerfil);
