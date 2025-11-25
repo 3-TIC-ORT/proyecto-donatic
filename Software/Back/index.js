@@ -152,19 +152,28 @@ function gestionPerfil({
       fs.writeFileSync("usuarios.json", usuariosjson);
     }
   }
-  if (!nuevoNombreCompleto){
-  return usuariosArray;
-  }
   let juegosJSON = fs.readFileSync("juegos.json", "utf-8");
   let juegosArray = JSON.parse(juegosJSON);
-  for (let i=0; i<juegosArray.length; i++){
-    if (juegosArray[i].nombreCompleto == nombreCompleto){
-      juegosArray[i].nombreCompleto = nuevoNombreCompleto
-    } 
+  for (let i = 0; i < juegosArray.length; i++) {
+    if (juegosArray[i].nombreCompleto == nombreCompleto) {
+      juegosArray[i].nombreCompleto = nuevoNombreCompleto;
+    }
   }
   let juegosjson = JSON.stringify(juegosArray, null, 2);
   fs.writeFileSync("juegos.json", juegosjson);
-  return juegosArray;
+
+  let clasesJSON = fs.readFileSync("clases.json", "utf-8");
+  let clasesArray = JSON.parse(clasesJSON);
+  for (let i = 0; i < clasesArray.length; i++) {
+    for (let i = 0; i < clasesArray.alumnos.length; i++) {
+      if (clasesArray.alumnos[i] === nombreCompleto) {
+        clasesArray.alumnos[i] = nuevoNombreCompleto;
+      }
+    }
+  }
+  let clasesjson = JSON.stringify(clasesArray, null, 2);
+  fs.writeFileSync("juegos.json", clasesjson);
+  return usuariosArray;
 }
 subscribePOSTEvent("gestionPerfil", gestionPerfil);
 startServer();
