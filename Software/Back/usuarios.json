@@ -10,8 +10,12 @@
     "codigoClase": "2323"
   },
   {
-    "nombreCompleto": "male",
+    "nombreCompleto": "male rossi",
     "clave": "2323",
     "codigoClase": "2323"
+  },
+  {
+    "nombreCompleto": "nico",
+    "clave": "1234"
   }
 ]

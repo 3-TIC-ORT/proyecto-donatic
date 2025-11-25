@@ -152,7 +152,21 @@ function gestionPerfil({
       fs.writeFileSync("usuarios.json", usuariosjson);
     }
   }
+  if (!nuevoNombreCompleto){
   return usuariosArray;
+  }
+  let juegosJSON = fs.readFileSync("juegos.json", "utf-8");
+  let juegosArray = JSON.parse(juegosJSON);
+  for (let i=0; i<juegosArray.length; i++){
+    if (juegosArray[i].nombreCompleto == nombreCompleto){
+      juegosArray[i].nombreCompleto = nuevoNombreCompleto
+    } 
+  }
+  let juegosjson = JSON.stringify(juegosArray, null, 2);
+  fs.writeFileSync("juegos.json", juegosjson);
+  return juegosArray;
 }
 subscribePOSTEvent("gestionPerfil", gestionPerfil);
 startServer();
+
+//tmb que al cambiar clase se borre de la otra, y se cambie en clases.json, no solo en perfil

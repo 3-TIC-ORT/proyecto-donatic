@@ -1,6 +1,6 @@
 [
   {
-    "nombreCompleto": "male",
+    "nombreCompleto": "male rossi",
     "resultados": [
       {
         "juego": "Verdadero/Falso",
@@ -13,27 +13,6 @@
       {
         "juego": "Puede Donar?",
         "resultado": 6
-      }
-    ]
-  },
-  {
-    "nombreCompleto": null,
-    "resultados": [
-      {
-        "juego": "afinidad sanguínea",
-        "resultado": 74
-      },
-      {
-        "juego": "afinidad sanguínea",
-        "resultado": 74
-      },
-      {
-        "juego": "afinidad sanguínea",
-        "resultado": 74
-      },
-      {
-        "juego": "afinidad sanguínea",
-        "resultado": 74
       }
     ]
   }
