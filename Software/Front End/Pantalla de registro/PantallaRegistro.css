@@ -217,3 +217,12 @@ box-shadow: 0.5rem 0.5rem 1rem #30303061}
   cursor: default;
   pointer-events: none;
 }
+input::-webkit-password-toggle-button,
+input::-webkit-credentials-auto-fill-button {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+input::-ms-reveal {
+  display: none !important;
+}

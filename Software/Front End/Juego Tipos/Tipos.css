@@ -84,9 +84,118 @@
   .puede:hover{
     transform: scale(1.06);   
   }
-  .si{
-    background-color: #3996D0;
-  }
-  .no{
-    background-color: #F66451;
-  }
+  #btnF {
+  background-color: #c31315;
+  color: #ffffff;
+}
+#btnV {
+  background-color: #ffffff;
+  color: #3996d0;
+}
+
+#CuadradoCorrecto {
+  font-size: 2rem;
+  text-align: center;
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url(../../../Montserrat/static/Montserrat-Medium.ttf);
+}
+
+
+.popup1 {
+  position: absolute;
+  width: 560px;
+  height: 200px;
+  opacity: 1;
+  top: 475px;
+  left: 398px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: white;
+  background-color: #3996d0;
+  padding: 10px;
+  gap: 10px;
+}
+.popup1 h3 {
+  font-family: "Montserrat-Medium";
+  text-align: center;
+  padding-top: 15px;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+}
+.pasar {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  width: 60px;
+  height: 60px;
+  opacity: 1;
+}
+
+.popupinco {
+  position: absolute;
+  width: 44rem;
+  height: 36rem;
+  background-color: #c31315;
+  opacity: 1;
+  top: 19rem;
+  left: 21rem;
+  border-width: 0.2rem;
+  border-radius: 0.9rem;
+  border-style: solid;
+  border-color: #f66451;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.blanquito {
+  position: absolute;
+  width: 36rem;
+  height: 7rem;
+  top: 3rem;
+  border-radius: 0.9rem;
+  background-color: white;
+  opacity: 1;
+  left: 4rem;
+}
+.blanquito h3 {
+  font-family: "Montserrat-Medium";
+  text-align: center;
+  padding-top: 0.9rem;
+  font-size: 5rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #c31315;
+}
+.moraleja {
+  font-family: "Montserrat-Medium";
+  font-size: 2.5rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-top: 4rem;
+  text-align: center;
+  opacity: 1;
+  color: white;
+}
+.pasar {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  top: 26rem;
+  opacity: 1;
+  cursor: pointer;
+  left: 33rem;
+}
+
+#CuadradoCorrecto {
+  font-size: 2rem;
+  text-align: center;
+}
