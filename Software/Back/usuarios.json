@@ -1,6 +1,6 @@
 [
   {
-    "nombreCompleto": "zuri",
+    "nombreCompleto": "urzuri",
     "clave": "1234",
     "codigoClase": "2323"
   },
@@ -16,6 +16,10 @@
   },
   {
     "nombreCompleto": "nico",
+    "clave": "1234"
+  },
+  {
+    "nombreCompleto": "uri",
     "clave": "1234"
   }
 ]

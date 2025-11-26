@@ -3,28 +3,11 @@
     "creador": "dante",
     "nombre": "3TD",
     "codigoClase": "2323",
-    "alumnos": [
-      "zuri",
-      "lu",
-      "marto",
-      "male"
-    ]
-  },
-  {
-    "nombre": "4MB",
-    "codigoClase": "9777"
+    "alumnos": ["urzuri", "lu", "marto", "male"]
   },
   {
     "nombre": "1Q",
     "codigoClase": "1234",
-    "alumnos": [
-      "justo",
-      "dante",
-      "valen"
-    ]
-  },
-  {
-    "nombre": "2D",
-    "codigoClase": "1630"
+    "alumnos": ["justo", "dante", "valen"]
   }
 ]

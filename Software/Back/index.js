@@ -171,6 +171,13 @@ function gestionPerfil({
       }
     }
   }
+  if (nuevaClase) {
+    for (let i = 0; i < clasesArray.length; i++) {
+      if (clasesArray[i].codigoClase === nuevaClase)
+        clasesArray[i].alumnos.push(nombreCompleto);
+    }
+  }
+
   let clasesjson = JSON.stringify(clasesArray, null, 2);
   fs.writeFileSync("clases.json", clasesjson);
   return usuariosArray;
