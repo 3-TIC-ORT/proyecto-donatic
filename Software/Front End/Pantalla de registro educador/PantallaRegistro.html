@@ -17,15 +17,18 @@
     </header>
     <form class="Registro">
                 <input type="text" name="nombreYapellido" id="inputNombre" placeholder="NOMBRE Y APELLIDO" class="Input">
-                <input type="password" name="contraseña" id="inputContrasena" placeholder="CONTRASEÑA" class="Input">  
+                <div class="contra">
+                <input name="contraseña" class="Contraseña" type="password" id="inputContrasena" placeholder="CONTRASEÑA">
+                <span id="togglePassword" class="ojo"></span>
+                </div>
 
-            <div class="FotoPerfil">
-                <p>FOTO DE PERFIL</p>
-                <input type="file" name="fotodeperfil" id="inputFotoPerfil" class="SubirInput" style="display: none;">
-                <label for="inputFotoPerfil" class="subir-label">
-                    <img src="../../../Imagenes/subir imagen logo.png" class="Subir" alt="Subir">
-                </label>
-            </div>
+                <div class="FotoPerfil">
+                    <p>FOTO DE PERFIL</p>
+                    <input type="file" name="fotodeperfil" id="inputFotoPerfil" class="SubirInput" style="display: none;">
+                    <label for="inputFotoPerfil" class="subir-label">
+                        <img src="../../../Imagenes/subir imagen logo.png" class="Subir" alt="Subir">
+                    </label>
+                </div>
         
         <button type="button" id="BotonRegistrarse" class="Confirmar">CONFIRMAR</button>
 

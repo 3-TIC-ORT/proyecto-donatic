@@ -99,3 +99,47 @@ header{
 }
 .Confirmar:hover{
 box-shadow: 0.5rem 0.5rem 1rem #30303061}
+
+.contra {
+    height: 4rem;
+    width: 80%;
+    background-color: #FFFFFF;
+    border: 0.2rem solid #236995;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+}
+
+.contra input {
+  width: 90%;
+  height: 100%;
+  border: none;
+  padding-right: 40px; /* espacio para el ojo */
+  font-size: 18px;
+  outline: none;
+  color: #236995;
+  font-family: 'Montserrat-Medium';
+  font-size: 2rem;
+}
+
+.ojo {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%23236995" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>');
+  background-size: cover;
+}
+
+.ojo.showing {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%23236995" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.94 17.94C16.19 19.22 14.17 20 12 20 5 20 1 12 1 12a21.8 21.8 0 014.2-5.32M9.88 4.12A9.77 9.77 0 0112 4c7 0 11 8 11 8a21.82 21.82 0 01-3.17 4.65"/><line x1="1" y1="1" x2="23" y2="23"/></svg>');
+}
+
+.ojo.disabled {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}

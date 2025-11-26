@@ -33,3 +33,27 @@ FormInicio.addEventListener("submit", (e) => {
     }
   });
 });
+
+const password = document.getElementById("escribir.contra");
+const toggle = document.getElementById("togglePassword");
+
+toggle.classList.add("disabled");
+
+password.addEventListener("input", () => {
+  if (password.value.length > 0) {
+    toggle.classList.remove("disabled");
+  } else {
+    toggle.classList.add("disabled");
+    password.type = "password";
+    toggle.classList.add("showing");
+  }
+});
+
+toggle.addEventListener("click", () => {
+  if (toggle.classList.contains("disabled")) return;
+
+  const oculto = password.type === "password";
+
+  password.type = oculto ? "text" : "password";
+  toggle.classList.toggle("showing", !oculto);
+});
