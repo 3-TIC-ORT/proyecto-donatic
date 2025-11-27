@@ -13,10 +13,7 @@ function registro(data) {
   usuariosArray.push(usuario);
   let usuariosjson = JSON.stringify(usuariosArray, null, 2);
   fs.writeFileSync("usuarios.json", usuariosjson);
-  unirseAClase({
-    codigoClase: data.codigoClase,
-    nombreCompleto: data.nombreCompleto,
-  });
+
   return usuario;
 }
 subscribePOSTEvent("registro", registro);
@@ -55,16 +52,16 @@ function mostrarClase() {
   let usuariosJSON = fs.readFileSync("usuarios.json", "utf-8");
   let usuariosArray = JSON.parse(usuariosJSON);
   for (let i = 0; i < clasesArray.length; i++) {
-    let clase = clasesArray[i].codigoClase;
-    for (let j = 0; j < usuariosArray.length; i++) {
-      if (usuariosArray[i].codigoClase === clase) {
-        alumnosArray.push(usuariosArray[i].nombreCompleto);
+    if (usuariosArray.codigoClase)
+      for (let j = 0; j < usuariosArray.length; j++) {
+        if (usuariosArray[j].codigoClase === clasesArray[i].codigoClase) {
+          alumnosArray.push(usuariosArray[j].nombreCompleto);
+        }
       }
-    }
   }
 
-  let cursos = { clasesArray, alumnosArray };
-  return cursos;
+  let clases = { clasesArray, alumnosArray };
+  return clases;
 }
 subscribeGETEvent("mostrarClase", mostrarClase);
 
