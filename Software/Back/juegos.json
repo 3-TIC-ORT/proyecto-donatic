@@ -24,5 +24,18 @@
         "resultado": 77
       }
     ]
+  },
+  {
+    "nombreCompleto": null,
+    "resultados": [
+      {
+        "juego": "Puede Donar?",
+        "resultado": 2
+      },
+      {
+        "juego": "Puede Donar?",
+        "resultado": 6
+      }
+    ]
   }
 ]
