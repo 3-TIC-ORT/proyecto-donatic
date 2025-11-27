@@ -46,22 +46,21 @@ function crearClase(data) {
 subscribePOSTEvent("creaciondeclases", crearClase);
 
 function mostrarClase() {
-  let alumnosArray = [];
   let clasesJSON = fs.readFileSync("clases.json", "utf-8");
   let clasesArray = JSON.parse(clasesJSON);
   let usuariosJSON = fs.readFileSync("usuarios.json", "utf-8");
   let usuariosArray = JSON.parse(usuariosJSON);
   for (let i = 0; i < clasesArray.length; i++) {
-    if (usuariosArray.codigoClase)
-      for (let j = 0; j < usuariosArray.length; j++) {
+    let alumnosArray = [];
+    for (let j = 0; j < usuariosArray.length; j++) {
+      if (usuariosArray[j].codigoClase)
         if (usuariosArray[j].codigoClase === clasesArray[i].codigoClase) {
           alumnosArray.push(usuariosArray[j].nombreCompleto);
         }
-      }
+    }
+    clasesArray[i].alumnos = alumnosArray;
   }
-
-  let clases = { clasesArray, alumnosArray };
-  return clases;
+  return clasesArray;
 }
 subscribeGETEvent("mostrarClase", mostrarClase);
 

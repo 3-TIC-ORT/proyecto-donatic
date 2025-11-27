@@ -13,7 +13,6 @@ const contenedorData = document.getElementById("Nombre");
 
 getEvent("mostrarClase", (clasesRecibidas) => {
   const contenedor = document.getElementById("clases");
-
   if (!contenedor) return;
 
   contenedor.innerHTML = "";
@@ -37,7 +36,6 @@ getEvent("mostrarClase", (clasesRecibidas) => {
     const listaAlumnos = document.createElement("div");
     listaAlumnos.classList.add("lista-alumnos");
     listaAlumnos.style.display = "none";
-
     (clase.alumnos || []).forEach((alum) => {
       const p = document.createElement("p");
       p.textContent = alum;
