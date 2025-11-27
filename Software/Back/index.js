@@ -134,7 +134,7 @@ function gestionPerfil({
         usuariosArray[i].clave = nuevaClave;
       }
       if (nuevaClase) {
-        usuariosArray[i].clase = nuevaClase;
+        usuariosArray[i].codigoClase = nuevaClase;
       }
       if (nuevaFoto) {
         usuariosArray[i].foto = nuevaFoto;

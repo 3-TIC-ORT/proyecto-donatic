@@ -5,21 +5,17 @@
     "codigoClase": "1234"
   },
   {
-    "nombreCompleto": "dante",
-    "clave": "1234",
-    "codigoClase": "2323"
-  },
-  {
     "nombreCompleto": "male rossi",
     "clave": "2323",
-    "codigoClase": "2323"
-  },
-  {
-    "nombreCompleto": "nico",
-    "clave": "1234"
+    "codigoClase": "1234"
   },
   {
     "nombreCompleto": "uri",
     "clave": "1234"
+  },
+  {
+    "nombreCompleto": "dante konoba",
+    "clave": "2323",
+    "codigoClase": "2590"
   }
 ]
