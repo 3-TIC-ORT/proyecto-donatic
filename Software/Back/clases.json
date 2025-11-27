@@ -2,12 +2,10 @@
   {
     "creador": "dante",
     "nombre": "3TD",
-    "codigoClase": "2323",
-    "alumnos": ["urzuri", "lu", "marto", "male"]
+    "codigoClase": "2323"
   },
   {
     "nombre": "1Q",
-    "codigoClase": "1234",
-    "alumnos": ["justo", "dante", "valen"]
+    "codigoClase": "1234"
   }
 ]

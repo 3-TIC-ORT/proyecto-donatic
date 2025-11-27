@@ -49,29 +49,24 @@ function crearClase(data) {
 subscribePOSTEvent("creaciondeclases", crearClase);
 
 function mostrarClase() {
+  let alumnosArray = [];
   let clasesJSON = fs.readFileSync("clases.json", "utf-8");
   let clasesArray = JSON.parse(clasesJSON);
-  return clasesArray;
-}
-subscribeGETEvent("mostrarClase", mostrarClase);
-
-function unirseAClase({ codigoClase, nombreCompleto }) {
-  let clasesJSON = fs.readFileSync("clases.json", "utf-8");
-  let clasesArray = JSON.parse(clasesJSON);
+  let usuariosJSON = fs.readFileSync("usuarios.json", "utf-8");
+  let usuariosArray = JSON.parse(usuariosJSON);
   for (let i = 0; i < clasesArray.length; i++) {
-    if (clasesArray[i].codigoClase == codigoClase) {
-      if (!clasesArray[i].alumnos) {
-        clasesArray[i].alumnos = [];
+    let clase = clasesArray[i].codigoClase;
+    for (let j = 0; j < usuariosArray.length; i++) {
+      if (usuariosArray[i].codigoClase === clase) {
+        alumnosArray.push(usuariosArray[i].nombreCompleto);
       }
-      clasesArray[i].alumnos.push(nombreCompleto);
-      break;
     }
   }
-  clasesJSON = JSON.stringify(clasesArray, null, 2);
-  fs.writeFileSync("clases.json", clasesJSON);
-  return clasesArray;
+
+  let cursos = { clasesArray, alumnosArray };
+  return cursos;
 }
-subscribePOSTEvent("unirseAClase", unirseAClase);
+subscribeGETEvent("mostrarClase", mostrarClase);
 
 function sumarPuntajeJuego({ nombreCompleto, juego, Puntaje }) {
   let juegosJSON = fs.readFileSync("juegos.json", "utf-8");
@@ -161,28 +156,8 @@ function gestionPerfil({
   }
   let juegosjson = JSON.stringify(juegosArray, null, 2);
   fs.writeFileSync("juegos.json", juegosjson);
-
-  let clasesJSON = fs.readFileSync("clases.json", "utf-8");
-  let clasesArray = JSON.parse(clasesJSON);
-  for (let i = 0; i < clasesArray.length; i++) {
-    for (let j = 0; j < clasesArray[i].alumnos.length; j++) {
-      if (clasesArray[i].alumnos[j] === nombreCompleto) {
-        clasesArray[i].alumnos[j] = nuevoNombreCompleto;
-      }
-    }
-  }
-  if (nuevaClase) {
-    for (let i = 0; i < clasesArray.length; i++) {
-      if (clasesArray[i].codigoClase === nuevaClase)
-        clasesArray[i].alumnos.push(nombreCompleto);
-    }
-  }
-
-  let clasesjson = JSON.stringify(clasesArray, null, 2);
-  fs.writeFileSync("clases.json", clasesjson);
-  return usuariosArray;
 }
 subscribePOSTEvent("gestionPerfil", gestionPerfil);
 startServer();
 
-//tmb que al cambiar clase se borre de la otra, y se cambie en clases.json, no solo en perfil
+//local storage, que se fije QUE usuario esta y en base a eso que mostar
