@@ -3,12 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 @font-face {
   font-family: "Montserrat-Bold";
   src: url(../../../Montserrat/static/Montserrat-Bold.ttf);
 }
-
 body {
   background-color: #fbf5f4;
   display: flex;
@@ -17,7 +15,6 @@ body {
   align-items: center;
   flex-direction: column;
 }
-
 .container-logo {
   width: 100vw;
   height: auto;
@@ -27,12 +24,10 @@ body {
   margin-top: 2rem;
   margin-bottom: 5rem;
 }
-
 .logoDonaticP1 {
   width: 52rem;
   height: 44rem;
 }
-
 .buttons {
   width: 100vw;
   height: 18rem;
@@ -42,7 +37,6 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-
 .boton {
   height: 9rem;
   width: 23rem;
@@ -54,50 +48,6 @@ body {
   color: #ffffff;
   cursor: pointer;
 }
-
 .boton:hover {
   background-color: #f66451;
-}
-
-@media (max-width: 1200px) {
-  .logoDonaticP1 {
-    width: 41.6rem;
-    height: 35.2rem;
-  }
-
-  .buttons {
-    height: 14.4rem;
-  }
-
-  .boton {
-    width: 18.4rem;
-    height: 7.2rem;
-    font-size: 1.6rem;
-    border-radius: 3.4rem;
-    border: 0.3rem solid #ffffff;
-  }
-}
-
-@media (max-width: 768px) {
-  .container-logo {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .logoDonaticP1 {
-    width: 70vw;
-    height: 59vw;
-  }
-
-  .buttons {
-    height: 25vw;
-  }
-
-  .boton {
-    width: 40vw;
-    height: 12vw;
-    font-size: 3.5vw;
-    border-radius: 6vw;
-    border: 0.5vw solid #ffffff;
-  }
 }
