@@ -59,7 +59,31 @@ body {
   background-color: #f66451;
 }
 
+@media (max-width: 1200px) {
+  .logoDonaticP1 {
+    width: 41.6rem;
+    height: 35.2rem;
+  }
+
+  .buttons {
+    height: 14.4rem;
+  }
+
+  .boton {
+    width: 18.4rem;
+    height: 7.2rem;
+    font-size: 1.6rem;
+    border-radius: 3.4rem;
+    border: 0.3rem solid #ffffff;
+  }
+}
+
 @media (max-width: 768px) {
+  .container-logo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
   .logoDonaticP1 {
     width: 70vw;
     height: 59vw;
