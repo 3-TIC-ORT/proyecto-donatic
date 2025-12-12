@@ -22,15 +22,15 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 .logoDonaticP1 {
-  width: 52rem;
-  height: 44rem;
+  width: 36rem;
+  height: 30rem;
 }
 .buttons {
   width: 100vw;
-  height: 18rem;
+  height: 14rem;
   background-color: #c31315;
   display: flex;
   justify-content: center;
@@ -38,8 +38,8 @@ body {
   justify-content: space-evenly;
 }
 .boton {
-  height: 9rem;
-  width: 23rem;
+  height: 7rem;
+  width: 21rem;
   border-radius: 4.25rem;
   background-color: #c31315;
   border: 0.4rem solid #ffffff;
@@ -47,6 +47,8 @@ body {
   font-size: 2rem;
   color: #ffffff;
   cursor: pointer;
+
+  
 }
 .boton:hover {
   background-color: #f66451;
