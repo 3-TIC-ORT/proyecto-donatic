@@ -155,5 +155,3 @@ function gestionPerfil({
 }
 subscribePOSTEvent("gestionPerfil", gestionPerfil);
 startServer();
-
-//local storage, que se fije QUE usuario esta y en base a eso que mostar

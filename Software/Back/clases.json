@@ -2,11 +2,15 @@
   {
     "nombre": "1Q",
     "codigoClase": "1234",
-    "alumnos": ["marco ferrari, justo rodriguez, dante konoba"]
+    "alumnos": [
+      "marco ferrari, justo rodriguez, dante konoba"
+    ]
   },
   {
     "nombre": "tic D",
     "codigoClase": "2590",
-    "alumnos": ["urzuri oliver, male rossi, valentina campora"]
+    "alumnos": [
+      "urzuri oliver, male rossi, valentina campora"
+    ]
   }
 ]
