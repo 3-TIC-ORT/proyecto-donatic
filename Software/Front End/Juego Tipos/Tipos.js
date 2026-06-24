@@ -123,7 +123,9 @@ function mostrarPregunta() {
     elementoPregunta.textContent = `Tu puntaje final es: ${Puntaje} de ${Preguntas.length}.`;
 
     BtnV.disabled = true;
+    BtnV.style.display = "none";
     BtnF.disabled = true;
+    BtnF.style.display = "none";
     
     const datosPuntaje = {
       nombreCompleto: nombreCompleto,

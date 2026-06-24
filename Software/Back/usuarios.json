@@ -28,15 +28,63 @@
     "clave": "1234"
   },
   {
-    "nombreCompleto": "",
-    "clave": ""
-  },
-  {
     "nombreCompleto": "Jutimpi",
     "clave": "rodri"
   },
   {
     "nombreCompleto": "ema goldberg",
+    "clave": "1234"
+  },
+  {
+    "nombreCompleto": "marto",
+    "clave": "1234"
+  },
+  {
+    "nombreCompleto": "justo",
+    "clave": "3333"
+  },
+  {
+    "nombreCompleto": "dante",
+    "clave": "1234"
+  },
+  {
+    "nombreCompleto": "Lu",
+    "clave": "caballero",
+    "codigoClase": "0618"
+  },
+  {
+    "nombreCompleto": "Perritosofi",
+    "clave": "Perritosofi123"
+  },
+  {
+    "nombreCompleto": "Perritosofi",
+    "clave": "Perritosofi123"
+  },
+  {
+    "nombreCompleto": "Perritosofi",
+    "clave": "Perritosofi123"
+  },
+  {
+    "nombreCompleto": "",
+    "clave": "",
+    "codigoClase": "1234"
+  },
+  {
+    "nombreCompleto": "",
+    "clave": "",
+    "codigoClase": "1234"
+  },
+  {
+    "nombreCompleto": "Jano",
+    "clave": "12345"
+  },
+  {
+    "nombreCompleto": "Lucia",
+    "clave": "1234",
+    "codigoClase": "1234"
+  },
+  {
+    "nombreCompleto": "tusto",
     "clave": "1234"
   }
 ]
