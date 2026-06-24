@@ -377,7 +377,7 @@ function cargarNivel() {
 
     postEvent("sumarPuntaje", datosPuntaje, (juegosArray) => {
       console.log(
-        "✅ Puntaje enviado y guardado. Respuesta del servidor:",
+        "✅ Puntaje enviado y guardado. Respuesta del servidor: ",
         juegosArray
       );
     });
