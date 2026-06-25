@@ -381,6 +381,7 @@ function cargarNivel() {
         juegosArray
       );
     });
+    document.getElementById("titulobien").textContent = "JUEGO TERMINADO";
 
     popup.classList.remove("display")
     bien.textContent =`Lograste hacer  ${aciertosGlobales} de ${
@@ -454,9 +455,15 @@ function verificarRespuestas() {
 
   aciertosGlobales += aciertosNivelActual;
 
-  nivelActualIndex++;
+  popup.classList.remove("display");
+  document.getElementById("titulobien").textContent = `NIVEL ${claveNivel}`;
+  bien.textContent = `Lograste ${aciertosNivelActual} de ${totalPosible} respuestas correctas.`;
 
-  cargarNivel();
+  setTimeout(() => {
+    popup.classList.add("display");
+    nivelActualIndex++;
+    cargarNivel();
+  }, 2000);
 }
 if (botonSiguiente) {
   botonSiguiente.onclick = verificarRespuestas;

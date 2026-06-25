@@ -52,6 +52,30 @@
       {
         "juego": "Verdadero/Falso",
         "resultado": 8
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 4
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 117
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 127
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 9
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 9
+      },
+      {
+        "juego": "Puede Donar?",
+        "resultado": 5
       }
     ]
   },
@@ -151,6 +175,131 @@
       {
         "juego": "Verdadero/Falso",
         "resultado": 8
+      }
+    ]
+  },
+  {
+    "nombreCompleto": "Valen",
+    "resultados": [
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 7
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 80
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 8
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 54
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 10
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 9
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 6
+      },
+      {
+        "juego": "Puede Donar?",
+        "resultado": 5
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 9
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 9
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 128
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 75
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 120
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 47
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 74
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 64
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 126
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 99
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 64
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 10
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 7
+      },
+      {
+        "juego": "afinidad sanguínea",
+        "resultado": 128
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 8
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 9
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 8
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 6
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 9
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 10
+      },
+      {
+        "juego": "Puede Donar?",
+        "resultado": 3
+      },
+      {
+        "juego": "Verdadero/Falso",
+        "resultado": 9
       }
     ]
   }
